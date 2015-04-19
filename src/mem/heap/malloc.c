@@ -49,12 +49,16 @@ void *malloc(size_t size) {
 		SET_ERRNO(ENOMEM);
 	}
 
+	printk("%s: sz=%zu, ptr=%p\n", __func__, size, ptr);
+
 	return ptr;
 }
 
 void free(void *ptr) {
 	if (ptr == NULL)
 		return;
+
+	printk("%s: ptr=%p\n", __func__, ptr);
 	/* XXX this workaround for such situation:
 	 * module ConstructionGlobal invokes constructors inside kernel task for all applications,
 	 * and call malloc. After a while Qt application call realloc() on some memory previously
