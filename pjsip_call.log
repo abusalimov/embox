@@ -1,0 +1,1177 @@
+AUTOQEMU_ARCH: arm (guessed)
+AUTOQEMU_MEM: 512 (guessed)
+AUTOQEMU_NICS: lan9118 (guessed)
+AUTOQEMU_NICS_CONFIG: (got)
+AUTOQEMU_KVM_ARG: (guessed)
+Making uImage...
+32768+0 записей получено
+32768+0 записей отправлено
+ скопировано 32768 байт (33 kB), 0,0541248 c, 605 kB/c
+Making nand image...
+AUTOQEMU_LOAD_ARG: -mtdblock beagle_nand.img (guessed)
+AUTOQEMU_NOGRAPHIC_ARG: -nographic (guessed)
+sudo qemu-system-arm -M overo -mtdblock beagle_nand.img -m 512 -net nic,vlan=0,model=lan9118,macaddr=AA:BB:CC:DD:EE:02 -net tap,script=./scripts/qemu/start_script,downscript=./scripts/qemu/stop_script,vlan=0 -nographic -s -S
+ioctl(TUNSETIFF): Device or resource busy
+Enable IP Forwarding for wlp3s0
+net.ipv4.ip_forward = 1
+
+
+Texas Instruments X-Loader 1.41
+Starting OS Bootloader...
+
+
+U-Boot 1.3.3 (Nov 23 2008 - 18:48:04)
+
+OMAP3530-GP rev 2, CPU-OPP2 L3-165MHz
+OMAP3 Beagle Board + LPDDR/NAND
+DRAM:  128 MB
+NAND:  256 MiB
+In:    serial
+Out:   serial
+Err:   serial
+Hit any key to stop autoboot:  3  2  1  0 
+
+NAND read: device 0 offset 0x680000, size 0x400000
+ 4194304 bytes read: OK
+## Booting kernel from Legacy Image at 81000000 ...
+   Image Name:   
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    2310080 Bytes =  2.2 MB
+   Load Address: 81000000
+   Entry Point:  81008040
+   Verifying Checksum ... OK
+   XIP Kernel Image ... OK
+
+Starting kernel ...
+
+
+Embox kernel start
+runlevel: init level is 0
+	unit: initializing embox.driver.interrupt.omap3_intc: done
+	unit: initializing embox.mem.static_heap: done
+	unit: initializing embox.kernel.task.task_resource: done
+	unit: initializing embox.kernel.task.task_table: done
+	unit: initializing embox.kernel.task.kernel_task: done
+	unit: initializing embox.driver.clock.omap3_clk: done
+	unit: initializing embox.kernel.time.kernel_time: done
+	unit: initializing embox.kernel.time.jiffies: omap_gp_timer_write: Bad register 0x000048
+omap_gp_timer_write: Bad register 0x00004c
+done
+	unit: initializing embox.fs.driver.repo: done
+	unit: initializing embox.kernel.sched.sched: done
+	unit: initializing embox.fs.node: done
+	unit: initializing embox.kernel.time.timekeeper: done
+	unit: initializing embox.kernel.time.timer: done
+	unit: initializing embox.driver.gpmc.omap3_gpmc: done
+	unit: initializing embox.driver.gpio.omap3_gpio: done
+	unit: initializing embox.net.net_entry: done
+	unit: initializing embox.driver.net.lan9118: done
+runlevel: init level is 1
+	unit: initializing embox.net.neighbour: done
+	unit: initializing embox.mem.phymem: start=0x8602f000, end=0xa1009000, size=452829184
+done
+	unit: initializing embox.fs.buffer_cache: done
+	unit: initializing embox.driver.block: done
+	unit: initializing embox.net.tcp: done
+	unit: initializing embox.fs.rootfs: initfs_mount: unpack initinitfs at 0x81226ad0 into /
+done
+	test: running embox.test.stdio.printf_test ......... done
+	unit: initializing embox.cmd.shell: done
+	unit: initializing embox.driver.net.loopback: done
+	unit: initializing embox.kernel.sched.sched_ticker_preempt: done
+runlevel: init level is 2
+	unit: initializing embox.init.start_script: 
+Started shell [] on device []
+loading start script:
+> ifconfig lo 127.0.0.1 netmask 255.0.0.0 up 
+> route add 127.0.0.0 netmask 255.0.0.0 lo 
+> ifconfig eth0 10.0.2.16 netmask 255.255.255.0 hw ether AA:BB:CC:DD:EE:02 up 
+> route add 10.0.2.0 netmask 255.255.255.0 eth0 
+> route add default gw 10.0.2.10 eth0 
+> pjsua --registrar sip:10.0.2.10 --id sip:1002 --user 1002 --password=1234 --realm * 
+00:00:00.032 os_core_unix.c !pjlib 2.2.1 for POSIX initialized
+malloc: sz=1024, ptr=0x82327250
+00:00:00.044 sip_endpoint.c  .Creating endpoint instance...
+malloc: sz=4096, ptr=0x82327668
+malloc: sz=16000, ptr=0x82329020
+malloc: sz=16000, ptr=0x8232e020
+00:00:00.061          pjlib  .select() I/O Queue created (0x823310b0)
+00:00:00.062 sip_endpoint.c  .Module "mod-msg-print" registered
+00:00:00.063 sip_transport.  .Transport manager created.
+00:00:00.064   pjsua_core.c  .PJSUA state changed: NULL --> CREATED
+malloc: sz=1024, ptr=0x82331eb8
+malloc: sz=1024, ptr=0x823322d0
+malloc: sz=1024, ptr=0x823326e8
+free: ptr=0x823326e8
+malloc: sz=1024, ptr=0x823326e8
+free: ptr=0x823326e8
+00:00:00.073 sip_endpoint.c  .Module "mod-pjsua-log" registered
+malloc: sz=512, ptr=0x823326e8
+malloc: sz=4608, ptr=0x82333020
+00:00:00.075 sip_endpoint.c  .Module "mod-tsx-layer" registered
+00:00:00.076 sip_endpoint.c  .Module "mod-stateful-util" registered
+malloc: sz=512, ptr=0x82334238
+malloc: sz=2560, ptr=0x82334450
+00:00:00.078 sip_endpoint.c  .Module "mod-ua" registered
+00:00:00.080 sip_endpoint.c  .Module "mod-100rel" registered
+00:00:00.081 sip_endpoint.c  .Module "mod-pjsua" registered
+00:00:00.083 sip_endpoint.c  .Module "mod-invite" registered
+malloc: sz=512, ptr=0x82334e68
+malloc: sz=2560, ptr=0x82335080
+malloc: sz=256, ptr=0x82335a98
+Pa_Initialize: 
+00:00:00.086       pa_dev.c  ..PortAudio sound library initialized, status=0
+00:00:00.087       pa_dev.c  ..PortAudio host api count=1
+00:00:00.088       pa_dev.c  ..Sound device count=1
+Pa_GetDeviceInfo: index=0 info=0x81209980
+malloc: sz=256, ptr=0x82335bb0
+malloc: sz=1024, ptr=0x82332900
+malloc: sz=512, ptr=0x82335cc8
+malloc: sz=512, ptr=0x82332d18
+malloc: sz=512, ptr=0x8232ceb8
+malloc: sz=512, ptr=0x8232d0d0
+00:00:00.092          pjlib  ..select() I/O Queue created (0x82332914)
+malloc: sz=4096, ptr=0x82336020
+malloc: sz=2000, ptr=0x82337038
+malloc: sz=6000, ptr=0x82337820
+malloc: sz=4000, ptr=0x82339020
+malloc: sz=2000, ptr=0x82339fd8
+malloc: sz=8, ptr=0x8233a7c0
+malloc: sz=8, ptr=0x8233a7d0
+malloc: sz=8, ptr=0x8233a7e0
+malloc: sz=8, ptr=0x8233a7f0
+malloc: sz=8, ptr=0x8233a800
+00:00:00.104        libsrtp  ..Ugh: /dev/urandom not present, using rand() instead
+malloc: sz=13, ptr=0x8233a810
+free: ptr=0x8233a810
+malloc: sz=13, ptr=0x8233a810
+00:00:00.114        libsrtp  ..Ugh: /dev/urandom not present, using rand() instead
+free: ptr=0x8233a810
+malloc: sz=12, ptr=0x8233a810
+malloc: sz=244, ptr=0x8233a820
+free: ptr=0x8233a820
+malloc: sz=244, ptr=0x8233a820
+00:00:00.119        libsrtp  ..Ugh: /dev/urandom not present, using rand() instead
+free: ptr=0x8233a820
+malloc: sz=12, ptr=0x8233a820
+malloc: sz=8, ptr=0x8233a830
+malloc: sz=220, ptr=0x8233a840
+free: ptr=0x8233a840
+malloc: sz=220, ptr=0x8233a840
+00:00:00.128        libsrtp  ..Ugh: /dev/urandom not present, using rand() instead
+free: ptr=0x8233a840
+malloc: sz=12, ptr=0x8233a840
+malloc: sz=8, ptr=0x8233a850
+malloc: sz=21, ptr=0x8233a860
+free: ptr=0x8233a860
+malloc: sz=12, ptr=0x8233a860
+malloc: sz=268, ptr=0x8233a870
+free: ptr=0x8233a870
+malloc: sz=12, ptr=0x8233a870
+malloc: sz=8, ptr=0x8233a880
+malloc: sz=8, ptr=0x8233a890
+malloc: sz=512, ptr=0x8233a8a0
+00:00:00.141 sip_endpoint.c  .Module "mod-evsub" registered
+00:00:00.143 sip_endpoint.c  .Module "mod-presence" registered
+malloc: sz=512, ptr=0x8233aab8
+00:00:00.145 sip_endpoint.c  .Module "mod-mwi" registered
+malloc: sz=512, ptr=0x8233acd0
+00:00:00.146 sip_endpoint.c  .Module "mod-refer" registered
+malloc: sz=512, ptr=0x8232d2e8
+00:00:00.148 sip_endpoint.c  .Module "mod-pjsua-pres" registered
+00:00:00.149 sip_endpoint.c  .Module "mod-pjsua-im" registered
+00:00:00.150 sip_endpoint.c  .Module "mod-pjsua-options" registered
+00:00:00.151   pjsua_core.c  .1 SIP worker threads created
+00:00:00.152   pjsua_core.c  .pjsua version 2.2.1 for Embox-0.3.3/arm initialized
+00:00:00.153   pjsua_core.c  .PJSUA state changed: CREATED --> INIT
+00:00:00.155 sip_endpoint.c  Module "mod-default-handler" registered
+malloc: sz=2000, ptr=0x8232d500
+malloc: sz=1000, ptr=0x82328680
+malloc: sz=2000, ptr=0x8233b020
+00:00:00.159   pjsua_core.c  SIP UDP socket reachable at 10.0.2.16:5060
+malloc: sz=512, ptr=0x8233b808
+malloc: sz=512, ptr=0x8233ba20
+malloc: sz=4096, ptr=0x8233bc38
+malloc: sz=8000, ptr=0x8233d020
+00:00:00.165  udp0x8233b808  SIP UDP transport started, published address is 10.0.2.16:5060
+00:00:00.167    pjsua_acc.c  Adding account: id=<sip:10.0.2.16:5060>
+malloc: sz=512, ptr=0x8233ef78
+00:00:00.170    pjsua_acc.c  .Account <sip:10.0.2.16:5060> added with id 0
+00:00:00.171    pjsua_acc.c  Modifying accunt 0
+00:00:00.172    pjsua_acc.c  Acc 0: setting online status to 1..
+malloc: sz=512, ptr=0x8233f190
+malloc: sz=512, ptr=0x8233f3a8
+00:00:00.179    tcplis:5060  SIP TCP listener ready for incoming connections at 10.0.2.16:5060
+00:00:00.180    pjsua_acc.c  Adding account: id=<sip:10.0.2.16:5060;transport=TCP>
+malloc: sz=512, ptr=0x8233f5c0
+00:00:00.182    pjsua_acc.c  .Account <sip:10.0.2.16:5060;transport=TCP> added with id 1
+00:00:00.183    pjsua_acc.c  Modifying accunt 1
+00:00:00.184    pjsua_acc.c  Acc 1: setting online status to 1..
+00:00:00.185    pjsua_acc.c  Adding account: id=sip:1002
+malloc: sz=512, ptr=0x8233f7d8
+00:00:00.187    pjsua_acc.c  .Account sip:1002 added with id 2
+00:00:00.187    pjsua_acc.c  .Acc 2: setting registration..
+malloc: sz=1024, ptr=0x8233f9f0
+malloc: sz=512, ptr=0x8233cc50
+malloc: sz=256, ptr=0x8233fe08
+malloc: sz=1024, ptr=0x82328a80
+malloc: sz=512, ptr=0x8232dce8
+free: ptr=0x8232dce8
+free: ptr=0x8233cc50
+malloc: sz=4096, ptr=0x82340020
+malloc: sz=2048, ptr=0x82341038
+malloc: sz=512, ptr=0x82341850
+malloc: sz=8000, ptr=0x82343020
+00:00:00.206   pjsua_core.c  ...TX 484 bytes Request msg REGISTER/cseq=29275 (tdta0x82340020) to UDP 10.0.2.10:5060:
+REGISTER sip:10.0.2.10 SIP/2.0g
+Via: SIP/2.0/UDP 10.0.2.16:5060;rport;branch=z9hG4bKPjwph5UlC0t4L4Tv3323P3wjq2mNR2Nop4g
+Max-Forwards: 70g
+From: <sip:1002>;tag=b4g351Q0R5j4ySR4B7p5MmS2MNY0Jr13g
+To: <sip:1002>g
+Call-ID: Mhg0xJl4VG24ofq1BQP3SL91TPN2Wli4g
+CSeq: 29275 REGISTERg
+User-Agent: PJSUA v2.2.1 Embox-0.3.3/armg
+Contact: <sip:10.0.2.16:5060;ob>g
+Expires: 300g
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONSg
+Content-Length:  0g
+g
+
+--end msg--
+00:00:00.227    pjsua_acc.c  ..Acc 2: Registration sent
+00:00:00.229    pjsua_acc.c  Acc 2: settin 2: setting onli00:00:00.30   pnse msg 401/REGIfree: ptr=0x823322d0
+S00:00:00.22231   jsua_core.c !PJSUA state changed: INIT --> STARTING
+ cseq=29275 (rda (rdapjsua_core.c !PJSUA state changed: INIT --> STARTING
+34) from UDP 10.0.2.10:5060:
+SIP/2.0 401 Unauthorizedg
+Via: SIP/2.0/UDP 10.0.2.16:5060;branch=z9hG4bKPjwph5UlC0t4L4Tv3323P3wjq2mNR2Nop4;received=10.0.2.16;rport=5060g
+From: <sip:1002>;tag=b4g351Q0R5j4ySR4B7p5MmS2MNY0Jr13g
+To: <sip:1002>;tag=as311d6bf0g
+Call-ID: Mhg0xJl4VG24ofq1BQP3SL91TPN2Wli4g
+CSeq: 29275 REGISTERg
+Server: Asterisk PBX 13.3.1g
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO, PUBLISH, MESSAGEg
+Supported: replaces, timerg
+WWW-Authenticate: Digest algorithm=MD5, realm="asterisk", nonce="7ba07cf0"g
+Content-Length: 0g
+g
+
+--end msg--
+malloc: sz=512, ptr=0x82344f78
+free: ptr=0x82344f78
+malloc: sz=1024, ptr=0x82344f78
+malloc: sz=2048, ptr=0x82345390
+malloc: sz=512, ptr=0x82345ba8
+00:00:00.249   pjsua_core.c  ....TX 640 bytes Request msg REGISTER/cseq=29276 (tdta0x82340020) to UDP 10.0.2.10:5060:
+REGISTER sip:10.0.2.10 SIP/2.0g
+Via: SIP/2.0/UDP 10.0.2.16:5060;rport;branch=z9hG4bKPjL5W1jwX2-851aPA2lV83hQj5mxt0gKG4g
+Max-Forwards: 70g
+From: <sip:1002>;tag=b4g351Q0R5j4ySR4B7p5MmS2MNY0Jr13g
+To: <sip:1002>g
+Call-ID: Mhg0xJl4VG24ofq1BQP3SL91TPN2Wli4g
+CSeq: 29276 REGISTERg
+User-Agent: PJSUA v2.2.1 Embox-0.3.3/armg
+Contact: <sip:10.0.2.16:5060;ob>g
+Expires: 300g
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONSg
+Authorization: Digest username="1002", realm="asterisk", nonce="7ba07cf0", uri="sip:10.0.2.10", response="fe7b11441be2bd6fed7cc0209eb0dfba", algorithm=MD5g
+Content-Length:  0g
+g
+
+--end msg--
+free: ptr=0x8233d020
+malloc: sz=8000, ptr=0x8233d020
+00:00:00.263 sip_endpoint.c !.Module "mod-unsolicited-mwi" registered
+00:00:00.263   pjsua_corjsua_core.c  .PJ00:00:00.264   pjsua_core.c  .RX 546 bytes Response msg 200/REGISTER/cseq=29276 (rdata0x82e233d034 546 bytes Response msg 200/REGISTER/cse00:00:00.265         main.c !Ready: Success
+>>>>
+3 Succ) from UDP 10.0.2.10:5060:
+SIP/2.0 200 OKg
+Via: SIP/2.0/UDP 10.0.2.16:5060;branch=z9hG4bKPjL5W1jwX2-851aPA2lV83hQj5mxt0gKG4;receive;received=10.0.2Account list:
+  [ 0] <sip:10.0.2.16:5060>: does not register
+       Online status: Online
+  [ 1] <sip:10.0.2.16:60;trans.16;rport=5060g
+From: <sip:1002>;tag=b4g351Q0R5j4ySR4B7p5MmS2MNY0Jr13g
+To: <sip:1002>;tag=as311d6bf0g
+Call-ID: Mhg0xJl4VG24ofq1BQP3SL91TPN2Wlli4g
+P3SL9port=TCP>: does not register
+       Online status: Online
+ *[ 2] sip:1002: 100/In Progress (expires=0)
+       OnliCSeq: 29276 REGISTERg
+Server: Asterisk PBX 13.3.1g
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO, PUBLISH, MESSAGEAGEg
+BLISatus: Online
+Buddy list:
+ -none-
+
++=================================================================Supported: replaces, timerg
+Expires: 300g
+Contact: <sip:10.0.2.16:5060;ob>;expires=300g
+Date: Wed, 22 Apr 2015 22:06:52 GMTg
+Content-Length: 0g
+g
+
+==============+
+|       Call Commands:         |   Buddy, IM & Presence:  |     Account:      |
+|                              |                     
+                     |                   |
+|  m  Make new call            | +b  Add new buddy       .| +a  Add new accnt |
+|  M  Make multiple calls      | -b  Delete buddy         | -a  Delete accnt. |
+|  a  Answer call              |  i  Send IM              | !a  MModify accnt. |
+00:00:00.278    pjsua_acc.c  ....SIP outbound status fotus for acc 2 i|  h  Hangup call  (ha=all)    |  s  Subscribe presence   | rr  (Re-)register |
+|  H  Hold call                |  u  Unsrubscribes not active
+malloc: sz=512, ptr=0x82345dc0
+tive
+ibe presence | ru  Unregister    |
+|  v  re-inVite (release hold) |  t  free: ptr=0x82345dc0
+  t  ToGgle Onli00:00:00.282    _acc.c     ne status |  >  Cycle next ac.|
+|  U  send UPDATE              |  T  S  T  Set online ....sip:1002: registration success, status=200 (OK), will re-regien 300 secstatus    |  <  Cycle prev ac.|
+| ],[ Select next/prev call    +-------------------onds
+00:00:00.286    pjsua_acc.c  ...--alivc  ...----------+-------------------+
+|  x  Xfer call                |          Media Comme timer started for acc 2, destination:10.0.2.10:5060, interval:15s , interval:ands:     |  Status & Config: |
+|  X  Xfer with Replaces       |     free: ptr=0x8233d020
+malloc: sz=8000, ptr=0                      |                   |
+|  #  Send RFC 2833 DTMF       | clx8233d020
+  List ports           |  d  Dump status   |
+|  *  Send DTMF with INFO      | cc  Connect port         | dd  Dump detailed |
+| dq  Dump curr. call quality  | cd  Disconnect port      | dc  Dump config   |
+|                              |  V  Adjust audio Volume  |  f  Save config   |
+|  S  Send arbitrary REQUEST   | Cp  Codec priorities     |                   |
++-----------------------------------------------------------------------------+
+|  q  QUIT   L  ReLoad   sleep MS   echo [0|1|txt]     n: detect NAT type     |
++=============================================================================+
+You have 0 active call
+>>> free: ptr=0x82341038
+free: ptr=0x82341850
+free: ptr=0x82343020
+free: ptr=0x82340020
+free: ptr=0x82345390
+free: ptr=0x82345ba8
+malloc: sz=4096, ptr=0x82343020
+free: ptr=0x82343020
+00:00:23.317   pjsua_core.c  .RX 817 bytes Request msg INVITE/cseq=102 (rdata0x8233d034) from UDP 10.0.2.10:5060:
+INVITE sip:10.0.2.16:5060;ob SIP/2.0g
+Via: SIP/2.0/UDP 10.0.2.10:5060;branch=z9hG4bK35f933e2g
+Max-Forwards: 70g
+From: <sip:1001@10.0.2.10>;tag=as30414edag
+To: <sip:10.0.2.16:5060;ob>g
+Contact: <sip:1001@10.0.2.10:5060>g
+Call-ID: 73d4c54e2e88a55e39f9933844658ac4@10.0.2.10:5060g
+CSeq: 102 INVITEg
+User-Agent: Asterisk PBX 13.3.1g
+Date: Wed, 22 Apr 2015 22:07:15 GMTg
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO, PUBLISH, MESSAGEg
+Supported: replaces, timerg
+Content-Type: application/sdpg
+Content-Length: 277g
+g
+v=0g
+o=root 2007287124 2007287124 IN IP4 10.0.2.10g
+s=Asterisk PBX 13.3.1g
+c=IN IP4 10.0.2.10g
+t=0 0g
+m=audio 15464 RTP/AVP 0 8 3 96g
+a=rtpmap:0 PCMU/8000g
+a=rtpmap:8 PCMA/8000g
+a=rtpmap:3 GSM/8000g
+a=rtpmap:96 telephone-event/8000g
+a=fmtp:96 0-16g
+a=maxptime:150g
+a=sendrecvg
+
+--end msg--
+00:00:23.320   pjsua_call.c  .Incoming Request msg INVITE/cseq=102 (rdata0x8233d034)
+malloc: sz=2048, ptr=0x82343020
+malloc: sz=2048, ptr=0x82343838
+malloc: sz=512, ptr=0x82344050
+malloc: sz=512, ptr=0x82344268
+malloc: sz=512, ptr=0x82344480
+malloc: sz=512, ptr=0x82344698
+malloc: sz=256, ptr=0x823448b0
+malloc: sz=256, ptr=0x823449c8
+malloc: sz=512, ptr=0x82344ae0
+malloc: sz=1024, ptr=0x82345390
+00:00:23.348  pjsua_media.c  ..Call 0: initializing media..
+malloc: sz=512, ptr=0x823457a8
+malloc: sz=768, ptr=0x823459c0
+malloc: sz=256, ptr=0x82345cd8
+00:00:23.354  pjsua_media.c  ...RTP socket reachable at 10.0.2.16:4000
+00:00:23.356  pjsua_media.c  ...RTCP socket reachable at 10.0.2.16:4001
+malloc: sz=512, ptr=0x82345df0
+malloc: sz=10240, ptr=0x82340020
+malloc: sz=1024, ptr=0x82342838
+malloc: sz=4000, ptr=0x82346020
+00:00:23.366  pjsua_media.c  ...Media index 0 selected for audio call 0
+malloc: sz=512, ptr=0x82346fd8
+malloc: sz=1024, ptr=0x823471f0
+malloc: sz=512, ptr=0x82347608
+malloc: sz=768, ptr=0x82347820
+malloc: sz=512, ptr=0x82347b38
+malloc: sz=256, ptr=0x82347d50
+malloc: sz=768, ptr=0x82342c50
+malloc: sz=512, ptr=0x82344cf8
+malloc: sz=768, ptr=0x8233cc50
+malloc: sz=256, ptr=0x82347e68
+malloc: sz=512, ptr=0x823322d0
+malloc: sz=768, ptr=0x8232dce8
+malloc: sz=256, ptr=0x823324e8
+malloc: sz=512, ptr=0x82348020
+malloc: sz=768, ptr=0x82348238
+malloc: sz=512, ptr=0x82348550
+malloc: sz=768, ptr=0x82348768
+malloc: sz=256, ptr=0x82348a80
+malloc: sz=768, ptr=0x82348b98
+malloc: sz=4096, ptr=0x82348eb0
+malloc: sz=8000, ptr=0x8234a020
+00:00:23.402   pjsua_core.c  .....TX 260 bytes Response msg 100/INVITE/cseq=102 (tdta0x82348eb0) to UDP 10.0.2.10:5060:
+SIP/2.0 100 Tryingg
+Via: SIP/2.0/UDP 10.0.2.10:5060;received=10.0.2.10;branch=z9hG4bK35f933e2g
+Call-ID: 73d4c54e2e88a55e39f9933844658ac4@10.0.2.10:5060g
+From: <sip:1001@10.0.2.10>;tag=as30414edag
+To: <sip:10.0.2.16;ob>g
+CSeq: 102 INVITEg
+Content-Length:  0g
+g
+
+--end msg--
+00:00:23.416    pjsua_aud.c  ..Conf connect: 2 --> 0
+00:00:23.419    pjsua_aud.c  ...Set sound device: capture=-1, playback=-2
+Pa_GetDeviceInfo: index=0 info=0x81209980
+00:00:23.423    pjsua_app.c  ....Turning sound device ON
+malloc: sz=4096, ptr=0x8234bf78
+00:00:23.425    pjsua_aud.c  ....Opening sound device PCM@16000/1/20ms
+Pa_GetDeviceInfo: index=0 info=0x81209980
+Pa_GetDeviceInfo: index=0 info=0x81209980
+Pa_GetDeviceInfo: index=0 info=0x81209980
+malloc: sz=1024, ptr=0x8234d020
+malloc: sz=1024, ptr=0x8234d438
+malloc: sz=1024, ptr=0x8234d850
+Pa_GetHostApiInfo: api_index=0 info=0x00000000
+Pa_GetHostApiInfo: api_index=0 info=0x00000000
+Pa_OpenStream: stream=0x812cac80 in_param=0x812cac60 out_param=0x812cac40 samplerate=16000.000000 frames/buffer=320 flags=1 callback=0x81132840 data=0x8234d084
+Pa_GetStreamInfo: stream=0x00000ff0 info=0x8122c2b8
+Pa_GetStreamInfo: stream=0x00000ff0 info=0x8122c2b8
+Pa_GetStreamInfo: stream=0x00000ff0 info=0x8122c2b8
+Pa_GetStreamInfo: stream=0x00000ff0 info=0x8122c2b8
+malloc: sz=256, ptr=0x8234dc68
+malloc: sz=768, ptr=0x8234dd80
+malloc: sz=256, ptr=0x8234e098
+malloc: sz=256, ptr=0x8234e1b0
+malloc: sz=256, ptr=0x8234e2c8
+malloc: sz=768, ptr=0x8234e3e0
+malloc: sz=5888, ptr=0x8234f020
+malloc: sz=4096, ptr=0x82350738
+malloc: sz=512, ptr=0x82351750
+malloc: sz=2048, ptr=0x8234e6f8
+00:00:23.461   ec0x8234dc68  .....Echo suppressor created, clock_rate=16000, channel=1, samples per frame=320, tail length=200 ms, latency=20 ms
+Pa_StartStream: stream=0x00000ff0
+Pa_GetStreamInfo: stream=0x00000ff0 info=0x8122c2b8
+Pa_GetStreamInfo: stream=0x00000ff0 info=0x8122c2b8
+Pa_GetDeviceInfo: index=0 info=0x81209980
+Pa_GetStreamInfo: stream=0x00000ff0 info=0x8122c2b8
+Pa_GetStreamInfo: stream=0x00000ff0 info=0x8122c2b8
+00:00:23.473   conference.c  ...Port 2 (ring) transmitting to port 0 (portaudio_stub)
+00:00:23.475    pjsua_app.c  ..Incoming call for account 0!
+Media count: 1 audio & 0 video
+From: <sip:1001@10.0.2.10>
+To: <sip:10.0.2.16;ob>
+Press a to answer or h to reject call
+free: ptr=0x8233d020
+malloc: sz=8000, ptr=0x8233d020
+Answer with code (100-699) (empty to cancel): malloc: sz=4096, ptr=0x82352020
+free: ptr=0x82352020
+00:00:31.915   pjsua_call.c !Answering call 0: code=200
+malloc: sz=512, ptr=0x82352020
+malloc: sz=768, ptr=0x82352238
+malloc: sz=256, ptr=0x82352550
+malloc: sz=768, ptr=0x82352668
+malloc: sz=256, ptr=0x82352980
+00:00:31.920  pjsua_media.c  ...Call 0: updating media..
+malloc: sz=768, ptr=0x82352a98
+00:00:31.923    pjsua_aud.c  ....Audio channel update..
+malloc: sz=1024, ptr=0x82352db0
+malloc: sz=2000, ptr=0x823531c8
+00:00:31.927 strm0x823531dc  .....VAD temporarily disabled
+malloc: sz=1000, ptr=0x823539b0
+malloc: sz=5000, ptr=0x82355020
+malloc: sz=2000, ptr=0x823563c0
+malloc: sz=2000, ptr=0x82356ba8
+00:00:31.933 strm0x823531dc  .....Encoder stream started
+00:00:31.934 strm0x823531dc  .....Decoder stream started
+malloc: sz=512, ptr=0x82357390
+malloc: sz=1024, ptr=0x823575a8
+malloc: sz=512, ptr=0x823579c0
+malloc: sz=512, ptr=0x82357bd8
+malloc: sz=1536, ptr=0x82353db0
+00:00:31.938  pjsua_media.c  ....Audio updated, stream #0: PCMU (sendrecv)
+00:00:31.940    pjsua_app.c  ...Call 0 media 0 [type=audio], status is Active
+00:00:31.941    pjsua_aud.c  ...Conf disconnect: 2 -x- 0
+00:00:31.942   conference.c  ....Port 2 (ring) stop transmitting to port 0 (portaudio_stub)
+00:00:31.944    pjsua_aud.c  ...Conf connect: 3 --> 0
+00:00:31.945   conference.c  ....Port 3 (sip:1001@10.0.2.10) transmitting to port 0 (portaudio_stub)
+00:00:31.946    pjsua_aud.c  ...Conf connect: 0 --> 3
+00:00:31.947   conference.c  ....Port 0 (portaudio_stub) transmitting to port 3 (sip:1001@10.0.2.10)
+00:00:31.951   pjsua_core.c  ....TX 766 bytes Response msg 200/INVITE/cseq=102 (tdta0x82348eb0) to UDP 10.0.2.10:5060:
+SIP/2.0 200 OKg
+Via: SIP/2.0/UDP 10.0.2.10:5060;received=10.0.2.10;branch=z9hG4bK35f933e2g
+Call-ID: 73d4c54e2e88a55e39f9933844658ac4@10.0.2.10:5060g
+From: <sip:1001@10.0.2.10>;tag=as30414edag
+To: <sip:10.0.2.16;ob>;tag=bvx4P3b5aGK2s3x4h5i37sR2bAh0dGn0g
+CSeq: 102 INVITEg
+Contact: <sip:10.0.2.16:5060>g
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONSg
+Supported: replaces, 100rel, timer, norefersubg
+Content-Type: application/sdpg
+Content-Length:   262g
+g
+v=0g
+o=- 2208988823 2208988824 IN IP4 10.0.2.16g
+s=pjmediag
+b=AS:84g
+t=0 0g
+a=X-nat:0g
+m=audio 4000 RTP/AVP 0 96g
+c=IN IP4 10.0.2.16g
+b=TIAS:64000g
+a=rtcp:4001 IN IP4 10.0.2.16g
+a=sendrecvg
+a=rtpmap:0 PCMU/8000g
+a=rtpmap:96 telephone-event/8000g
+a=fmtp:96 0-16g
+
+--end msg--
+00:00:31.964    pjsua_app.c  .......Call 0 state changed to CONNECTING
+>>> 00:00:31.971   pjsua_core.c  .RX 378 bytes Request msg ACK/cseq=102 (rdata0x8233d034) from UDP 10.0.2.10:5060:
+ACK sip:10.0.2.16:5060 SIP/2.0g
+Via: SIP/2.0/UDP 10.0.2.10:5060;branch=z9hG4bK5e22bef4g
+Max-Forwards: 70g
+From: <sip:1001@10.0.2.10>;tag=as30414edag
+To: <sip:10.0.2.16:5060;ob>;tag=bvx4P3b5aGK2s3x4h5i37sR2bAh0dGn0g
+Contact: <sip:1001@10.0.2.10:5060>g
+Call-ID: 73d4c54e2e88a55e39f9933844658ac4@10.0.2.10:5060g
+CSeq: 102 ACKg
+User-Agent: Asterisk PBX 13.3.1g
+Content-Length: 0g
+g
+
+--end msg--
+00:00:31.984    pjsua_app.c  ...Call 0 state changed to CONFIRMED
+free: ptr=0x8233d020
+malloc: sz=8000, ptr=0x8233d020
+00:00:31.988   pjsua_core.c  .RX 821 bytes Request msg INVITE/cseq=103 (rdata0x8233d034) from UDP 10.0.2.10:5060:
+INVITE sip:10.0.2.16:5060 SIP/2.0g
+Via: SIP/2.0/UDP 10.0.2.10:5060;branch=z9hG4bK34a16977g
+Max-Forwards: 70g
+From: <sip:1001@10.0.2.10>;tag=as30414edag
+To: <sip:10.0.2.16:5060;ob>;tag=bvx4P3b5aGK2s3x4h5i37sR2bAh0dGn0g
+Contact: <sip:1001@10.0.2.10:5060>g
+Call-ID: 73d4c54e2e88a55e39f9933844658ac4@10.0.2.10:5060g
+CSeq: 103 INVITEg
+User-Agent: Asterisk PBX 13.3.1g
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO, PUBLISH, MESSAGEg
+Supported: replaces, timerg
+Content-Type: application/sdpg
+Content-Length: 284g
+g
+v=0g
+o=root 2007287124 2007287125 IN IP4 192.168.1.104g
+s=Asterisk PBX 13.3.1g
+c=IN IP4 192.168.1.104g
+t=0 0g
+m=audio 4002 RTP/AVP 0 8 3 96g
+a=rtpmap:0 PCMU/8000g
+a=rtpmap:8 PCMA/8000g
+a=rtpmap:3 GSM/8000g
+a=rtpmap:96 telephone-event/8000g
+a=fmtp:96 0-16g
+a=maxptime:150g
+a=sendrecvg
+
+--end msg--
+malloc: sz=2048, ptr=0x823543c8
+malloc: sz=512, ptr=0x82357df0
+malloc: sz=512, ptr=0x82354be0
+malloc: sz=768, ptr=0x82351968
+00:00:32.009   pjsua_call.c  .....Call 0: received updated media offer
+00:00:32.011  pjsua_media.c  ......Call 0: re-initializing media..
+malloc: sz=512, ptr=0x82354df8
+malloc: sz=256, ptr=0x82351c80
+malloc: sz=768, ptr=0x82358020
+00:00:32.015  pjsua_media.c  .......Media index 0 selected for audio call 0
+malloc: sz=512, ptr=0x82358338
+malloc: sz=768, ptr=0x82358550
+malloc: sz=512, ptr=0x82358868
+malloc: sz=768, ptr=0x82358a80
+malloc: sz=256, ptr=0x82358d98
+malloc: sz=4096, ptr=0x82358eb0
+malloc: sz=512, ptr=0x82351d98
+malloc: sz=768, ptr=0x8235a020
+malloc: sz=256, ptr=0x8235a338
+malloc: sz=768, ptr=0x8235a450
+00:00:32.025  pjsua_media.c  ......Call 0: updating media..
+malloc: sz=768, ptr=0x8235a768
+free: ptr=0x823531c8
+free: ptr=0x823539b0
+free: ptr=0x82355020
+free: ptr=0x823563c0
+free: ptr=0x82356ba8
+free: ptr=0x82352db0
+00:00:32.036  pjsua_media.c  ........Media stream call00:0 is destroyed
+00:00:32.039    pjsua_aud.c  .......Audio channel update..
+malloc: sz=1024, ptr=0x8235aa80
+malloc: sz=2000, ptr=0x8235ae98
+00:00:32.043 strm0x8235aeac  ........VAD temporarily disabled
+malloc: sz=1000, ptr=0x8235b680
+malloc: sz=5000, ptr=0x82355020
+malloc: sz=2000, ptr=0x823563c0
+malloc: sz=2000, ptr=0x82356ba8
+00:00:32.049 strm0x8235aeac  ........Encoder stream started
+00:00:32.051 strm0x8235aeac  ........Decoder stream started
+malloc: sz=512, ptr=0x8235ba80
+malloc: sz=1024, ptr=0x82352db0
+malloc: sz=512, ptr=0x8235bc98
+malloc: sz=512, ptr=0x823531c8
+malloc: sz=1536, ptr=0x823533e0
+00:00:32.057  pjsua_media.c  .......Audio updated, stream #0: PCMU (sendrecv)
+00:00:32.059    pjsua_app.c  ......Call 0 media 0 [type=audio], status is Active
+00:00:32.061    pjsua_aud.c  ......Conf connect: 3 --> 0
+00:00:32.063   conference.c  .......Port 3 (sip:1001@10.0.2.10) transmitting to port 0 (portaudio_stub)
+00:00:32.067    pjsua_aud.c  ......Conf connect: 0 --> 3
+00:00:32.067   conference.c  .......Port 0 (portaudio_stub) transmitting to port 3 (sip:1001@10.0.2.10)
+free: ptr=0x823457a8
+free: ptr=0x823459c0
+free: ptr=0x82345cd8
+free: ptr=0x82347608
+free: ptr=0x82347820
+free: ptr=0x82347b38
+free: ptr=0x82347d50
+free: ptr=0x82342c50
+free: ptr=0x82344cf8
+free: ptr=0x8233cc50
+free: ptr=0x82347e68
+free: ptr=0x823322d0
+free: ptr=0x8232dce8
+free: ptr=0x823324e8
+free: ptr=0x82348020
+free: ptr=0x82348238
+free: ptr=0x82348550
+free: ptr=0x82348768
+free: ptr=0x82348a80
+free: ptr=0x82348b98
+free: ptr=0x82352020
+free: ptr=0x82352238
+free: ptr=0x82352550
+free: ptr=0x82352668
+free: ptr=0x82352980
+free: ptr=0x82352a98
+malloc: sz=4000, ptr=0x8235c020
+malloc: sz=8000, ptr=0x8235e020
+00:00:32.089   pjsua_core.c  ........TX 766 bytes Response msg 200/INVITE/cseq=103 (tdta0x82358eb0) to UDP 10.0.2.10:5060:
+SIP/2.0 200 OKg
+Via: SIP/2.0/UDP 10.0.2.10:5060;received=10.0.2.10;branch=z9hG4bK34a16977g
+Call-ID: 73d4c54e2e88a55e39f9933844658ac4@10.0.2.10:5060g
+From: <sip:1001@10.0.2.10>;tag=as30414edag
+To: <sip:10.0.2.16;ob>;tag=bvx4P3b5aGK2s3x4h5i37sR2bAh0dGn0g
+CSeq: 103 INVITEg
+Contact: <sip:10.0.2.16:5060>g
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONSg
+Supported: replaces, 100rel, timer, norefersubg
+Content-Type: application/sdpg
+Content-Length:   262g
+g
+v=0g
+o=- 2208988823 2208988825 IN IP4 10.0.2.16g
+s=pjmediag
+b=AS:84g
+t=0 0g
+a=X-nat:0g
+m=audio 4000 RTP/AVP 0 96g
+c=IN IP4 10.0.2.16g
+b=TIAS:64000g
+a=rtcp:4001 IN IP4 10.0.2.16g
+a=sendrecvg
+a=rtpmap:0 PCMU/8000g
+a=rtpmap:96 telephone-event/8000g
+a=fmtp:96 0-16g
+
+--end msg--
+free: ptr=0x8233d020
+malloc: sz=8000, ptr=0x8233d020
+00:00:32.119   pjsua_core.c  .RX 378 bytes Request msg ACK/cseq=103 (rdata0x8233d034) from UDP 10.0.2.10:5060:
+ACK sip:10.0.2.16:5060 SIP/2.0g
+Via: SIP/2.0/UDP 10.0.2.10:5060;branch=z9hG4bK1e834ecag
+Max-Forwards: 70g
+From: <sip:1001@10.0.2.10>;tag=as30414edag
+To: <sip:10.0.2.16:5060;ob>;tag=bvx4P3b5aGK2s3x4h5i37sR2bAh0dGn0g
+Contact: <sip:1001@10.0.2.10:5060>g
+Call-ID: 73d4c54e2e88a55e39f9933844658ac4@10.0.2.10:5060g
+CSeq: 103 ACKg
+User-Agent: Asterisk PBX 13.3.1g
+Content-Length: 0g
+g
+
+--end msg--
+free: ptr=0x8233d020
+malloc: sz=8000, ptr=0x8233d020
+free: ptr=0x8234a020
+free: ptr=0x82348eb0
+free: ptr=0x82343838
+free: ptr=0x82344050
+free: ptr=0x8235c020
+free: ptr=0x8235e020
+free: ptr=0x82358eb0
+free: ptr=0x823543c8
+free: ptr=0x82357df0
+00:00:32.238  udp0x82345df0 !Remote RTP address switched to 10.0.2.10:15464
+00:00:32.240  udp0x82345df0  Remote RTCP address switched to predicted address 10.0.2.10:15465
+00:00:32.853   pjsua_core.c  .RX 821 bytes Request msg INVITE/cseq=104 (rdata0x8233d034) from UDP 10.0.2.10:5060:
+INVITE sip:10.0.2.16:5060 SIP/2.0g
+Via: SIP/2.0/UDP 10.0.2.10:5060;branch=z9hG4bK708b6712g
+Max-Forwards: 70g
+From: <sip:1001@10.0.2.10>;tag=as30414edag
+To: <sip:10.0.2.16:5060;ob>;tag=bvx4P3b5aGK2s3x4h5i37sR2bAh0dGn0g
+Contact: <sip:1001@10.0.2.10:5060>g
+Call-ID: 73d4c54e2e88a55e39f9933844658ac4@10.0.2.10:5060g
+CSeq: 104 INVITEg
+User-Agent: Asterisk PBX 13.3.1g
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO, PUBLISH, MESSAGEg
+Supported: replaces, timerg
+Content-Type: application/sdpg
+Content-Length: 284g
+g
+v=0g
+o=root 2007287124 2007287126 IN IP4 192.168.1.104g
+s=Asterisk PBX 13.3.1g
+c=IN IP4 192.168.1.104g
+t=0 0g
+m=audio 4002 RTP/AVP 0 8 3 96g
+a=rtpmap:0 PCMU/8000g
+a=rtpmap:8 PCMA/8000g
+a=rtpmap:3 GSM/8000g
+a=rtpmap:96 telephone-event/8000g
+a=fmtp:96 0-16g
+a=maxptime:150g
+a=sendrecvg
+
+--end msg--
+malloc: sz=2048, ptr=0x8235e020
+malloc: sz=512, ptr=0x8235e838
+malloc: sz=512, ptr=0x8235ea50
+malloc: sz=768, ptr=0x8235ec68
+00:00:32.863   pjsua_call.c  .....Call 0: received updated media offer
+00:00:32.865  pjsua_media.c  ......Call 0: re-initializing media..
+malloc: sz=512, ptr=0x8235ef80
+malloc: sz=256, ptr=0x8235f198
+malloc: sz=768, ptr=0x8235f2b0
+00:00:32.867  pjsua_media.c  .......Media index 0 selected for audio call 0
+malloc: sz=512, ptr=0x8235f5c8
+malloc: sz=768, ptr=0x8235f7e0
+malloc: sz=512, ptr=0x8235faf8
+malloc: sz=768, ptr=0x8235fd10
+malloc: sz=256, ptr=0x82360028
+malloc: sz=4096, ptr=0x8235c020
+malloc: sz=512, ptr=0x82360140
+malloc: sz=768, ptr=0x82360358
+malloc: sz=256, ptr=0x82360670
+malloc: sz=768, ptr=0x82360788
+00:00:32.875  pjsua_media.c  ......Call 0: updating media..
+malloc: sz=768, ptr=0x82360aa0
+00:00:32.879  pjsua_media.c  .......Call 0: stream #0 (audio) unchanged.
+00:00:32.879  pjsua_media.c  .......Audio updated, stream #0: PCMU (sendrecv)
+00:00:32.881    pjsua_app.c  ......Call 0 media 0 [type=audio], status is Active
+00:00:32.883    pjsua_aud.c  ......Conf connect: 3 --> 0
+00:00:32.883    pjsua_aud.c  ......Conf connect: 0 --> 3
+free: ptr=0x82354be0
+free: ptr=0x82351968
+free: ptr=0x82354df8
+free: ptr=0x82351c80
+free: ptr=0x82358020
+free: ptr=0x82358338
+free: ptr=0x82358550
+free: ptr=0x82358868
+free: ptr=0x82358a80
+free: ptr=0x82358d98
+free: ptr=0x82351d98
+free: ptr=0x8235a020
+free: ptr=0x8235a338
+free: ptr=0x8235a450
+free: ptr=0x8235a768
+malloc: sz=4000, ptr=0x8235d038
+malloc: sz=8000, ptr=0x82358020
+00:00:32.894   pjsua_core.c  ........TX 766 bytes Response msg 200/INVITE/cseq=104 (tdta0x8235c020) to UDP 10.0.2.10:5060:
+SIP/2.0 200 OKg
+Via: SIP/2.0/UDP 10.0.2.10:5060;received=10.0.2.10;branch=z9hG4bK708b6712g
+Call-ID: 73d4c54e2e88a55e39f9933844658ac4@10.0.2.10:5060g
+From: <sip:1001@10.0.2.10>;tag=as30414edag
+To: <sip:10.0.2.16;ob>;tag=bvx4P3b5aGK2s3x4h5i37sR2bAh0dGn0g
+CSeq: 104 INVITEg
+Contact: <sip:10.0.2.16:5060>g
+Allow: PRACK, INVITE, ACK, BYE, CANCEL, UPDATE, INFO, SUBSCRIBE, NOTIFY, REFER, MESSAGE, OPTIONSg
+Supported: replaces, 100rel, timer, norefersubg
+Content-Type: application/sdpg
+Content-Length:   262g
+g
+v=0g
+o=- 2208988823 2208988826 IN IP4 10.0.2.16g
+s=pjmediag
+b=AS:84g
+t=0 0g
+a=X-nat:0g
+m=audio 4000 RTP/AVP 0 96g
+c=IN IP4 10.0.2.16g
+b=TIAS:64000g
+a=rtcp:4001 IN IP4 10.0.2.16g
+a=sendrecvg
+a=rtpmap:0 PCMU/8000g
+a=rtpmap:96 telephone-event/8000g
+a=fmtp:96 0-16g
+
+--end msg--
+free: ptr=0x8233d020
+malloc: sz=8000, ptr=0x8234a020
+00:00:32.925   pjsua_core.c  .RX 378 bytes Request msg ACK/cseq=104 (rdata0x8234a034) from UDP 10.0.2.10:5060:
+ACK sip:10.0.2.16:5060 SIP/2.0g
+Via: SIP/2.0/UDP 10.0.2.10:5060;branch=z9hG4bK69ef595ag
+Max-Forwards: 70g
+From: <sip:1001@10.0.2.10>;tag=as30414edag
+To: <sip:10.0.2.16:5060;ob>;tag=bvx4P3b5aGK2s3x4h5i37sR2bAh0dGn0g
+Contact: <sip:1001@10.0.2.10:5060>g
+Call-ID: 73d4c54e2e88a55e39f9933844658ac4@10.0.2.10:5060g
+CSeq: 104 ACKg
+User-Agent: Asterisk PBX 13.3.1g
+Content-Length: 0g
+g
+
+--end msg--
+free: ptr=0x8234a020
+malloc: sz=8000, ptr=0x8234a020
+free: ptr=0x8235d038
+free: ptr=0x82358020
+free: ptr=0x8235c020
+free: ptr=0x8235e020
+free: ptr=0x8235e838
+00:00:33.027  udp0x82345df0 !Remote RTP address switched to 10.0.2.10:4002
+00:00:33.029  udp0x82345df0  Remote RTCP address switched to predicted address 10.0.2.10:4003
+00:00:33.047 strm0x8235aeac  Jitter buffer reset
+00:00:42.968   pjsua_call.c !Call 0 hanging up: code=0..
+malloc: sz=4096, ptr=0x8235c020
+malloc: sz=2048, ptr=0x8235e020
+malloc: sz=512, ptr=0x8235e838
+malloc: sz=8000, ptr=0x82358020
+00:00:42.973   pjsua_core.c  ....TX 384 bytes Request msg BYE/cseq=572 (tdta0x8235c020) to UDP 10.0.2.10:5060:
+BYE sip:1001@10.0.2.10:5060 SIP/2.0g
+Via: SIP/2.0/UDP 10.0.2.16:5060;rport;branch=z9hG4bKPjG6F4ytU3qlb1fCH2f2t0fRz4W8.5Qps1g
+Max-Forwards: 70g
+From: <sip:10.0.2.16;ob>;tag=bvx4P3b5aGK2s3x4h5i37sR2bAh0dGn0g
+To: <sip:1001@10.0.2.10>;tag=as30414edag
+Call-ID: 73d4c54e2e88a55e39f9933844658ac4@10.0.2.10:5060g
+CSeq: 572 BYEg
+User-Agent: PJSUA v2.2.1 Embox-0.3.3/armg
+Content-Length:  0g
+g
+
+--end msg--
+00:00:42.980 strm0x8235aeac  Received RTCP Bn tsx0x8235e084 state changed to Calling
+>>> 00:00:42.985    pjsua_app.c  .....Call 0 is DISCONNECTED [reason=200 (Normal call clearing)]
+00:00:42.993 pjsua_app_comm  .....
+  [DISCONNCTD] To: <sip:1001@10.0.2.10>;tag=as30414edag
+    Call time: 00h:00m:11s, 1st res in 8595 ms, conn in 8662ms
+    #0 audio PCMU @8kHz, sendrecv, peer=-
+       SRTP status: Not active Crypto-suite: 
+       RX pt=0, last update:00h:00m:10.572s ago
+          total 43pkt 6.8KB (8.6KB +IP hdr) @avg=5.0Kbps/6.2Kbps
+          pkt loss=0 (0.0%), discrd=1 (2.3%), dup=0 (0.0%), reord=1 (2.3%)
+                (msec)    min     avg     max     last    dev
+          loss period:   0.000   0.000   0.000   0.000   0.000
+          jitter     :  -0.001   0.000   0.000   0.000   0.000
+       TX pt=0, ptime=20, last update:00h:00m:00.011s ago
+          total 0pkt 0B (0B +IP hdr) @avg=0bps/0bps
+          pkt loss=0 (0.0%), dup=0 (0.0%), reorder=0 (0.0%)
+                (msec)    min     avg     max     last    dev 
+          loss period:   0.000   0.000   0.000   0.000   0.000
+          jitter     :   0.000   0.000   0.000   0.000   0.000
+       RTT msec      :   0.000   0.000   0.000   0.000   0.000
+00:00:43.015  pjsua_media.c  .....Call 0: deinitializing media..
+free: ptr=0x8235ae98
+free: ptr=0x8235b680
+free: ptr=0x82355020
+free: ptr=0x823563c0
+free: ptr=0x82356ba8
+free: ptr=0x8235aa80
+00:00:43.020  pjsua_media.c  .......Media stream call00:0 is destroyed
+free: ptr=0x82340020
+free: ptr=0x82345df0
+free: ptr=0x82346020
+free: ptr=0x82342838
+free: ptr=0x823449c8
+free: ptr=0x8235ea50
+free: ptr=0x8235ec68
+free: ptr=0x8235ef80
+free: ptr=0x8235f198
+free: ptr=0x8235f2b0
+free: ptr=0x8235f5c8
+free: ptr=0x8235f7e0
+free: ptr=0x8235faf8
+free: ptr=0x8235fd10
+free: ptr=0x82360028
+free: ptr=0x82360140
+free: ptr=0x82360358
+free: ptr=0x82360670
+free: ptr=0x82360788
+free: ptr=0x82360aa0
+free: ptr=0x823448b0
+free: ptr=0x8234a020
+malloc: sz=8000, ptr=0x8235ea50
+00:00:44.018    pjsua_aud.c  Closing sound device after idle for 1 second(s)
+00:00:44.018    pjsua_app.c  .Turning sound device OFF
+Pa_GetStreamInfo: stream=0x00000ff0 info=0x8122c2b8
+Pa_GetStreamInfo: stream=0x00000ff0 info=0x8122c2b8
+Pa_GetDeviceInfo: index=0 info=0x81209980
+Pa_GetDeviceInfo: index=0 info=0x81209980
+00:00:44.022    pjsua_aud.c  .Closing portaudio_stub sound playback device and portaudio_stub sound capture device
+>>>>
+Pa_StopStream: stream=0x00000ff0
+Pa_CloseStream: stream=0x00000ff0
+free: ptr=0x8234d438
+free: ptr=0x8234d850
+free: ptr=0x8234d020
+free: ptr=0x8234dd80
+free: ptr=0x8234e098
+free: ptr=0x8234e1b0
+free: ptr=0x8234e2c8
+free: ptr=0x8234e3e0
+free: ptr=0x8234f020
+free: ptr=0x82350738
+free: ptr=0x82351750
+free: ptr=0x8234e6f8
+free: ptr=0x8234dc68
+free: ptr=0x8234bf78
+Account list:
+  [ 0] <sip:10.0.2.16:5060>: does not register
+       Online status: Online
+  [ 1] <sip:10.0.2.16:5060;transport=TCP>: does not register
+       Online status: Online
+ *[ 2] sip:1002: 200/OK (expires=248)
+       Online status: Online
+Buddy list:
+ -none-
+
++=============================================================================+
+|       Call Commands:         |   Buddy, IM & Presence:  |     Account:      |
+|                              |                          |                   |
+|  m  Make new call            | +b  Add new buddy       .| +a  Add new accnt |
+|  M  Make multiple calls      | -b  Delete buddy         | -a  Delete accnt. |
+|  a  Answer call              |  i  Send IM              | !a  Modify accnt. |
+|  h  Hangup call  (ha=all)    |  s  Subscribe presence   | rr  (Re-)register |
+|  H  Hold call                |  u  Unsubscribe presence | ru  Unregister    |
+|  v  re-inVite (release hold) |  t  ToGgle Online status |  >  Cycle next ac.|
+|  U  send UPDATE              |  T  Set online status    |  <  Cycle prev ac.|
+| ],[ Select next/prev call    +--------------------------+-------------------+
+|  x  Xfer call                |      Media Commands:     |  Status & Config: |
+|  X  Xfer with Replaces       |                          |                   |
+|  #  Send RFC 2833 DTMF       | cl  List ports           |  d  Dump status   |
+|  *  Send DTMF with INFO      | cc  Connect port         | dd  Dump detailed |
+| dq  Dump curr. call quality  | cd  Disconnect port      | dc  Dump config   |
+|                              |  V  Adjust audio Volume  |  f  Save config   |
+|  S  Send arbitrary REQUEST   | Cp  Codec priorities     |                   |
++-----------------------------------------------------------------------------+
+|  q  QUIT   L  ReLoad   sleep MSmalloc: sz=4096, ptr=0x8235a020
+   echo [0|1|txt]     n: detect NAT type     |
++=============================================================================+
+You hfree: ptr=0x8235a020
+ave 0 active call
+>>> free: ptr=0x82344268
+free: ptr=0x82344480
+free: ptr=0x82344698
+free: ptr=0x82344ae0
+free: ptr=0x82345390
+free: ptr=0x82346fd8
+free: ptr=0x823471f0
+free: ptr=0x82357390
+free: ptr=0x823575a8
+free: ptr=0x823579c0
+free: ptr=0x82357bd8
+free: ptr=0x82353db0
+free: ptr=0x8235ba80
+free: ptr=0x82352db0
+free: ptr=0x8235bc98
+free: ptr=0x823531c8
+free: ptr=0x823533e0
+free: ptr=0x82343020
+free: ptr=0x82358020
+free: ptr=0x8235c020
+free: ptr=0x8235e020
+free: ptr=0x8235e838
+free: ptr=0x8232d500
+free: ptr=0x82328680
+free: ptr=0x8233b020
+free: ptr=0x82331eb8
+00:00:48.719   pjsua_core.c !Shutting down, flags=0...
+00:00:48.719   pjsua_core.c  PJSUA state changed: RUNNING --> CLOSING
+00:00:48.728   pjsua_call.c  .Hangup all calls..
+00:00:48.729  pjsua_media.c  .Call 0: deinitializing media..
+00:00:48.729   pjsua_pres.c  .Shutting down presence..
+00:00:48.730    pjsua_acc.c  .Acc 2: setting unregistration..
+malloc: sz=4096, ptr=0x8235c020
+malloc: sz=2048, ptr=0x8235e020
+malloc: sz=512, ptr=0x8235e838
+malloc: sz=8000, ptr=0x8235a020
+00:00:48.734   pjsua_core.c  ...TX 384 bytes Request msg REGISTER/cseq=29277 (tdta0x8235c020) to UDP 10.0.2.10:5060:
+REGISTER sip:10.0.2.10 SIP/2.0g
+Via: SIP/2.0/UDP 10.0.2.16:5060;rport;branch=z9hG4bKPjtqA3Mpr2MiH36g53aDi2lmP5A2U4dZU4g
+Max-Forwards: 70g
+From: <sip:1002>;tag=A803iMf1WNU2QuY28.S10Vp5bX-0O-Q0g
+To: <sip:1002>g
+Call-ID: Mhg0xJl4VG24ofq1BQP3SL91TPN2Wli4g
+CSeq: 29277 REGISTERg
+User-Agent: PJSUA v2.2.1 Embox-0.3.3/armg
+Contact: <sip:10.0.2.16:5060;ob>g
+Expires: 0g
+Content-Length:  0g
+g
+
+--end msg--
+00:00:48.740    pjsua_acc.c  ..Acc 2: Unregistration sent
+00:00:48.741   pjsua_core.c  ..RX 535 bytes Response msg 401/REGISTER/cseq=29277 (rdata0x8235ea64) from UDP 10.0.2.10:5060:
+SIP/2.0 401 Unauthorizedg
+Via: SIP/2.0/UDP 10.0.2.16:5060;branch=z9hG4bKPjtqA3Mpr2MiH36g53aDi2lmP5A2U4dZU4;received=10.0.2.16;rport=5060g
+From: <sip:1002>;tag=A803iMf1WNU2QuY28.S10Vp5bX-0O-Q0g
+To: <sip:1002>;tag=as283c49b0g
+Call-ID: Mhg0xJl4VG24ofq1BQP3SL91TPN2Wli4g
+CSeq: 29277 REGISTERg
+Server: Asterisk PBX 13.3.1g
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO, PUBLISH, MESSAGEg
+Supported: replaces, timerg
+WWW-Authenticate: Digest algorithm=MD5, realm="asterisk", nonce="46bfa5fa"g
+Content-Length: 0g
+g
+
+--end msg--
+malloc: sz=2048, ptr=0x8235d038
+malloc: sz=512, ptr=0x823609a8
+00:00:48.749   pjsua_core.c  .....TX 540 bytes Request msg REGISTER/cseq=29278 (tdta0x8235c020) to UDP 10.0.2.10:5060:
+REGISTER sip:10.0.2.10 SIP/2.0g
+Via: SIP/2.0/UDP 10.0.2.16:5060;rport;branch=z9hG4bKPjLLz4aVr3.3p2NwH14vj5Ubm1wkB57Me0g
+Max-Forwards: 70g
+From: <sip:1002>;tag=A803iMf1WNU2QuY28.S10Vp5bX-0O-Q0g
+To: <sip:1002>g
+Call-ID: Mhg0xJl4VG24ofq1BQP3SL91TPN2Wli4g
+CSeq: 29278 REGISTERg
+User-Agent: PJSUA v2.2.1 Embox-0.3.3/armg
+Contact: <sip:10.0.2.16:5060;ob>g
+Expires: 0g
+Authorization: Digest username="1002", realm="asterisk", nonce="46bfa5fa", uri="sip:10.0.2.10", response="d6151d68a4c872f108dd7173a04ebb16", algorithm=MD5g
+Content-Length:  0g
+g
+
+--end msg--
+free: ptr=0x8235ea50
+malloc: sz=8000, ptr=0x8235ea50
+00:00:48.758   pjsua_core.c  ..RX 498 bytes Response msg 200/REGISTER/cseq=29278 (rdata0x8235ea64) from UDP 10.0.2.10:5060:
+SIP/2.0 200 OKg
+Via: SIP/2.0/UDP 10.0.2.16:5060;branch=z9hG4bKPjLLz4aVr3.3p2NwH14vj5Ubm1wkB57Me0;received=10.0.2.16;rport=5060g
+From: <sip:1002>;tag=A803iMf1WNU2QuY28.S10Vp5bX-0O-Q0g
+To: <sip:1002>;tag=as283c49b0g
+Call-ID: Mhg0xJl4VG24ofq1BQP3SL91TPN2Wli4g
+CSeq: 29278 REGISTERg
+Server: Asterisk PBX 13.3.1g
+Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO, PUBLISH, MESSAGEg
+Supported: replaces, timerg
+Expires: 0g
+Date: Wed, 22 Apr 2015 22:07:41 GMTg
+Content-Length: 0g
+g
+
+--end msg--
+00:00:48.765    pjsua_acc.c  .....sip:1002: unregistration success
+free: ptr=0x82328a80
+free: ptr=0x82344f78
+free: ptr=0x8233f9f0
+free: ptr=0x8235ea50
+malloc: sz=8000, ptr=0x8235ea50
+00:00:49.748   pjsua_core.c  .Destroying...
+00:00:49.748  pjsua_media.c  .Shutting down media..
+free: ptr=0x82336020
+free: ptr=0x82335bb0
+00:00:50.007       pa_dev.c  ..PortAudio sound library shutting down..
+Pa_Terminate: 
+free: ptr=0x82335a98
+free: ptr=0x8233a840
+free: ptr=0x8233a820
+free: ptr=0x8233a810
+free: ptr=0x8233a870
+free: ptr=0x8233a860
+free: ptr=0x8233a890
+free: ptr=0x8233a880
+free: ptr=0x8233a850
+free: ptr=0x8233a830
+free: ptr=0x8233a800
+free: ptr=0x8233a7f0
+free: ptr=0x8233a7e0
+free: ptr=0x8233a7d0
+free: ptr=0x8233a7c0
+free: ptr=0x82335080
+free: ptr=0x82332900
+free: ptr=0x82335cc8
+free: ptr=0x82332d18
+free: ptr=0x8232ceb8
+free: ptr=0x8232d0d0
+free: ptr=0x82334e68
+00:00:50.010 sip_transactio  .Stopping transaction layer module
+free: ptr=0x8235e020
+free: ptr=0x8235e838
+free: ptr=0x8235a020
+free: ptr=0x8235c020
+free: ptr=0x8235d038
+free: ptr=0x823609a8
+00:00:50.014 sip_transactio  .Stopped transaction layer module
+00:00:50.014 sip_endpoint.c  .Module "mod-default-handler" unregistered
+00:00:50.015 sip_endpoint.c  .Module "mod-unsolicited-mwi" unregistered
+00:00:50.015 sip_endpoint.c  .Module "mod-pjsua-options" unregistered
+00:00:50.016 sip_endpoint.c  .Module "mod-pjsua-im" unregistered
+00:00:50.016 sip_endpoint.c  .Module "mod-pjsua-pres" unregistered
+00:00:50.017 sip_endpoint.c  .Module "mod-pjsua" unregistered
+00:00:50.018 sip_endpoint.c  .Module "mod-stateful-util" unregistered
+00:00:50.018 sip_endpoint.c  .Module "mod-refer" unregistered
+00:00:50.018 sip_endpoint.c  .Module "mod-mwi" unregistered
+00:00:50.019 sip_endpoint.c  .Module "mod-presence" unregistered
+free: ptr=0x8233aab8
+free: ptr=0x8233acd0
+free: ptr=0x8232d2e8
+free: ptr=0x8233a8a0
+00:00:50.020 sip_endpoint.c  .Module "mod-evsub" unregistered
+00:00:50.021 sip_endpoint.c  .Module "mod-invite" unregistered
+00:00:50.021 sip_endpoint.c  .Module "mod-100rel" unregistered
+free: ptr=0x82334450
+free: ptr=0x82334238
+00:00:50.022 sip_endpoint.c  .Module "mod-ua" unregistered
+free: ptr=0x82333020
+free: ptr=0x823326e8
+00:00:50.023 sip_transactio  .Transaction layer module destroyed
+00:00:50.023 sip_endpoint.c  .Module "mod-tsx-layer" unregistered
+00:00:50.024 sip_endpoint.c  .Module "mod-msg-print" unregistered
+00:00:50.024 sip_endpoint.c  .Module "mod-pjsua-log" unregistered
+free: ptr=0x8235ea50
+free: ptr=0x8233bc38
+free: ptr=0x8233ba20
+free: ptr=0x8233b808
+00:00:50.028    tcplis:5060  .SIP TCP listener destroyed
+free: ptr=0x8233f3a8
+free: ptr=0x8233f190
+free: ptr=0x82329020
+free: ptr=0x8232e020
+free: ptr=0x82327668
+00:00:50.030 sip_endpoint.c  .Endpoint 0x823276cc destroyed
+free: ptr=0x8233ef78
+free: ptr=0x8233f5c0
+free: ptr=0x8233fe08
+free: ptr=0x8233f7d8
+free: ptr=0x82337038
+free: ptr=0x82337820
+free: ptr=0x82339020
+free: ptr=0x82339fd8
+free: ptr=0x82327250
+00:00:50.033   pjsua_core.c  .PJSUA state changed: CLOSING --> NULL
+00:00:50.034   pjsua_core.c  .PJSUA destroyed...
+
+Welcome to Embox and have a lot g
+[31m[1membox>[0m
