@@ -21,6 +21,7 @@ module icmpv4 {
 	depends embox.net.lib.icmpv4
 	depends embox.net.lib.ipv4
 	depends embox.net.skbuff
+	depends third_party.gcc.core
 }
 
 module icmpv6 {
