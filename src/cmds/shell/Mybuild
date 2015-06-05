@@ -5,11 +5,14 @@ module shell {
 	source "shell.c"
 }
 
-module tish extends embox.cmd.shell_api {
-	option number rich_prompt_support = 0
-
+abstract module shell_api {
 	option string prompt = "embox> "
 	option string welcome_msg = "Welcome to Embox and have a lot of fun!"
+}
+
+module tish extends shell_api {
+	option number rich_prompt_support = 0
+
 	option string builtin_commands = "cd export exit logout"
 
 	source "tish.c"
