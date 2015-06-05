@@ -5,7 +5,7 @@ module shell {
 	source "shell.c"
 }
 
-module tish embox.cmd.shell_api {
+module tish extends embox.cmd.shell_api {
 	option number rich_prompt_support = 0
 
 	option string prompt = "embox> "
