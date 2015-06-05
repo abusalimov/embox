@@ -1,16 +1,12 @@
 package embox.cmd
 
-interface Shell {
-	feature commandLine
-}
+abstract module shell_api {}
 
-module shell {
+module shell extends shell_api {
 	option number prompt_len = 80
 	option number history_size = 8
 	option string prompt = "embox> "
 	option string welcome_msg = "Welcome to Embox and have a lot of fun!"
-
-	provides Shell.commandLine
 
 	@IncludePath("$(CONF_DIR)")
 	source "shell.c", "console/console.c",
