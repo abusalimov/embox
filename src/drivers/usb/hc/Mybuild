@@ -1,5 +1,5 @@
 
-package embox.driver.usb.hc
+package embox.drivers.usb.hc
 
 module ohci_pci {
 	source "ohci_pci.c"

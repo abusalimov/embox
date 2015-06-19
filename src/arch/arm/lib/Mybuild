@@ -1,5 +1,5 @@
 /*FIXME mybuild libarch is bad packet */
-package embox.arch.arm
+package embox.arch.arm.lib
 
 static module libarch extends embox.arch.libarch {
 	source "setjmp.S"

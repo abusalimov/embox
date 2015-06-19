@@ -1,4 +1,4 @@
-package embox.kernel.task.resource
+package embox.kernel.task.resource.task_heap
 
 module task_heap {
 	@IncludeExport(path="kernel/task/resource")

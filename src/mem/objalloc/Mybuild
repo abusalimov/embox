@@ -1,4 +1,4 @@
-package embox.mem
+package embox.mem.objalloc
 
 @DefaultImpl(pool_adapter)
 abstract module objalloc { }

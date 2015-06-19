@@ -1,4 +1,4 @@
-package stm32f4_iocontrol
+package platform.stm32f4_iocontrol.cmds
 
 @AutoCmd
 @Build(script="true")

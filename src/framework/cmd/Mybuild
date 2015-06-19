@@ -1,4 +1,4 @@
-package embox.framework
+package embox.framework.cmd
 
 module cmd {
 	/*FIXME mybuild make flags options */

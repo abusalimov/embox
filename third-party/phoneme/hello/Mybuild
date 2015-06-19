@@ -1,4 +1,4 @@
-package third_party.phoneme
+package third_party.phoneme.hello
 
 //for running "cldc_vm -cp hello.jar embox.Hello"
 @Build(stage=1,script="$(EXTERNAL_MAKE) build")

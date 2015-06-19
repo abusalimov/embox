@@ -1,4 +1,4 @@
-package embox.test.kernel
+package embox.tests.kernel
 
 @TestFor(embox.kernel.irq)
 module irq_test {

@@ -1,4 +1,4 @@
-package embox.arch.x86.kernel
+package embox.arch.x86.kernel.syscall
 
 module syscall extends embox.arch.syscall {
 	source "syscall_entry.S"

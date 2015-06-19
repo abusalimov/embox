@@ -1,5 +1,5 @@
 
-package embox.cmd.user
+package embox.cmds.user
 
 @AutoCmd
 @Cmd(name = "login",

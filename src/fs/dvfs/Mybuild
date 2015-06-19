@@ -1,4 +1,4 @@
-package embox.fs
+package embox.fs.dvfs
 
 module dvfs extends embox.fs.fs_api {
 	@IncludeExport(path="fs")

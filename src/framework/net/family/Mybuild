@@ -1,4 +1,4 @@
-package embox.framework.net
+package embox.framework.net.family
 
 module family {
 	source "core.c"

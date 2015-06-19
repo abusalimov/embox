@@ -1,4 +1,4 @@
-package third_party.qt.example
+package third_party.qt.examples
 
 @Build(script="TARGET=$(EXTERNAL_BUILD_DIR)/third_party/qt/core/qt-everywhere-opensource-src-4.8.5/examples/animation/moveblocks; $(EXTERNAL_MAKE_PRO)")
 @BuildDepends(third_party.qt.core)

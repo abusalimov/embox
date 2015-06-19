@@ -1,4 +1,4 @@
-package third_party.phoneme
+package third_party.phoneme.javacall
 
 @Build(stage=1,script="$(EXTERNAL_MAKE) configure build install")
 @BuildArtifactPath(cppflags="-I$(abspath $(EXTERNAL_BUILD_DIR))/third_party/phoneme/javacall/install/include")

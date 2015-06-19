@@ -1,4 +1,4 @@
-package embox.arch.x86
+package embox.arch.x86.mmu
 
 module mmu extends embox.arch.mmu {
 	source "mmu.c", "mmu.h"

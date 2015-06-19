@@ -1,4 +1,4 @@
-package embox.test.net
+package embox.tests.net
 
 module socket_test {
 	source "socket_test.c"

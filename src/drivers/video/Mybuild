@@ -1,5 +1,5 @@
 /*FIXME mybuild wrong packet name */
-package embox.driver.video
+package embox.drivers.video
 
 module fb {
 	source "fb.c"

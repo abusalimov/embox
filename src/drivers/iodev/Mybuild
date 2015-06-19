@@ -1,4 +1,4 @@
-package embox.driver.iodev
+package embox.drivers.iodev
 
 module iodev_video {
 	source "iodev_video.c"

@@ -1,4 +1,4 @@
-package embox.net
+package embox.net.l3
 
 module arp {
 	source "arp.c"

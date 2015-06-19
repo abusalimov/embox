@@ -1,4 +1,4 @@
-package lego_nxt.cmd
+package platform.lego_nxt.cmds.snake
 
 module nxt_snake {
 	source "snake.c"

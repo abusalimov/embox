@@ -1,4 +1,4 @@
-package embox.cmd
+package embox.cmds.hardware
 
 @AutoCmd
 @Cmd(name = "lspnp",

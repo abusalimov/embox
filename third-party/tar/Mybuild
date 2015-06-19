@@ -1,4 +1,4 @@
-package third_party.gnu
+package third_party.tar
 
 @Build(stage=2,script="$(EXTERNAL_MAKE)")
 @App

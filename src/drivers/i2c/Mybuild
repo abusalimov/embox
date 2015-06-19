@@ -1,5 +1,5 @@
 
-package embox.driver
+package embox.drivers.i2c
 
 module at91_twi {
 	source "at91_twi.c"

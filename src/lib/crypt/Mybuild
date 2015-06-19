@@ -1,4 +1,4 @@
-package embox.lib
+package embox.lib.crypt
 
 static module LibCrypt {
 	source "crc32.c"

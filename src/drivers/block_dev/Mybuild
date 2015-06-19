@@ -1,4 +1,4 @@
-package embox.driver
+package embox.drivers.block_dev
 
 module block_common {
 	option number dev_quantity = 16

@@ -1,4 +1,4 @@
-package third_party.tcl
+package third_party.tcl.tclsh
 
 @Build(stage=1,script="$(EXTERNAL_MAKE) BUILD_DIR=$(abspath $(EXTERNAL_BUILD_DIR))/third_party/tcl/core download extract patch")
 static module tclsh_export_scripts {

@@ -1,4 +1,4 @@
-package lego_nxt.driver
+package platform.lego_nxt.drivers.lcd
 
 module nxt_lcd {
     @IncludePath("$(PLATFORM_DIR)/lego_nxt/include")

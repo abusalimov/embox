@@ -1,4 +1,4 @@
-package embox.fs.driver
+package embox.fs.driver.initfs
 
 @DefaultImpl(initfs_old)
 abstract module initfs {

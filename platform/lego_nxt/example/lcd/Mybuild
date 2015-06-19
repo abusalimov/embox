@@ -1,5 +1,5 @@
 
-package lego_nxt.example
+package platform.lego_nxt.example.lcd
 
 
 module nxt_lcd_picture {

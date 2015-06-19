@@ -1,4 +1,4 @@
-package embox.driver.audio
+package embox.drivers.audio
 
 abstract module portaudio { }
 

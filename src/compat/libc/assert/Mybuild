@@ -1,4 +1,4 @@
-package embox.compat.libc
+package embox.compat.libc.assert
 
 static module assert {
 	source "assert.c"

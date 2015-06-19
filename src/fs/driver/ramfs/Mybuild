@@ -1,4 +1,4 @@
-package embox.fs.driver
+package embox.fs.driver.ramfs
 
 module ramfs {
 	@IncludeExport(path="fs")

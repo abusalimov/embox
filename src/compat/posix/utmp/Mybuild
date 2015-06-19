@@ -1,5 +1,5 @@
 
-package embox.compat.posix
+package embox.compat.posix.utmp
 
 @DefaultImpl(no_utmp)
 abstract module utmp_api { }

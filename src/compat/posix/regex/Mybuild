@@ -1,4 +1,4 @@
-package embox.compat.posix
+package embox.compat.posix.regex
 
 @DefaultImpl(regex_trex)
 abstract module regex {}

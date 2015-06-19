@@ -1,5 +1,5 @@
 
-package lego_nxt.driver
+package platform.lego_nxt.drivers.motor
 
 module nxt_motor {
     @IncludePath("$(PLATFORM_DIR)/lego_nxt/include")

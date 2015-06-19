@@ -1,4 +1,4 @@
-package embox.driver
+package embox.drivers.pci
 
 module pci {
 	option number dev_quantity = 32

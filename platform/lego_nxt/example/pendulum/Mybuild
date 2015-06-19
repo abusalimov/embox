@@ -1,4 +1,4 @@
-package lego_nxt.example.pendulum
+package platform.lego_nxt.example.pendulum
 
 module without_sensors {
 	source "without_sensors.c"

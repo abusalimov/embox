@@ -1,4 +1,4 @@
-package third_party.lib
+package third_party.lib.acpica
 
 @Build(stage=1,script="$(EXTERNAL_MAKE) download extract patch")
 

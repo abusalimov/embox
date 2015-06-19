@@ -1,4 +1,4 @@
-package embox.lib.cxx
+package embox.compat.cxx.core
 
 @DefaultImpl(standalone)
 abstract module lib {

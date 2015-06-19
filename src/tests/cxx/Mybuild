@@ -1,4 +1,4 @@
-package embox.test.cxx
+package embox.tests.cxx
 
 module memory {
 	source "memory.cpp"

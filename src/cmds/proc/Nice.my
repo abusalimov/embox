@@ -1,4 +1,4 @@
-package embox.cmd.proc
+package embox.cmds.proc
 
 @AutoCmd
 @Cmd(name = "nice",

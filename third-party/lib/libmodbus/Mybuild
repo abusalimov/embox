@@ -1,4 +1,4 @@
-package third_party.lib
+package third_party.lib.libmodbus
 
 @Build(script="$(EXTERNAL_MAKE)")
 @BuildArtifactPath(cppflags="-I$(ROOT_DIR)/third-party/lib/libmodbus/include")

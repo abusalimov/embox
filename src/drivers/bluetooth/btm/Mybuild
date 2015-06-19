@@ -1,4 +1,4 @@
-package embox.driver.bluetooth.btm
+package embox.drivers.bluetooth.btm
 
 module usart {
 	@Type("pin") @Unique

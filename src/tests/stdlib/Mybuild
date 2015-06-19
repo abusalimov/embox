@@ -1,4 +1,4 @@
-package embox.test.stdlib
+package embox.tests.stdlib
 
 module strtod_test {
 	source "strtod_test.c"

@@ -1,4 +1,4 @@
-package embox.driver.input.mouse
+package embox.drivers.input.mouse
 
 module PsMouse {
 	source "ps_mouse.c"

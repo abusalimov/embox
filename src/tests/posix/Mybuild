@@ -1,5 +1,5 @@
 
-package embox.test.posix
+package embox.tests.posix
 
 module all {
 	depends environ_test

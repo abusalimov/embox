@@ -1,4 +1,4 @@
-package embox.driver.serial
+package embox.drivers.serial
 
 /* FIXME:
  * Unused files: skyeye_uart.c

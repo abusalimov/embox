@@ -1,4 +1,4 @@
-package embox.driver
+package embox.drivers.block_dev.flash
 
 module flash_lib {
 	@IncludeExport(path="drivers/block_dev/flash")

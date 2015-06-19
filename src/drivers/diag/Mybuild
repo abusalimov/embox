@@ -1,4 +1,4 @@
-package embox.driver.diag
+package embox.drivers.diag
 
 module diag_api {}
 

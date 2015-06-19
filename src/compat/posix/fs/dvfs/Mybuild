@@ -1,4 +1,4 @@
-package embox.compat.posix.fs
+package embox.compat.posix.fs.dvfs
 
 module all_dvfs extends embox.compat.posix.fs.all {
 	depends file_dvfs,

@@ -1,4 +1,4 @@
-package embox.driver.input
+package embox.drivers.input
 
 module core {
 	option number hnd_priority = 200

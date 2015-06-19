@@ -1,5 +1,5 @@
 
-package embox.driver.lcd
+package embox.drivers.lcd
 
 module hd44780 {
 	option string control_port

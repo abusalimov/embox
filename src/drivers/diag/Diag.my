@@ -1,4 +1,4 @@
-package embox.driver
+package embox.drivers.diag
 
 module diag {
 	option string impl

@@ -1,4 +1,4 @@
-package embox.test.posix.fork
+package embox.tests.posix
 
 @App
 @Cmd(name="test_fork_static",

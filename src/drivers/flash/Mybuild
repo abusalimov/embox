@@ -1,4 +1,4 @@
-package embox.driver
+package embox.drivers.flash
 
 module flash_emu {
 	source "flash_emu.c"

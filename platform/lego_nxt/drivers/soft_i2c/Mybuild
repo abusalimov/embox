@@ -1,5 +1,5 @@
 
-package lego_nxt.driver
+package platform.lego_nxt.drivers.soft_i2c
 
 module soft_i2c {
 

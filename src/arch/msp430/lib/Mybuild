@@ -1,5 +1,5 @@
 
-package embox.arch.msp430
+package embox.arch.msp430.lib
 
 static module libarch extends embox.arch.libarch {
 	source "setjmp.S"

@@ -1,4 +1,4 @@
-package embox.test.kernel.thread
+package embox.tests.kernel.thread
 
 module thread_test {
 	source "thread_test.c"

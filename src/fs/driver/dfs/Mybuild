@@ -1,4 +1,4 @@
-package embox.fs.driver
+package embox.fs.driver.dfs
 
 module dfs {
 	@IncludeExport(path="fs")

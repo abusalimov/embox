@@ -1,5 +1,5 @@
 /*FIXME mybuild libarch is bad packet */
-package embox.arch.sparc
+package embox.arch.sparc.lib
 
 static module libarch extends embox.arch.libarch {
 	source "setjmp.S"

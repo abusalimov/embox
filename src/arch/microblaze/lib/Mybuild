@@ -1,4 +1,4 @@
-package embox.arch.microblaze
+package embox.arch.microblaze.lib
 
 static module libarch extends embox.arch.libarch {
 	source "setjmp.S"

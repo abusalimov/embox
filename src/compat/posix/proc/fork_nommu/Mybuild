@@ -1,4 +1,4 @@
-package embox.compat.posix.proc
+package embox.compat.posix.proc.fork_nommu
 
 module fork_copy_everything extends embox.compat.posix.proc.fork {
 	source "fork.c"

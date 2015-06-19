@@ -1,4 +1,4 @@
-package embox.fs.driver
+package embox.fs.driver.tmpfs
 
 module tmpfs {
 	@IncludeExport(path="fs")

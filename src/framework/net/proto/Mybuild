@@ -1,4 +1,4 @@
-package embox.framework.net
+package embox.framework.net.proto
 
 module proto {
 	source "core.c"

@@ -1,4 +1,4 @@
-package embox.driver.sd
+package embox.drivers.block_dev.stm32_sd
 
 abstract module sd { }
 

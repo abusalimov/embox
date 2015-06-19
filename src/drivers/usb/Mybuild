@@ -1,5 +1,5 @@
 
-package embox.driver.usb
+package embox.drivers.usb
 
 module core {
 	source "usb_core.c"

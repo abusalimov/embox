@@ -1,4 +1,4 @@
-package embox.driver.net
+package embox.drivers.net
 
 module loopback {
 	source "loopback.c"

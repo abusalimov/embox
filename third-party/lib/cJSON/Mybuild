@@ -1,4 +1,4 @@
-package third_party.lib
+package third_party.lib.cJSON
 
 @Build(stage=1,script="$(EXTERNAL_MAKE) download extract patch")
 @BuildArtifactPath(cppflags="-I$(abspath $(EXTERNAL_BUILD_DIR))/third_party/lib/cjson/cJSON")

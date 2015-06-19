@@ -1,4 +1,4 @@
-package embox.mem
+package embox.mem.vmem
 
 @DefaultImpl(vmem_nommu)
 abstract module vmem_api {

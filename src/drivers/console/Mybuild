@@ -1,4 +1,4 @@
-package embox.driver.console
+package embox.drivers.console
 
 abstract module mpx {
 }

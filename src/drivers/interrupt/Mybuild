@@ -1,5 +1,5 @@
 /*FIXME mybuild wrong packet name */
-package embox.driver.interrupt
+package embox.drivers.interrupt
 
 abstract module irqctrl_api { }
 

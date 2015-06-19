@@ -1,4 +1,4 @@
-package third_party.external_build
+package third_party.external_build.app
 
 @Cmd(name = "app",
 	help = "start demo application depends on a library",

@@ -1,4 +1,4 @@
-package embox.compat.posix.proc
+package embox.compat.posix.proc.vfork_stop_parent
 
 static module exec_stop_parent extends embox.compat.posix.proc.exec_lib {
 	source "exec_stop_parent.c"

@@ -1,5 +1,5 @@
 
-package lego_nxt.driver
+package platform.lego_nxt.drivers.avr_init
 
 module nxt_avr_init {
     @IncludePath("$(PLATFORM_DIR)/lego_nxt/include")

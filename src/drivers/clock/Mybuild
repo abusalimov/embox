@@ -1,4 +1,4 @@
-package embox.driver.clock
+package embox.drivers.clock
 
 module at91_pitc extends embox.arch.clock {
 	source "at91_pitc.c"

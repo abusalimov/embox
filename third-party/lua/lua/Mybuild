@@ -1,4 +1,4 @@
-package third_party.cmd
+package third_party.lua.lua
 
 @App
 @AutoCmd(preserve_locals=true)

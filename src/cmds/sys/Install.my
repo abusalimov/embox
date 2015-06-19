@@ -1,4 +1,4 @@
-package embox.cmd.sys
+package embox.cmds.sys
 
 @AutoCmd
 @Cmd(name="install",

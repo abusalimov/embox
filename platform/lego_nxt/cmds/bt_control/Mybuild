@@ -1,5 +1,5 @@
 
-package lego_nxt.cmd
+package platform.lego_nxt.cmds.bt_control
 
 module bt_control {
     @IncludePath("$(PLATFORM_DIR)/lego_nxt/include")

@@ -1,4 +1,4 @@
-package embox.fs.driver
+package embox.fs.driver.ext4
 
 module ext4 {
 	@IncludeExport(path="fs")

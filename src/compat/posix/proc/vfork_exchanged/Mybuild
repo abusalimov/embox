@@ -1,4 +1,4 @@
-package embox.compat.posix.proc
+package embox.compat.posix.proc.vfork_exchanged
 
 static module exec_exchanged extends embox.compat.posix.proc.exec_lib {
 	source "exec_exchanged.c"

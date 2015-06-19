@@ -1,4 +1,4 @@
-package third_party.lib
+package third_party.lua.lib.luasocket
 
 @Build(script="$(EXTERNAL_MAKE)")
 @BuildDepends(third_party.lua.lua.lua)

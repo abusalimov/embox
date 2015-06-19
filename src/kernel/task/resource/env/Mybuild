@@ -1,4 +1,4 @@
-package embox.kernel.task.resource
+package embox.kernel.task.resource.env
 
 module env {
 	@IncludeExport(path="kernel/task/resource")

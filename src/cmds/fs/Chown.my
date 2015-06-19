@@ -1,5 +1,5 @@
 
-package embox.cmd
+package embox.cmds.fs
 
 @AutoCmd
 @Cmd(name = "chown",

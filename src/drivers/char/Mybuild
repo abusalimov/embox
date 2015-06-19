@@ -1,4 +1,4 @@
-package embox.driver
+package embox.drivers.char
 
 module terminal {
 	source "terminal.c"

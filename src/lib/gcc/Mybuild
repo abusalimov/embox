@@ -1,4 +1,4 @@
-package embox.lib
+package embox.lib.gcc
 
 @DefaultImpl(third_party.lib.libgcc.libgcc_toolchain)
 abstract module LibGcc {

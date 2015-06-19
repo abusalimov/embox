@@ -1,4 +1,4 @@
-package embox.util
+package embox.util.dlist
 
 
 @DefaultImpl(DListDebug)
