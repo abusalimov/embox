@@ -1,4 +1,4 @@
-package embox.kernel.task
+package embox.kernel.task.idesc
 
 module idesc {
 	source "idesc_table.c", "index_descriptor.c"

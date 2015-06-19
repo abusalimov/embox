@@ -1,4 +1,4 @@
-package embox.test.posix.fcntl
+package embox.tests.posix.fcntl
 
 module creat_test {
 	source "creat_test.c"

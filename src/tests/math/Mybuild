@@ -1,4 +1,4 @@
-package embox.test.math
+package embox.tests.math
 
 module math_test {
 	source "math_test.c"

@@ -1,4 +1,4 @@
-package embox.test.kernel.task
+package embox.tests.kernel.task
 
 @TestFor(embox.kernel.task.multi)
 module multitask_test {

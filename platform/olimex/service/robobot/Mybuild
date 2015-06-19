@@ -1,4 +1,4 @@
-package olimex.service
+package platform.olimex.service.robobot
 
 
 module robobot_bluetooth_car {

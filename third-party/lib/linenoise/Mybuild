@@ -1,4 +1,4 @@
-package third_party.lib
+package third_party.lib.linenoise
 
 module linenoise {
 	source "linenoise.c"

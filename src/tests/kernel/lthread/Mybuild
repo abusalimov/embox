@@ -1,4 +1,4 @@
-package embox.test.kernel.lthread
+package embox.tests.kernel.lthread
 
 module lthread_test {
 	option number lthreads_quantity=64

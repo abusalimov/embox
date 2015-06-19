@@ -1,4 +1,4 @@
-package embox.net.lib
+package embox.net.lib.rpc
 
 module rpc {
 	option number amount_clnt=4

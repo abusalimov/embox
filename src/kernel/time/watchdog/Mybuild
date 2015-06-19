@@ -1,4 +1,4 @@
-package embox.kernel.watchdog
+package embox.kernel.time.watchdog
 
 module watchdog_source {
 	source "watchdog.c"

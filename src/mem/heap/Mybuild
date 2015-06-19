@@ -1,4 +1,4 @@
-package embox.mem
+package embox.mem.heap
 
 @DefaultImpl(heap_bm)
 abstract module heap_api {

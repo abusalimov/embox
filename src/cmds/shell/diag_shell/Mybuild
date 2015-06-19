@@ -1,4 +1,4 @@
-package embox.cmd
+package embox.cmds.shell.diag_shell
 
 module shell extends embox.cmds.shell.shell_api {
 	option number prompt_len = 80

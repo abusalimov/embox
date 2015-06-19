@@ -1,5 +1,5 @@
 
-package embox.driver.ahci
+package embox.drivers.ahci
 
 module core {
 	source "ahci_core.c"

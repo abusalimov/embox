@@ -1,4 +1,4 @@
-package embox.kernel.timer.strategy
+package embox.kernel.time.timer.strategy
 
 @DefaultImpl(head_timer)
 abstract module api { }

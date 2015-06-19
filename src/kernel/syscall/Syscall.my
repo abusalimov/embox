@@ -1,4 +1,4 @@
-package embox.kernel
+package embox.kernel.syscall
 
 module syscall {
 	source "syscall.c"

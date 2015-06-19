@@ -1,4 +1,4 @@
-package embox.test.time
+package embox.tests.time
 
 module watchdog_trial {
 	source "watchdog_trial.c"

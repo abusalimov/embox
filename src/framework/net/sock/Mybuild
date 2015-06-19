@@ -1,4 +1,4 @@
-package embox.framework.net
+package embox.framework.net.sock
 
 module sock {
 	source "core.c"

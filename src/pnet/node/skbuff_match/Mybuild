@@ -1,4 +1,4 @@
-package embox.pnet.node.skbuff
+package embox.pnet.node.skbuff_match
 
 module matcher {
 	source "skbuff_match.c"

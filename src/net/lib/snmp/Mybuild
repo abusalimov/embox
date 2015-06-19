@@ -1,4 +1,4 @@
-package embox.net.lib
+package embox.net.lib.snmp
 
 module snmp {
 	source "snmp.c"

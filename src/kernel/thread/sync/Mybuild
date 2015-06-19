@@ -1,4 +1,4 @@
-package embox.kernel.thread
+package embox.kernel.thread.sync
 
 module sync {
 	depends mutex

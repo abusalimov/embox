@@ -1,5 +1,5 @@
 
-package lego_nxt.pnet.node.direct_comm
+package platform.lego_nxt.pnet.node.direct_comm
 
 module executer {
     @IncludePath("$(PLATFORM_DIR)/lego_nxt/include")

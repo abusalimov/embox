@@ -1,4 +1,4 @@
-package lego_nxt.example.sensor
+package platform.lego_nxt.example.sensors
 
 module touch {
 	source "touch.c"

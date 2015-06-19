@@ -1,4 +1,4 @@
-package embox.test.security
+package embox.tests.security
 
 module smac {
 	source "smac.c"

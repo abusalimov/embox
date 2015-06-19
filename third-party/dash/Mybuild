@@ -1,4 +1,4 @@
-package third_party
+package third_party.dash
 
 @Build(stage=2,script="$(EXTERNAL_MAKE)")
 @App

@@ -1,4 +1,4 @@
-package embox.lib
+package embox.lib.exec
 
 static module LibExec {
 	source "exec.c"

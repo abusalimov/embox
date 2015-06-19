@@ -1,4 +1,4 @@
-package embox.test.hal
+package embox.tests.hal.ipl
 
 module ipl_test {
 	source "ipl_test.c"

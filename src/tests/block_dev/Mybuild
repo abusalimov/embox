@@ -1,4 +1,4 @@
-package embox.test.block_dev
+package embox.tests.block_dev
 
 
 module ramdisk_test {

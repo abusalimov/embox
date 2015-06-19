@@ -1,4 +1,4 @@
-package embox.net
+package embox.net.l0
 
 @DefaultImpl(net_entry)
 abstract module entry_api {

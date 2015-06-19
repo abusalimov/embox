@@ -1,4 +1,4 @@
-package embox.test.third_party
+package embox.tests.third_party
 
 module trex_test {
 	@IncludePath("$(THIRDPARTY_DIR)/lib/trex")

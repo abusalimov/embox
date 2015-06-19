@@ -1,5 +1,5 @@
 
-package embox.cmd
+package embox.cmds.profiler
 
 @AutoCmd
 @Cmd(name = "coverage",

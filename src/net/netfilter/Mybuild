@@ -1,4 +1,4 @@
-package embox.net
+package embox.net.netfilter
 
 module netfilter {
 	source "netfilter.c"

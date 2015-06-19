@@ -1,4 +1,4 @@
-package embox.fs.driver
+package embox.fs.driver.devfs
 
 module devfs {
 	source "devfs.c"

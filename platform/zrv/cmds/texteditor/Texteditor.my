@@ -1,4 +1,4 @@
-package zrv.cmd
+package platform.zrv.cmds.texteditor
 
 @AutoCmd(preserve_locals = true)
 @Cmd(name = "texteditor",

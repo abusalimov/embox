@@ -1,4 +1,4 @@
-package embox.framework
+package embox.framework.service
 
 module service {
 	/* FIXME:

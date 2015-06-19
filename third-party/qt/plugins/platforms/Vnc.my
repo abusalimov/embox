@@ -1,4 +1,4 @@
-package third_party.qt.plugin.platform
+package third_party.qt.plugins.platforms
 
 @Build(stage=2,script="TARGET=$(EXTERNAL_BUILD_DIR)/third_party/qt/core/qt-everywhere-opensource-src-4.8.5/src/plugins/platforms/vnc; $(EXTERNAL_MAKE_PRO)")
 @BuildDepends(third_party.qt.core)

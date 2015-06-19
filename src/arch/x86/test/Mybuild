@@ -1,4 +1,4 @@
-package embox.arch.x86
+package embox.arch.x86.test
 
 module testtrap extends embox.arch.testtrap {
 	source "testtraps_core.c"

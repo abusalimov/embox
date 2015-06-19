@@ -1,4 +1,4 @@
-package embox.profiler
+package embox.profiler.tracing
 
 @DefaultImpl(no_tracing)
 abstract module trace {

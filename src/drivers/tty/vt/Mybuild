@@ -1,4 +1,4 @@
-package embox.driver.tty
+package embox.drivers.tty.vt
 
 module vterm {
 	source "video_term.c"

@@ -1,4 +1,4 @@
-package embox.example.vmem
+package embox.example.virt_mem
 
 module mmuprobe {
 	source "mmu_probe.c"

@@ -1,4 +1,4 @@
-package embox.test.util
+package embox.tests.util
 
 module array_test {
 	source "array_test.c"

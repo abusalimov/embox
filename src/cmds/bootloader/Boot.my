@@ -1,4 +1,4 @@
-package embox.cmd
+package embox.cmds.bootloader
 
 @AutoCmd
 @Cmd(name = "boot",

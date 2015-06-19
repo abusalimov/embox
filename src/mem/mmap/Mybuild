@@ -1,4 +1,4 @@
-package embox.mem
+package embox.mem.mmap
 
 @DefaultImpl(mmap_nommu)
 abstract module mmap_api {

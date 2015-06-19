@@ -1,4 +1,4 @@
-package embox.test.mem
+package embox.tests.mem
 
 module afterfree {
 	source "afterfree.c"

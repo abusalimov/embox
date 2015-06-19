@@ -1,4 +1,4 @@
-package embox.driver.gpmc
+package embox.drivers.gpmc
 
 abstract module gpmc_api { }
 

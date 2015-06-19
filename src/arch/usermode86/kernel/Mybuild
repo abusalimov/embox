@@ -1,5 +1,5 @@
 
-package embox.arch.usermode86
+package embox.arch.usermode86.kernel
 
 /*
 module host {

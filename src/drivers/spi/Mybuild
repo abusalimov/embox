@@ -1,5 +1,5 @@
 
-package embox.driver.spi
+package embox.drivers.spi
 
 module omap3_poll {
 	source "omap3_spi_poll.c", "omap3_spi_poll.h"

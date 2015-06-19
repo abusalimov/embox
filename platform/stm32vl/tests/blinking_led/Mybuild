@@ -1,4 +1,4 @@
-package stm32vl.test
+package platform.stm32vl.tests.blinking_led
 
 module blinking_led {
 	source "blinking_led.c"

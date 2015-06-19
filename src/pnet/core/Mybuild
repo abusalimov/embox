@@ -1,4 +1,4 @@
-package embox.pnet
+package embox.pnet.core
 
 module core {
 	source "node.c", "repo.c", "graph.c"

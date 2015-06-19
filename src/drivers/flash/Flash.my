@@ -1,5 +1,5 @@
 
-package embox.driver.flash
+package embox.drivers.flash
 
 @BuildDepends(third_party.bsp.st_f4.core)
 module stm32 {

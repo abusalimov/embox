@@ -1,4 +1,4 @@
-package embox.cmd.sh
+package embox.cmds.shell
 
 module shell_registry {
 	option number input_buff_sz = 80

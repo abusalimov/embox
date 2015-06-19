@@ -1,4 +1,4 @@
-package embox.cmd.user
+package embox.cmds.user
 
 module utils {
 	source "utils.c"

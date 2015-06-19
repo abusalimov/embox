@@ -1,4 +1,4 @@
-package embox.arch.sparc
+package embox.arch.sparc.mmu
 
 module mmu extends embox.arch.mmu {
 	option number asi_m_mmuregs=0x19

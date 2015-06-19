@@ -1,4 +1,4 @@
-package embox.driver
+package embox.drivers.timer_counter
 
 module at91_tc {
 	@IncludeExport(path="drivers/timer_counter")

@@ -1,4 +1,4 @@
-package embox.fs.driver
+package embox.fs.driver.ext3
 
 module ext3 {
 	source "ext3.c"

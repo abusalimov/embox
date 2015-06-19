@@ -1,4 +1,4 @@
-package embox.security
+package embox.security.smac
 
 module smac extends embox.security.api {
 	source "smac.c",

@@ -1,4 +1,4 @@
-package embox.kernel.task.resource
+package embox.kernel.task.resource.u_area
 
 module u_area {
 	@IncludeExport(path="kernel/task/resource")

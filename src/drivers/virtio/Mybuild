@@ -1,4 +1,4 @@
-package embox.driver
+package embox.drivers.virtio
 
 module virtio {
 	source "virtio_ring.c"

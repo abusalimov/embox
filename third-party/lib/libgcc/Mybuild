@@ -1,4 +1,4 @@
-package third_party.lib
+package third_party.lib.libgcc
 
 static module libgcc_toolchain extends embox.lib.gcc.LibGcc {
 	@Rule(script="$(CP) \"$$($(CC) $(CFLAGS) -print-file-name=libgcc.a | sed $$'s/\r$$//')\" $(OBJ_DIR)/third-party/lib/libgcc")

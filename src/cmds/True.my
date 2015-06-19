@@ -1,5 +1,5 @@
 
-package embox.cmd
+package embox.cmds
 
 @AutoCmd
 @Cmd(name="true",

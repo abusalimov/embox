@@ -1,4 +1,4 @@
-package embox.util
+package embox.util.array_spread
 
 static module Array {
 	source "array_impl.h"

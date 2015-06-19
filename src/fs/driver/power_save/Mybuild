@@ -1,4 +1,4 @@
-package embox.fs.driver
+package embox.fs.driver.power_save
 
 module qnx6 {
 	source "qnx6.c"

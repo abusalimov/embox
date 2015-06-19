@@ -1,5 +1,5 @@
 /*FIXME mybuild wrong packet name */
-package embox.driver.tty
+package embox.drivers.tty
 
 @DefaultImpl(task_breaking_enable)
 abstract module task_breaking {

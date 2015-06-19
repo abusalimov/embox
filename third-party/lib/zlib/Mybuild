@@ -1,4 +1,4 @@
-package third_party.zlib
+package third_party.lib.zlib
 
 @Build(stage=1,script="$(EXTERNAL_MAKE) BUILD_DIR=$(abspath $(EXTERNAL_BUILD_DIR))/third_party/zlib/libs download extract patch")
 static module zlib_download { }

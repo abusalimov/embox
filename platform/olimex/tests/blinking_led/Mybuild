@@ -1,4 +1,4 @@
-package olimex.test
+package platform.olimex.tests.blinking_led
 
 
 module blinking_led {

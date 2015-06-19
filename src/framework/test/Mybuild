@@ -1,4 +1,4 @@
-package embox.framework
+package embox.framework.test
 
 module test {
 	/*FIXME mybuild make flags options */

@@ -1,4 +1,4 @@
-package embox.driver.virtual
+package embox.drivers.virtual
 
 module tty_device {
 	source "tty_device.c"

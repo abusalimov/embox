@@ -1,4 +1,4 @@
-package embox.net
+package embox.net.socket
 
 module raw_sock {
 	source "raw_sock.c"

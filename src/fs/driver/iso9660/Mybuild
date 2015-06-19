@@ -1,4 +1,4 @@
-package embox.fs.driver
+package embox.fs.driver.iso9660
 
 module cdfs {
 	@IncludeExport(path="fs")

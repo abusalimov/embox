@@ -1,4 +1,4 @@
-package embox.fs.driver
+package embox.fs.driver.nfs
 
 module nfs {
 	@IncludeExport(path="fs")

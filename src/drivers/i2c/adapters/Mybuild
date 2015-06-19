@@ -1,4 +1,4 @@
-package embox.driver.i2c.adapters
+package embox.drivers.i2c.adapters
 
 module omap_i2c {
 	source "omap_i2c.c"

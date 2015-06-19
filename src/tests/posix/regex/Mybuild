@@ -1,4 +1,4 @@
-package embox.test.posix
+package embox.tests.posix.regex
 
 module regex {
 	source "regex_test.c"

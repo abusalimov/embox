@@ -1,4 +1,4 @@
-package embox.kernel.timer
+package embox.kernel.time.timer
 
 @DefaultImpl(sleep)
 abstract module sleep_api { }

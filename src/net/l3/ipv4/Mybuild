@@ -1,4 +1,4 @@
-package embox.net
+package embox.net.l3.ipv4
 
 module ipv4 {
 	option number ip_fragmented_support = 1

@@ -1,5 +1,5 @@
 
-package embox.service
+package embox.service.http_admin
 
 @Cmd(name="http_admin_backend", help="", man="")
 @BuildDepends(third_party.lib.cJSON.cjson)

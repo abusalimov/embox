@@ -1,4 +1,4 @@
-package embox.arch.x86.kernel
+package embox.arch.x86.kernel.smp
 
 module cpu extends embox.arch.cpu {
 	option number cpu_count

@@ -1,4 +1,4 @@
-package embox.mem
+package embox.mem.misc
 
 module slab {
 	option number heap_size = 524288

@@ -1,4 +1,4 @@
-package embox.driver.input.keyboard
+package embox.drivers.input.keyboard
 
 module keyboard {
 	source "keyboard.c"

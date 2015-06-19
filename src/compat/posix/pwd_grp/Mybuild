@@ -1,5 +1,5 @@
 
-package embox.compat.posix
+package embox.compat.posix.pwd_grp
 
 static module passwd {
 

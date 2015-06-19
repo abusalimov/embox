@@ -1,4 +1,4 @@
-package embox.driver.console.vc
+package embox.drivers.console.vc
 
 module vga extends embox.drivers.diag.diag_api {
 	source "vga.c"

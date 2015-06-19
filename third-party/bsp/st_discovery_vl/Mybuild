@@ -1,4 +1,4 @@
-package third_party.bsp
+package third_party.bsp.st_discovery_vl
 
 @Build(script="$(EXTERNAL_MAKE) download extract patch")
 @BuildArtifactPath(cppflags='''$(addprefix -I$(abspath $(EXTERNAL_BUILD_DIR))third_party/bsp/st_discovery_vl/an3268/stm32vldiscovery_package/Libraries/,

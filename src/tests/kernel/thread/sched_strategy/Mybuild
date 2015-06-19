@@ -1,4 +1,4 @@
-package embox.test.kernel.thread.sched_strategy
+package embox.tests.kernel.thread.sched_strategy
 
 module general_test {
 	source "general_test.c"

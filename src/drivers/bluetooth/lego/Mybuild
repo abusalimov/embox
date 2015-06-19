@@ -1,4 +1,4 @@
-package embox.driver.bluetooth.lego
+package embox.drivers.bluetooth.lego
 
 module usart {
 	@Type("pin") @Unique

@@ -1,5 +1,5 @@
 
-package stm32f4_cnc
+package platform.stm32f4_cnc.http_admin
 
 @Cmd(name="http_admin_backend", help="", man="")
 @BuildDepends(third_party.lib.cJSON.cjson)

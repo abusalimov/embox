@@ -1,4 +1,4 @@
-package embox.util
+package embox.util.bitmap
 
 static module Bitmap {
 	source "bitmap.c"

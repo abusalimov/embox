@@ -1,4 +1,4 @@
-package embox.test.third_party.lib
+package embox.tests.third_party.lib
 
 @Build(script="true")
 @BuildDepends(third_party.lib.libmodbus.libmodbus)

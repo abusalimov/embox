@@ -1,5 +1,5 @@
 
-package embox.arch.usermode86
+package embox.arch.usermode86.host
 
 @Build(stage=1,script="$(EXTERNAL_MAKE) build")
 module host {

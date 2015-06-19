@@ -1,4 +1,4 @@
-package embox.cmd.fs
+package embox.cmds.fs
 
 @AutoCmd
 @Cmd(name = "jffs2",

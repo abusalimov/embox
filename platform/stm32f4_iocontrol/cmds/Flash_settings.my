@@ -1,5 +1,5 @@
 
-package stm32f4_iocontrol.cmd
+package platform.stm32f4_iocontrol.cmds
 
 @AutoCmd
 @Cmd(name="flash_settings",

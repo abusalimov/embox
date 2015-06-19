@@ -1,4 +1,4 @@
-package third_party.lib
+package third_party.lib.pcre
 
 @Build(stage=2,script="$(EXTERNAL_MAKE)")
 module pcre {
