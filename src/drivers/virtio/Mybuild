@@ -2,13 +2,13 @@ package embox.driver
 
 module virtio {
 	source "virtio_ring.c"
-	depends embox.compat.libc.assert
+	depends embox.compat.libc.assert.assert
 	/* depends embox.util.binalign */
 
 	source "virtio_queue.c"
-	depends embox.compat.libc.assert
-	depends embox.compat.libc.str
+	depends embox.compat.libc.assert.assert
+	depends embox.compat.libc.string.str
 	depends embox.compat.libc.stdlib.core
-	depends embox.mem.sysmalloc_api
+	depends embox.mem.heap.sysmalloc_api
 	/* depends virtio_ring.c */
 }

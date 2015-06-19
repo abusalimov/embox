@@ -3,8 +3,8 @@ package embox.net.lib
 module arp {
 	source "arp.c"
 
-	@NoRuntime depends embox.compat.libc.assert
-	@NoRuntime depends embox.compat.libc.str
+	@NoRuntime depends embox.compat.libc.assert.assert
+	@NoRuntime depends embox.compat.libc.string.str
 }
 
 module bootp {
@@ -27,37 +27,37 @@ module getifaddrs {
 	@IncludeExport
 	source "ifaddrs.h"
 
-	depends embox.mem.pool
+	depends embox.mem.misc.pool
 	depends embox.net.core
 }
 
 module icmpv4 {
 	source "icmpv4.c"
 
-	@NoRuntime depends embox.compat.libc.assert
-	@NoRuntime depends embox.compat.libc.str
-	@NoRuntime depends embox.net.lib.ipv4
+	@NoRuntime depends embox.compat.libc.assert.assert
+	@NoRuntime depends embox.compat.libc.string.str
+	@NoRuntime depends ipv4
 }
 
 module icmpv6 {
 	source "icmpv6.c"
 
-	@NoRuntime depends embox.compat.libc.assert
-	@NoRuntime depends embox.compat.libc.str
-	@NoRuntime depends embox.net.lib.ipv6
+	@NoRuntime depends embox.compat.libc.assert.assert
+	@NoRuntime depends embox.compat.libc.string.str
+	@NoRuntime depends ipv6
 }
 
 module ipv4 {
 	source "ipv4.c"
 
-	@NoRuntime depends embox.compat.libc.assert
+	@NoRuntime depends embox.compat.libc.assert.assert
 }
 
 module ipv6 {
 	source "ipv6.c"
 
-	@NoRuntime depends embox.compat.libc.assert
-	@NoRuntime depends embox.compat.libc.str
+	@NoRuntime depends embox.compat.libc.assert.assert
+	@NoRuntime depends embox.compat.libc.string.str
 }
 
 module ntp {
@@ -76,7 +76,7 @@ module pop3 {
 module smtp {
 	source "smtp.c"
 
-	depends embox.lib.LibCrypt
+	depends embox.lib.crypt.LibCrypt
 	depends embox.compat.posix.net.gethostbyname
 	depends embox.compat.posix.net.socket
 }
@@ -84,15 +84,15 @@ module smtp {
 module tcp {
 	source "tcp.c"
 
-	@NoRuntime depends embox.compat.libc.assert
-	@NoRuntime depends embox.net.lib.ipv4
-	@NoRuntime depends embox.net.lib.ipv6
+	@NoRuntime depends embox.compat.libc.assert.assert
+	@NoRuntime depends ipv4
+	@NoRuntime depends ipv6
 }
 
 module udp {
 	source "udp.c"
 
-	@NoRuntime depends embox.compat.libc.assert
-	@NoRuntime depends embox.net.lib.ipv4
-	@NoRuntime depends embox.net.lib.ipv6
+	@NoRuntime depends embox.compat.libc.assert.assert
+	@NoRuntime depends ipv4
+	@NoRuntime depends ipv6
 }

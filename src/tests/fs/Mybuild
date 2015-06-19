@@ -4,12 +4,12 @@ package embox.test.fs
 module filesystem_test {
 	source "filesystem_op_test.c"
 
-	depends embox.driver.ramdisk
+	depends embox.drivers.block_dev.ramdisk.ramdisk
 	depends embox.fs.node, embox.fs.driver.repo
-	depends embox.fs.driver.devfs
+	depends embox.fs.driver.devfs.devfs
 	depends embox.fs.filesystem
-	depends embox.mem.page_api
-	depends embox.mem.pool
+	depends embox.mem.pagealloc.page_api
+	depends embox.mem.misc.pool
 	depends embox.mem.phymem
 	depends embox.compat.posix.LibPosix
 	depends embox.framework.LibFramework
@@ -18,7 +18,7 @@ module filesystem_test {
 module xattr {
 	source "xattr.c"
 
-	depends embox.driver.ramdisk
+	depends embox.drivers.block_dev.ramdisk.ramdisk
 	depends embox.compat.posix.fs.xattr
 }
 
@@ -41,7 +41,7 @@ module InitFsTest {
 module tmpfs_test {
 	source "tmpfs_test.c"
 
-	depends embox.fs.driver.tmpfs
+	depends embox.fs.driver.tmpfs.tmpfs
 	depends embox.compat.posix.LibPosix
 	depends embox.framework.LibFramework
 }
@@ -50,10 +50,10 @@ module permissions {
 	source "permissions.c"
 
 	depends embox.compat.posix.proc.uid
-	depends embox.driver.ide
-	depends embox.fs.driver.ext2
+	depends embox.drivers.block_dev.ide.ide
+	depends embox.fs.driver.ext2.ext2
 	depends embox.fs.filesystem
-	depends embox.kernel.task.resource.u_area
+	depends embox.kernel.task.resource.u_area.u_area
 }
 
 module vfs {

@@ -1,7 +1,7 @@
 
 package embox.security
 
-@DefaultImpl(no_security)
+@DefaultImpl(embox.security.no_security.no_security)
 abstract module api { }
 
 

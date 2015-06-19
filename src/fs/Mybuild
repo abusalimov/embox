@@ -5,7 +5,7 @@ module node {
 
 	source "node.c"
 
-	depends embox.kernel.thread.mutex
+	depends embox.kernel.thread.sync.mutex
 	depends embox.util.tree
 }
 
@@ -69,7 +69,7 @@ module core extends fs_api {
 	depends path_helper
 	depends node
 
-	depends embox.compat.libc.str
+	depends embox.compat.libc.string.str
 	depends embox.compat.posix.util.environ
 	depends embox.util.tree
 	depends embox.compat.posix.proc.uid
@@ -92,9 +92,9 @@ module rootfs extends root_file_system {
 	source "rootfs.c"
 	option string fstype = "initfs"
 	option string bdev = ""
-	depends driver.repo
+	depends embox.fs.driver.repo
 	depends node
-	depends embox.fs.filesystem
+	depends filesystem
 	depends embox.kernel.task.api
 	depends embox.fs.syslib.file_system_full
 	depends embox.compat.libc.all
@@ -105,8 +105,8 @@ module rootfs_dvfs extends root_file_system {
 	option string fstype = "initfs"
 	option string bdev = ""
 
-	depends embox.driver.block_common
-	depends embox.fs.dvfs
+	depends embox.drivers.block_dev.block_common
+	depends embox.fs.dvfs.dvfs
 	depends embox.fs.driver.dvfs_driver
 	depends embox.kernel.task.api
 }
@@ -114,13 +114,13 @@ module rootfs_dvfs extends root_file_system {
 module journal {
 	source "journal.c"
 
-	depends embox.compat.libc.assert
-	depends embox.compat.libc.str
+	depends embox.compat.libc.assert.assert
+	depends embox.compat.libc.string.str
 
 	depends buffer_cache
-	depends embox.mem.slab
+	depends embox.mem.misc.slab
 
-	depends embox.util.DList
+	depends embox.util.dlist.DList
 }
 
 module buffer_cache {
@@ -128,12 +128,12 @@ module buffer_cache {
 	option number bcache_size=128
 
 	depends embox.compat.libc.all
-	depends embox.mem.pool
-	depends embox.kernel.thread.mutex
+	depends embox.mem.misc.pool
+	depends embox.kernel.thread.sync.mutex
 
-	depends embox.mem.sysmalloc_api
+	depends embox.mem.heap.sysmalloc_api
 
-	@NoRuntime depends embox.util.hashtable
+	@NoRuntime depends embox.util.hashtable.hashtable
 }
 
 @DefaultImpl(buffer_no_crypt)

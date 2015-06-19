@@ -3,9 +3,9 @@ package embox.mem
 module slab {
 	option number heap_size = 524288
 	source "slab.c", "slab_impl.h"
-	depends embox.mem.page_api
+	depends embox.mem.pagealloc.page_api
 	depends embox.mem.phymem
-	depends embox.mem.static_heap
+	depends embox.mem.heap.static_heap
 }
 
 module pool {

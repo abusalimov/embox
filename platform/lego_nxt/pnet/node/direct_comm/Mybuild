@@ -4,19 +4,19 @@ package lego_nxt.pnet.node.direct_comm
 module executer {
     @IncludePath("$(PLATFORM_DIR)/lego_nxt/include")
 	source "executer.c"
-	depends lego_nxt.driver.nxt_motor
-	depends embox.pnet.core, embox.pnet.pack.PnetPackSimple
+	depends platform.lego_nxt.drivers.motor.nxt_motor
+	depends embox.pnet.core.core, embox.pnet.pack.pack_standalone.PnetPackSimple
 }
 
 module executer_embox {
     @IncludePath("$(PLATFORM_DIR)/lego_nxt/include")
 	source "executer_embox.c", "device_config.c"
-	depends lego_nxt.driver.nxt_motor
-	depends embox.pnet.core, embox.pnet.pack.PnetPackSimple
+	depends platform.lego_nxt.drivers.motor.nxt_motor
+	depends embox.pnet.core.core, embox.pnet.pack.pack_standalone.PnetPackSimple
 }
 
 module formation {
     @IncludePath("$(PLATFORM_DIR)/lego_nxt/include")
 	source "formation.c"
-	depends embox.pnet.core, embox.pnet.pack.PnetPackSimple
+	depends embox.pnet.core.core, embox.pnet.pack.pack_standalone.PnetPackSimple
 }

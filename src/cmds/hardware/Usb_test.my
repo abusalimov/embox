@@ -26,7 +26,7 @@ module usb_test {
 
 	depends embox.compat.libc.all
 	depends embox.compat.posix.LibPosix
-	depends embox.driver.usb.core
+	depends embox.drivers.usb.core
 	depends embox.framework.LibFramework
 }
 

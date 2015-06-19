@@ -15,7 +15,7 @@ module gptimer extends embox.arch.clock {
 	depends embox.kernel.time.clock_source
 	@NoRuntime depends embox.kernel.time.timer_handler
 
-	depends embox.driver.ambapp_api /*if ampa pnp enable option not required */
+	depends embox.drivers.ambapp.ambapp_api /*if ampa pnp enable option not required */
 	option number gptimer_base=0x80000300 /* if amba pnp disable */
 	option number irq_num=8               /* if amba pnp disable */
 }
@@ -100,7 +100,7 @@ module mips_clk extends embox.arch.clock {
 module lapic_timer extends embox.arch.clock {
 	source "lapic_timer.c"
 
-	depends embox.driver.interrupt.lapic
+	depends embox.drivers.interrupt.lapic
 	@NoRuntime depends embox.kernel.time.timer_handler
 }
 
@@ -118,5 +118,5 @@ module hpet {
 	source "hpet.c"
 
 	depends embox.kernel.time.clock_source
-	depends third_party.lib.acpica
+	depends third_party.lib.acpica.acpica
 }

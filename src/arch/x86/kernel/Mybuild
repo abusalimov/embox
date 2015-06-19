@@ -15,7 +15,7 @@ module interrupt extends embox.arch.interrupt {
 	depends arch
 
 	@NoRuntime depends embox.kernel.critical
-	@NoRuntime depends embox.compat.libc.assert
+	@NoRuntime depends embox.compat.libc.assert.assert
 }
 
 module entry extends embox.arch.entry {
@@ -56,7 +56,7 @@ abstract module shutdown {}
 module acpi_shutdown extends shutdown {
 	source "acpi_shutdown.c"
 
-	depends third_party.lib.acpica
+	depends third_party.lib.acpica.acpica
 	depends embox.lib.Printk
 }
 

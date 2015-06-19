@@ -18,7 +18,7 @@ module sqlite3 {
 	source "strip.sqlite3.o"
 
 	@NoRuntime depends sqlite3_stubs
-	@NoRuntime depends embox.framework.cmd
+	@NoRuntime depends embox.framework.cmd.cmd
 	@NoRuntime depends embox.lib.readline_api
 
 	@InitFS
@@ -30,6 +30,6 @@ module sqlite3_stubs {
 	source "stubs.c"
 
 	@NoRuntime depends embox.kernel.task.resource.errno
-	@NoRuntime depends embox.compat.libc.str
+	@NoRuntime depends embox.compat.libc.string.str
 	@NoRuntime depends embox.lib.Printk
 }

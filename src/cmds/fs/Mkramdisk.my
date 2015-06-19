@@ -17,7 +17,7 @@ package embox.cmd.fs
 module mkramdisk {
 	source "mkramdisk.c"
 
-	depends embox.driver.ramdisk
+	depends embox.drivers.block_dev.ramdisk.ramdisk
 	depends embox.compat.posix.util.getopt
 	depends embox.framework.LibFramework
 }

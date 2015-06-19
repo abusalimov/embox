@@ -4,7 +4,7 @@ module binfs {
 	source "binfs.c"
 
 	depends embox.fs.core
-	depends embox.mem.pool
+	depends embox.mem.misc.pool
 }
 
 

@@ -22,10 +22,10 @@ module irq extends irq_api {
 	source "irq.c"
 	depends irq_lock
 	@NoRuntime depends irq_stack
-	@NoRuntime depends embox.mem.objalloc
-	depends embox.driver.interrupt.irqctrl_api
-	@NoRuntime depends embox.profiler.trace
-	@NoRuntime depends embox.util.DList
+	@NoRuntime depends embox.mem.objalloc.objalloc
+	depends embox.drivers.interrupt.irqctrl_api
+	@NoRuntime depends embox.profiler.tracing.trace
+	@NoRuntime depends embox.util.dlist.DList
 }
 
 @DefaultImpl(irq_stack_no_protection)
@@ -43,6 +43,6 @@ module irq_stack_protection extends irq_stack {
 
 module irq_lock {
 	source "irq_lock.c"
-	@NoRuntime depends critical
+	@NoRuntime depends embox.kernel.critical
 }
 

@@ -1,0 +1,26 @@
+package embox.test.cxx
+
+module memory {
+	source "memory.cpp"
+
+	depends embox.compat.cxx.core.lib
+	depends embox.framework.cmd.cmd
+}
+
+module exceptions {
+	source "exceptions.cpp"
+
+	depends embox.compat.cxx.core.libsupcxx
+	depends embox.framework.test.test
+}
+
+module inheritance {
+	source "inheritance.cpp"
+
+	depends embox.compat.cxx.core.lib
+	depends embox.framework.test.test
+}
+
+module appctorsdtors extends embox.compat.cxx.core.app {
+	source "appctorsdtors.cpp"
+}

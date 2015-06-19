@@ -21,7 +21,7 @@ static module poll_table {
 	source "poll_table.c"
 
 	depends embox.fs.idesc_event
-	depends embox.kernel.task.idesc
+	depends embox.kernel.task.idesc.idesc
 	depends embox.kernel.task.resource.idesc_table
 }
 
@@ -32,7 +32,7 @@ static module select {
 	source "select.c"
 
 	depends poll_table
-	depends embox.kernel.task.idesc
+	depends embox.kernel.task.idesc.idesc
 }
 
 static module dup {
@@ -49,7 +49,7 @@ static module pipe {
 	option number pipe_buffer_size=1024
 	option number max_pipe_buffer_size=1024
 
-	depends embox.mem.sysmalloc_api
+	depends embox.mem.heap.sysmalloc_api
 
 	depends embox.fs.idesc_event
 	depends embox.kernel.task.api
@@ -62,7 +62,7 @@ static module ppty {
 
 	depends embox.fs.idesc_event
 	depends embox.kernel.task.api
-	depends embox.driver.tty.pty
+	depends embox.drivers.tty.pty
 }
 
 static module poll {
@@ -72,5 +72,5 @@ static module poll {
 	source "poll.c"
 
 	depends poll_table
-	depends embox.kernel.task.idesc
+	depends embox.kernel.task.idesc.idesc
 }

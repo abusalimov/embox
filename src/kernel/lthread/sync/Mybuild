@@ -4,6 +4,6 @@ module mutex {
 	@IncludeExport(path="kernel/lthread/sync")
 	source "mutex.h"
 
-	depends embox.kernel.sched.mutex
+	depends embox.kernel.sched.sync.mutex
 	depends embox.kernel.lthread.lthread
 }

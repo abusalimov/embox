@@ -7,5 +7,5 @@ static module core {
 	source "libntfs-3g.a"
 
 	depends embox.compat.libc.all
-	depends embox.compat.libc.str_dup
+	depends embox.compat.libc.string.str_dup
 }

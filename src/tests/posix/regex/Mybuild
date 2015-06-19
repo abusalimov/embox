@@ -3,5 +3,5 @@ package embox.test.posix
 module regex {
 	source "regex_test.c"
 
-	@NoRuntime depends embox.compat.posix.regex
+	@NoRuntime depends embox.compat.posix.regex.regex
 }

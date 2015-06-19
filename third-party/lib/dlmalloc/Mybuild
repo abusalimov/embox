@@ -1,6 +1,6 @@
 package third_party.lib
 
-module dlmalloc extends embox.mem.heap_api {
+module dlmalloc extends embox.mem.heap.heap_api {
 
 	source "empty.c" // FIXME: workaround
 

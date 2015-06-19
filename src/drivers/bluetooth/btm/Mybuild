@@ -27,12 +27,12 @@ module usart {
 
 	source "btm_bluetooth.c"
 
-	depends embox.kernel.timer.sleep_api
+	depends embox.kernel.time.timer.sleep_api
 	depends embox.kernel.irq
-	depends embox.driver.gpio.at91_pins
+	depends embox.drivers.gpio.at91_pins
 }
 
-module bt112 extends embox.driver.Bluetooth {
+module bt112 extends embox.drivers.bluetooth.Bluetooth {
 	source "btm_bt112.c"
 
 	depends usart

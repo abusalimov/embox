@@ -21,18 +21,18 @@ module iperf {
 
 	@NoRuntime depends iperf_stubs
 	@NoRuntime depends embox.compat.posix.net.inet_addr
-	@NoRuntime depends embox.compat.posix.pthreads
+	@NoRuntime depends embox.compat.posix.pthread.pthreads
 	@NoRuntime depends embox.kernel.task.resource.errno
-	@NoRuntime depends embox.compat.libc.type
-	@NoRuntime depends third_party.lib.libgcc_toolchain
+	@NoRuntime depends embox.compat.libc.ctype.type
+	@NoRuntime depends third_party.lib.libgcc.libgcc_toolchain
 }
 
 module iperf_stubs {
 	@IncludePathBefore("$(THIRDPARTY_DIR)/iperf/include")
 	source "stubs.c"
 
-	@NoRuntime depends embox.lib.cxx.lib
+	@NoRuntime depends embox.compat.cxx.core.lib
 	@NoRuntime depends embox.kernel.task.resource.errno
-	@NoRuntime depends embox.compat.libc.str
+	@NoRuntime depends embox.compat.libc.string.str
 	@NoRuntime depends embox.lib.Printk
 }

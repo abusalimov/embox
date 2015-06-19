@@ -10,5 +10,5 @@ module emboxvc {
 	source "emboxvc.cpp"
 
 	@NoRuntime depends third_party.qt.core
-	@NoRuntime depends third_party.qt.plugin.platform.minimal
+	@NoRuntime depends third_party.qt.plugins.platforms.minimal
 }

@@ -3,7 +3,7 @@ package embox.mem
 @DefaultImpl(heap_bm)
 abstract module heap_api {
 	option number heap_size = 524288
-	depends embox.kernel.task.resource.task_heap
+	depends embox.kernel.task.resource.task_heap.task_heap
 }
 
 @DefaultImpl(heap_afterfree_default)
@@ -23,8 +23,8 @@ module mspace_malloc {
 
 	depends boundary_markers
 
-	depends page_api
-	depends embox.mem.static_heap
+	depends embox.mem.pagealloc.page_api
+	depends static_heap
 }
 
 module heap_bm extends heap_api {
@@ -32,7 +32,7 @@ module heap_bm extends heap_api {
 
 	depends mspace_malloc
 
-	depends embox.kernel.task.resource.task_heap
+	depends embox.kernel.task.resource.task_heap.task_heap
 	depends embox.kernel.task.kernel_task
 	depends embox.kernel.task.api
 }
@@ -40,7 +40,7 @@ module heap_bm extends heap_api {
 module heap_simple extends heap_api {
 	source "heap_simple.c"
 
-	depends embox.mem.static_heap
+	depends static_heap
 }
 
 module sysmalloc_task_based extends sysmalloc_api {
@@ -48,7 +48,7 @@ module sysmalloc_task_based extends sysmalloc_api {
 
 	depends mspace_malloc
 
-	depends embox.kernel.task.resource.task_heap
+	depends embox.kernel.task.resource.task_heap.task_heap
 	depends embox.kernel.task.kernel_task
 }
 
@@ -62,7 +62,7 @@ module static_heap {
 	source "heap.lds.S"
 	source "static_heap.c"
 
-	depends embox.mem.bitmask
+	depends embox.mem.pagealloc.bitmask
 }
 
 module static_heap2 {
@@ -75,7 +75,7 @@ module static_heap2 {
 	source "heap2.lds.S"
 	source "static_heap2.c"
 
-	depends embox.mem.bitmask
+	depends embox.mem.pagealloc.bitmask
 }
 
 module heap_afterfree_default extends heap_afterfree {

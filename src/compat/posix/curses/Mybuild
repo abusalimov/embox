@@ -4,5 +4,5 @@ static module LibCurses {
 	source "curses.c"
 
 	depends embox.compat.posix.termios
-	depends embox.mem.pool
+	depends embox.mem.misc.pool
 }

@@ -9,7 +9,7 @@ module net_entry extends entry_api {
 	source "net_entry.c"
 
 	depends net_rx
-	depends skbuff
+	depends embox.net.skbuff
 	depends embox.kernel.lthread.lthread
 }
 
@@ -17,9 +17,9 @@ module net_rx {
 	source "net_rx.c"
 
 	depends net_crypt_api
-	depends skbuff
-	depends packet
-	depends af_packet_api /* make af_packet socket receive incoming packets */
+	depends embox.net.skbuff
+	depends embox.net.packet
+	depends embox.net.socket.af_packet_api /* make af_packet socket receive incoming packets */
 	depends embox.framework.LibFrameworkNet
 }
 
@@ -27,9 +27,9 @@ module net_tx {
 	source "net_tx.c"
 
 	depends net_crypt_api
-	depends skbuff
-	depends af_packet_api /* make af_packet socket receive outcoming packets */
-	depends neighbour
+	depends embox.net.skbuff
+	depends embox.net.socket.af_packet_api /* make af_packet socket receive outcoming packets */
+	depends embox.net.neighbour
 }
 
 @DefaultImpl(net_no_crypt)

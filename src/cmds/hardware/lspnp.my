@@ -24,8 +24,8 @@ module lspnp {
 	source "lspnp.c"
 
 	depends embox.compat.libc.all
-	depends embox.driver.amba_registry
-	depends embox.driver.ambapp_api
+	depends embox.drivers.ambapp.amba_registry
+	depends embox.drivers.ambapp.ambapp_api
 	depends embox.compat.posix.util.getopt
 	depends embox.framework.LibFramework
 }

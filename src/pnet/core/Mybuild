@@ -7,7 +7,7 @@ module core {
 	option number pnet_graph_quantity
 
 	depends prior_path
-	depends pack.PnetPackFactory
+	depends embox.pnet.pack.PnetPackFactory
 }
 
 module dev {

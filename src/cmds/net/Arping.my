@@ -34,7 +34,7 @@ module arping {
 	depends embox.net.util.macaddr
 	depends embox.compat.posix.net.inet_addr
 	depends embox.net.neighbour
-	depends embox.net.arp
+	depends embox.net.l3.arp
 	depends embox.compat.posix.util.sleep
 	depends embox.framework.LibFramework
 }

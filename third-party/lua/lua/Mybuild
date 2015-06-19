@@ -25,8 +25,8 @@ module lua {
 		"tofi_mod.lua",
 		"doit.lua"
 
-	depends embox.mem.heap_api
+	depends embox.mem.heap.heap_api
 	@NoRuntime depends embox.compat.libc.all
-	@NoRuntime depends embox.lib.LibGcc
+	@NoRuntime depends embox.lib.gcc.LibGcc
 	@NoRuntime depends embox.kernel.task.resource.errno
 }

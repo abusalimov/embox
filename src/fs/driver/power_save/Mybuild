@@ -6,10 +6,10 @@ module qnx6 {
 	option number ffs_descriptor_quantity=4
 
 	depends embox.fs.node, embox.fs.driver.repo
-	depends embox.fs.driver.fat
-	depends embox.driver.block
-	depends embox.mem.page_api
-	depends embox.mem.pool
+	depends embox.fs.driver.fat.fat
+	depends embox.drivers.block_dev.block
+	depends embox.mem.pagealloc.page_api
+	depends embox.mem.misc.pool
 }
 
 module qnx6_rl {
@@ -19,8 +19,8 @@ module qnx6_rl {
 	source "dir.c",
 	       "inode.c"
 
-	depends embox.driver.block
+	depends embox.drivers.block_dev.block
 	depends embox.fs.buffer_cache
-	depends embox.mem.page_api
-	depends embox.mem.pool
+	depends embox.mem.pagealloc.page_api
+	depends embox.mem.misc.pool
 }

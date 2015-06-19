@@ -7,6 +7,6 @@ module u_area {
 	source "u_area.c"
 
 	depends embox.kernel.task.task_resource
-	@NoRuntime depends embox.compat.libc.assert
+	@NoRuntime depends embox.compat.libc.assert.assert
 }
 

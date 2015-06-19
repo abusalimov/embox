@@ -18,6 +18,6 @@ module forkexec {
 
 	depends embox.compat.libc.all
 	depends embox.fs.core
-	depends embox.lib.LibExec
+	depends embox.lib.exec.LibExec
 	depends embox.framework.LibFramework
 }

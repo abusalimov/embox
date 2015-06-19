@@ -10,7 +10,7 @@ static module libarch extends embox.arch.libarch {
 
 module cxxabi {
 	source "cxxabi/aeabi_atexit.c"
-	depends embox.lib.cxx.DestructionPolicy
+	depends embox.compat.cxx.core.DestructionPolicy
 }
 
 static module vfork extends embox.arch.vfork_entry {

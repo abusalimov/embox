@@ -8,7 +8,7 @@ static module pthreads {
 	source "pthread_cancel.c"
 
 	depends embox.kernel.thread.core
-	depends embox.kernel.thread.sync
+	depends embox.kernel.thread.sync.sync
 	depends embox.kernel.task.syslib.thread_key_table
 }
 

@@ -18,7 +18,7 @@ package embox.cmd
 module ide {
 	source "ide.c"
 
-	depends embox.driver.ide
+	depends embox.drivers.block_dev.ide.ide
 	depends embox.compat.libc.all
 	depends embox.compat.posix.LibPosix
 	depends embox.framework.LibFramework

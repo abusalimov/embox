@@ -3,8 +3,8 @@ package embox.example.mem
 module boundary_markers {
 	source "boundary_markers.c"
 
-	depends embox.mem.page_api
-	depends embox.framework.example
+	depends embox.mem.pagealloc.page_api
+	depends embox.framework.example.example
 }
 
 //$_BRIEF-objalloc = demonstrates using of API for allocation fixed size object
@@ -12,22 +12,22 @@ module objalloc {
 	source "objalloc.c"
 
 	depends embox.compat.libc.all
-	depends embox.mem.objalloc
-	depends embox.framework.example
+	depends embox.mem.objalloc.objalloc
+	depends embox.framework.example.example
 }
 
 module page {
 	source "page.c"
 
-	depends embox.mem.page_api
-	depends embox.framework.example
+	depends embox.mem.pagealloc.page_api
+	depends embox.framework.example.example
 }
 
 module pool {
 	source "pool.c"
 
-	depends embox.mem.pool
-	depends embox.framework.example
+	depends embox.mem.misc.pool
+	depends embox.framework.example.example
 }
 
 module simple_alloc {
@@ -36,5 +36,5 @@ module simple_alloc {
 	source "simple_alloc.c"
 
 	depends embox.compat.libc.all
-	depends embox.framework.example
+	depends embox.framework.example.example
 }
