@@ -43,10 +43,10 @@ static module LibUtil {
 	depends ring
 	depends tree
 
-	depends Array
-	depends DList
+	depends embox.util.array_spread.Array
+	depends embox.util.dlist.DList
 	depends SList
-	depends Bit
+	depends embox.util.bit.Bit
 }
 
 static module tree {
@@ -56,7 +56,7 @@ static module tree {
 static module indexator {
 	source "indexator.c"
 
-	depends embox.compat.libc.assert
+	depends embox.compat.libc.assert.assert
 	depends embox.compat.libc.stdlib.core
-	depends embox.compat.libc.str
+	depends embox.compat.libc.string.str
 }

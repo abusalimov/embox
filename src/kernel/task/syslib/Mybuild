@@ -4,7 +4,7 @@ module thread_key_table {
 	source "thread_key_table.c"
 
 	depends embox.kernel.task.resource.thread_key_table
-	@NoRuntime depends embox.kernel.thread.mutex
+	@NoRuntime depends embox.kernel.thread.sync.mutex
 	@NoRuntime depends embox.util.indexator
 }
 
@@ -14,7 +14,7 @@ module waitpid {
 	depends embox.kernel.sched.sched
 	depends embox.kernel.sched.wait_queue
 	depends embox.kernel.task.resource.errno
-	depends embox.kernel.task.resource.waitpid
+	depends embox.kernel.task.resource.waitpid.waitpid
 
 	depends embox.kernel.task.multi
 }

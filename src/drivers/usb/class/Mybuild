@@ -5,14 +5,14 @@ module hid {
 	source "usb_class_hid.c"
 	source "usb_hid.c"
 
-	depends embox.driver.usb.core
-	depends embox.driver.input.core
+	depends embox.drivers.usb.core
+	depends embox.drivers.input.core
 }
 
 module mass_storage {
 	source "usb_mass_storage.c"
 
-	depends embox.driver.usb.core
+	depends embox.drivers.usb.core
 
 	depends scsi
 }
@@ -25,6 +25,6 @@ module scsi {
 module cdc {
 	source "usb_class_cdc.c"
 
-	depends embox.driver.usb.core
-	depends embox.mem.sysmalloc_api
+	depends embox.drivers.usb.core
+	depends embox.mem.heap.sysmalloc_api
 }

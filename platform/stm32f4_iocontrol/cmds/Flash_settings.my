@@ -22,10 +22,10 @@ module flash_settings {
 	depends embox.compat.libc.stdio.file_ops
 	depends embox.compat.posix.util.environ
 
-	depends embox.driver.flash.stm32
+	depends embox.drivers.flash.stm32
 	depends embox.net.lib.getifaddrs
 
-	depends stm32f4_iocontrol.libleddrv
-	depends stm32f4_iocontrol.lib_led_names
+	depends platform.stm32f4_iocontrol.cmds.libleddrv
+	depends platform.stm32f4_iocontrol.cmds.lib_led_names
 }
 

@@ -7,5 +7,5 @@ module core {
 
 module ti8168 {
 	source "ti8168.c"
-	depends embox.driver.ahci.core
+	depends core
 }

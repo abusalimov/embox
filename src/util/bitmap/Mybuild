@@ -2,5 +2,5 @@ package embox.util
 
 static module Bitmap {
 	source "bitmap.c"
-	depends embox.util.Bit
+	depends embox.util.bit.Bit
 }

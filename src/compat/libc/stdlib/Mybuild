@@ -10,7 +10,7 @@ static module config {
 	source "getpagesize.c"
 	source "sysconf.c"
 
-	depends embox.mem.page_api
+	depends embox.mem.pagealloc.page_api
 }
 
 static module core {
@@ -31,7 +31,7 @@ static module core {
 
 static module system {
 	source "system.c"
-	depends embox.cmd.sh.shell_registry
+	depends embox.cmds.shell.shell_registry
 }
 
 static module all {

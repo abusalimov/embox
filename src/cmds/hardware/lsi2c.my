@@ -20,5 +20,5 @@ package embox.cmd
 module lsi2c {
 	source "lsi2c.c"
 
-	depends embox.driver.i2c
+	depends embox.drivers.i2c.i2c
 }

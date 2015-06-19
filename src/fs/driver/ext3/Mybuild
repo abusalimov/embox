@@ -6,10 +6,10 @@ module ext3 {
 	option number ext3_descriptor_quantity=4
 
 	depends embox.fs.node, embox.fs.driver.repo
-	depends embox.fs.driver.ext2
-	depends embox.driver.block
-	depends embox.mem.page_api
-	depends embox.mem.pool
+	depends embox.fs.driver.ext2.ext2
+	depends embox.drivers.block_dev.block
+	depends embox.mem.pagealloc.page_api
+	depends embox.mem.misc.pool
 	depends ext3_journal
 	depends third_party.e2fsprogs.mke2fs
 }

@@ -5,10 +5,10 @@ module LibPosix {
 	depends embox.compat.posix.idx.All
 	depends embox.compat.posix.net.All
 	depends embox.compat.posix.proc.All
-	depends embox.compat.posix.passwd
-	depends embox.compat.posix.utmp_api
+	depends embox.compat.posix.pwd_grp.passwd
+	depends embox.compat.posix.utmp.utmp_api
 	depends embox.compat.posix.util.All
-	depends embox.compat.posix.pthreads
+	depends embox.compat.posix.pthread.pthreads
 	depends sched
 	depends termios
 	depends embox.kernel.task.resource.errno
@@ -24,7 +24,7 @@ static module sched {
 
 static module termios {
 	source "termios.c"
-	depends embox.driver.tty.tty
+	depends embox.drivers.tty.tty
 }
 
 static module semaphore {

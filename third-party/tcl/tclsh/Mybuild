@@ -40,6 +40,6 @@ module tclsh {
 	@AddPrefix("^BUILD/extbld/third_party/tcl/core/install")
 	source "tclsh.o"
 
-	@NoRuntime depends third_party.tcl.core
-	depends embox.compat.posix.stubs
+	@NoRuntime depends core
+	depends embox.compat.posix.stubs.stubs
 }

@@ -166,8 +166,8 @@ module acpica {
 	"dispatcher/dsopcode.c",
 	"dispatcher/dsargs.c"
 
-	depends embox.mem.heap_api
-	depends embox.kernel.timer.sleep_api
+	depends embox.mem.heap.heap_api
+	depends embox.kernel.time.timer.sleep_api
 	depends embox.arch.cpu
 	depends embox.compat.libc.stdio.all
 	depends embox.lib.Printk

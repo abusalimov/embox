@@ -16,7 +16,7 @@ module whereami extends whereami_api {
 	option number max_depth=64
 	option number row_sz=80
 
-	depends embox.lib.debug.symbol
+	depends symbol
 	depends embox.lib.execinfo.backtrace
 }
 

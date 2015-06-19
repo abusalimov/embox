@@ -4,5 +4,5 @@ package lego_nxt.driver
 module nxt_avr_init {
     @IncludePath("$(PLATFORM_DIR)/lego_nxt/include")
 	source "avr_init.c", "buttons.c", "sensors.c", "power_mng.c"
-	depends embox.driver.at91_twi, lego_nxt.driver.soft_i2c, embox.kernel.timer.sys_timer
+	depends embox.drivers.i2c.at91_twi, platform.lego_nxt.drivers.soft_i2c.soft_i2c, embox.kernel.time.timer.sys_timer
 }

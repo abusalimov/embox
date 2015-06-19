@@ -45,10 +45,10 @@ static module dirent_old extends dirent {
 	source "dirent.c"
 
 	depends embox.fs.core
-	depends embox.mem.objalloc
-	depends embox.compat.libc.str
+	depends embox.mem.objalloc.objalloc
+	depends embox.compat.libc.string.str
 	depends embox.fs.syslib.dcache
-	depends embox.compat.posix.fs.getcwd
+	depends getcwd
 	depends embox.fs.syslib.perm
 }
 
@@ -59,44 +59,44 @@ abstract module lseek {
 static module lseek_old extends lseek {
 	source "lseek.c"
 
-	depends embox.kernel.task.idesc
+	depends embox.kernel.task.idesc.idesc
 	depends embox.kernel.task.resource.errno
 }
 
 module read {
 	source "read.c"
-	depends embox.kernel.task.idesc
+	depends embox.kernel.task.idesc.idesc
 }
 
 module write {
 	source "write.c"
-	depends embox.kernel.task.idesc
+	depends embox.kernel.task.idesc.idesc
 }
 
 module fcntl {
 	source "fcntl.c"
-	depends embox.kernel.task.idesc
+	depends embox.kernel.task.idesc.idesc
 }
 
 module ioctl {
 	source "ioctl.c"
 	depends fcntl
-	depends embox.kernel.task.idesc
+	depends embox.kernel.task.idesc.idesc
 }
 
 module close {
 	source "close.c"
-	depends embox.kernel.task.idesc
+	depends embox.kernel.task.idesc.idesc
 }
 
 module fstat {
 	source "fstat.c"
-	depends embox.kernel.task.idesc
+	depends embox.kernel.task.idesc.idesc
 }
 
 module fsync {
 	source "fsync.c"
-	depends embox.kernel.task.idesc
+	depends embox.kernel.task.idesc.idesc
 }
 
 @DefaultImpl(file_ops_old)
@@ -111,7 +111,7 @@ static module file_ops_old extends file_ops {
 	depends embox.fs.idesc
 	depends embox.fs.index_operation
 	depends embox.kernel.task.api
-	depends embox.kernel.task.idesc
+	depends embox.kernel.task.idesc.idesc
 	depends embox.kernel.task.resource.errno
 }
 
@@ -137,7 +137,7 @@ static module getcwd_old extends getcwd {
 	source "getcwd.c"
 
 	depends embox.compat.posix.util.environ
-	depends embox.compat.libc.str
+	depends embox.compat.libc.string.str
 }
 
 @DefaultImpl(open_old)

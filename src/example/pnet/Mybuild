@@ -7,7 +7,7 @@ package embox.example.pnet
 module match {
 	source "match.c"
 
-	depends embox.pnet.core
-	depends embox.pnet.node.skbuff.matcher
-	depends embox.framework.example
+	depends embox.pnet.core.core
+	depends embox.pnet.node.skbuff_match.matcher
+	depends embox.framework.example.example
 }

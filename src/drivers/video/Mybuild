@@ -8,7 +8,7 @@ module fb {
 	source "fb.h"
 
 	option number fb_amount=2
-	depends embox.mem.pool
+	depends embox.mem.misc.pool
 	@NoRuntime depends embox.compat.libc.all
 	//depends embox.fs.rootfs
 	depends fb_videomodes
@@ -22,7 +22,7 @@ module bochs {
 	@IncludeExport(path="drivers/video")
 	source "vbe.h"
 
-	depends embox.driver.pci
+	depends embox.drivers.pci.pci
 	@NoRuntime depends fb
 	@NoRuntime depends embox.compat.libc.all
 }
@@ -34,7 +34,7 @@ module cirrus_logic {
 	source "cirrus_logic.h"
 
 	depends fb
-	depends embox.driver.pci
+	depends embox.drivers.pci.pci
 }
 
 module generic {
@@ -46,7 +46,7 @@ module generic {
 	option number fb_bar = 0
 
 	depends fb
-	depends embox.driver.pci
+	depends embox.drivers.pci.pci
 }
 
 module fb_videomodes {
@@ -69,7 +69,7 @@ module fonts {
 	source "font.h"
 }
 
-@BuildDepends(efm32zg_sk3200.bsp)
+@BuildDepends(platform.efm32zg_sk3200.src.bsp.bsp)
 module efm32_lcd {
 	source "efm32_lcd.c"
 }

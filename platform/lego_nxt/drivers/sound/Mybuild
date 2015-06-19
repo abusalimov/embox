@@ -5,5 +5,5 @@ module nxt_sound {
 	source "sound.c"
 
 	depends embox.kernel.irq
-	depends embox.kernel.timer.sleep_api
+	depends embox.kernel.time.timer.sleep_api
 }

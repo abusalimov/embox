@@ -9,9 +9,9 @@ module ide {
 	source "partition.c"
 
 	depends embox.util.LibUtil
-	depends embox.driver.block
+	depends embox.drivers.block_dev.block
 	depends embox.util.indexator
 	depends embox.compat.posix.util.sleep
 	depends embox.kernel.time.kernel_time
-	depends embox.fs.driver.devfs
+	depends embox.fs.driver.devfs.devfs
 }

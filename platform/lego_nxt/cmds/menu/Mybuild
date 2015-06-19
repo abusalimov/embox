@@ -3,6 +3,6 @@ package lego_nxt.cmd
 module menu {
 	source "menu.c"
 
-	depends lego_nxt.driver.nxt_lcd
-	depends lego_nxt.driver.nxt_avr_init
+	depends platform.lego_nxt.drivers.lcd.nxt_lcd
+	depends platform.lego_nxt.drivers.avr_init.nxt_avr_init
 }

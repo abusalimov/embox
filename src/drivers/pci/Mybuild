@@ -14,11 +14,11 @@ module pci {
 	@IncludeExport(path="drivers/pci")
 	source "pci_id.h"
 
-	depends embox.mem.pool
+	depends embox.mem.misc.pool
 	depends embox.kernel.irq
 	depends embox.util.LibUtil
-	depends embox.driver.pci_chip.pci_chip
-	depends embox.driver.pci_bios_api
+	depends embox.drivers.pci.pci_chip.pci_chip
+	depends pci_bios_api
 }
 
 @DefaultImpl(pci_bios_stub)
@@ -31,8 +31,8 @@ module pci_bios extends pci_bios_api {
 	option number pci_window_size
 	source "pci_bios.c"
 
-	depends embox.mem.page_api
-	depends embox.driver.pci_chip.pci_chip
+	depends embox.mem.pagealloc.page_api
+	depends embox.drivers.pci.pci_chip.pci_chip
 }
 
 module pci_tlp {

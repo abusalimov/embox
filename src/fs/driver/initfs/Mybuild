@@ -9,7 +9,7 @@ abstract module initfs {
 module initfs_old extends initfs {
 	source "initfs.c"
 	depends embox.fs.core
-	depends embox.mem.pool
+	depends embox.mem.misc.pool
 	option number fdesc_quantity=128
 }
 
@@ -18,5 +18,5 @@ module initfs_dvfs extends initfs {
 
 	option number dir_quantity=16
 
-	depends embox.fs.dvfs
+	depends embox.fs.dvfs.dvfs
 }

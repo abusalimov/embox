@@ -11,7 +11,7 @@ module mib {
 	option number max_obj_count=64
 	source "mib.c"
 
-	depends embox.mem.objalloc
+	depends embox.mem.objalloc.objalloc
 	depends embox.util.LibUtil
 }
 

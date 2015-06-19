@@ -20,7 +20,7 @@ module input_test {
 
 	depends embox.compat.libc.all
 	depends embox.compat.posix.LibPosix
-	depends embox.driver.input.core
+	depends embox.drivers.input.core
 	depends embox.framework.LibFramework
 }
 

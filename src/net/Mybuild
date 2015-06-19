@@ -5,8 +5,8 @@ module dev {
 	option number netdev_table_sz=3
 	source "netdev.c"
 
-	depends embox.util.DList
-	depends embox.util.hashtable
+	depends embox.util.dlist.DList
+	depends embox.util.hashtable.hashtable
 }
 
 module skbuff {
@@ -22,7 +22,7 @@ module skbuff {
 	option number extra_padto=1
 	source "skb.c"
 	depends embox.arch.interrupt
-	depends embox.mem.sysmalloc_api
+	depends embox.mem.heap.sysmalloc_api
 
 	source "skb_queue.c"
 	depends embox.arch.interrupt
@@ -34,8 +34,8 @@ module core {
 	option number amount_interface=4
 
 	depends dev /* for dev.c */
-	depends embox.util.DList
-	depends embox.mem.pool
+	depends embox.util.dlist.DList
+	depends embox.mem.misc.pool
 }
 
 module sock {
@@ -49,7 +49,7 @@ module sock {
 	depends embox.fs.idesc
 	depends embox.fs.idesc_event
 	depends embox.arch.interrupt
-	depends embox.mem.pool
+	depends embox.mem.misc.pool
 	depends embox.framework.LibFrameworkNet
 
 	depends sock_xattr_api
@@ -80,9 +80,9 @@ module neighbour {
 	option number neighbour_attempt=3
 
 	depends embox.compat.posix.util.time /* for time() */
-	depends embox.mem.pool
-	@NoRuntime depends embox.net.arp
-	@NoRuntime depends embox.net.ndp
+	depends embox.mem.misc.pool
+	@NoRuntime depends embox.net.l3.arp
+	@NoRuntime depends embox.net.l3.ndp
 }
 
 module packet {

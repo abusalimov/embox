@@ -41,7 +41,7 @@ module syscall extends embox.arch.syscall {
 module syscall_caller extends embox.arch.syscall_caller {
 	source "syscall_caller.h"
 
-	depends embox.kernel.syscall
+	depends embox.kernel.syscall.syscall
 }
 
 module arch extends embox.arch.arch {

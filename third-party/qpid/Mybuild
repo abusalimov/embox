@@ -33,8 +33,8 @@ module core {
 	@NoRuntime depends third_party.boost.core
 	@NoRuntime depends third_party.e2fsprogs.core
 	@NoRuntime depends third_party.STLport.core
-	@NoRuntime depends embox.compat.posix.pthread_key
-	@NoRuntime depends embox.compat.posix.regex_trex
+	@NoRuntime depends embox.compat.posix.pthread.pthread_key
+	@NoRuntime depends embox.compat.posix.regex.regex_trex
 }
 
 @Build(stage=2,script="true")
@@ -53,8 +53,8 @@ module qpidd {
 	@AddPrefix("^BUILD/extbld/third_party/qpid/core/install/bin")
 	source "qpidd.o"
 
-	@NoRuntime depends third_party.qpid.core
-	depends embox.compat.posix.stubs
+	@NoRuntime depends core
+	depends embox.compat.posix.stubs.stubs
 }
 
 @Build(stage=2,script="true")
@@ -70,7 +70,7 @@ module qpidd_hello {
 	@AddPrefix("^BUILD/extbld/third_party/qpid/core/install/bin")
 	source "strip.hello_world.o"
 
-	@NoRuntime depends third_party.qpid.core
-	depends embox.compat.posix.stubs
+	@NoRuntime depends core
+	depends embox.compat.posix.stubs.stubs
 }
 

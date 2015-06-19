@@ -3,8 +3,8 @@ package third_party.lib
 module trex {
 	source "trex.c"
 
-	depends embox.mem.heap_api
+	depends embox.mem.heap.heap_api
 	@NoRuntime depends embox.arch.libarch /* for setjmp */
 	@NoRuntime depends embox.compat.libc.stdio.all
-	@NoRuntime depends embox.compat.libc.str
+	@NoRuntime depends embox.compat.libc.string.str
 }

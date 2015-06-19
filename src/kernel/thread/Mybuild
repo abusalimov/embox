@@ -21,7 +21,7 @@ module core {
 	depends signal_api
 	depends thread_wait
 
-	depends embox.compat.libc.assert
+	depends embox.compat.libc.assert.assert
 
 	depends embox.kernel.cpu.common
 	depends embox.kernel.sched.current.api
@@ -76,7 +76,7 @@ module thread_local_heap extends thread_local {
 	source "thread_local_heap.c"
 	source "thread_local_heap.h"
 
-	depends embox.mem.sysmalloc_api
+	depends embox.mem.heap.sysmalloc_api
 
 	depends embox.kernel.task.resource.thread_key_table
 	depends embox.kernel.task.syslib.thread_key_table

@@ -4,6 +4,6 @@ package lego_nxt.driver
 module nxt_motor {
     @IncludePath("$(PLATFORM_DIR)/lego_nxt/include")
 	source "motor.c"
-	depends embox.driver.gpio.at91_pins
-	depends lego_nxt.driver.nxt_avr_init
+	depends embox.drivers.gpio.at91_pins
+	depends platform.lego_nxt.drivers.avr_init.nxt_avr_init
 }

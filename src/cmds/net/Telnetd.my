@@ -20,15 +20,15 @@ module telnetd {
 
 	option number telnetd_max_connections = 5
 
-	depends embox.net.tcp_sock
-	depends embox.net.tcp
+	depends embox.net.socket.tcp_sock
+	depends embox.net.l4.tcp
 
 	depends embox.compat.libc.all
 	depends embox.kernel.thread.core
 	depends embox.compat.posix.net.socket
 	depends embox.compat.posix.proc.signal
-	depends embox.cmd.sh.tish
-	depends embox.compat.posix.utmp_api
+	depends embox.cmds.shell.tish
+	depends embox.compat.posix.utmp.utmp_api
 	depends embox.compat.posix.LibPosix
 	depends embox.framework.LibFramework
 	depends embox.compat.posix.idx.ppty

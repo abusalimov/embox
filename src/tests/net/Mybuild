@@ -7,7 +7,7 @@ module socket_test {
 	option number proto
 
 	depends embox.compat.posix.net.socket
-	depends embox.framework.test
+	depends embox.framework.test.test
 }
 
 module inet_socket_test {
@@ -16,9 +16,9 @@ module inet_socket_test {
 	option number proto
 
 	depends embox.compat.posix.net.socket
-	depends embox.driver.net.loopback
-	depends embox.framework.test
-	depends embox.net.af_inet
+	depends embox.drivers.net.loopback
+	depends embox.framework.test.test
+	depends embox.net.socket.af_inet
 }
 
 module inet_stream_socket_test {
@@ -26,10 +26,10 @@ module inet_stream_socket_test {
 	option number proto
 
 	depends embox.compat.posix.net.socket
-	depends embox.driver.net.loopback
-	depends embox.framework.test
-	depends embox.net.tcp
-	depends embox.net.af_inet
+	depends embox.drivers.net.loopback
+	depends embox.framework.test.test
+	depends embox.net.l4.tcp
+	depends embox.net.socket.af_inet
 }
 
 module inet_dgram_socket_test {
@@ -37,20 +37,20 @@ module inet_dgram_socket_test {
 	option number proto
 
 	depends embox.compat.posix.net.socket
-	depends embox.driver.net.loopback
-	depends embox.framework.test
-	depends embox.net.udp
-	depends embox.net.af_inet
+	depends embox.drivers.net.loopback
+	depends embox.framework.test.test
+	depends embox.net.l4.udp
+	depends embox.net.socket.af_inet
 }
 
 module raw_socket_test {
 	source "raw_socket_test.c"
 
 	depends embox.compat.posix.net.socket
-	depends embox.driver.net.loopback
-	depends embox.framework.test
-	depends embox.net.af_inet
-	depends embox.net.af_packet
+	depends embox.drivers.net.loopback
+	depends embox.framework.test.test
+	depends embox.net.socket.af_inet
+	depends embox.net.socket.af_packet
 }
 
 module skb_iovec {

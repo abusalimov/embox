@@ -5,8 +5,8 @@ package third_party.zeromq
 @BuildDepends(third_party.gcc.core)
 static module core {
 	depends embox.compat.libc.all
-	depends embox.compat.libc.math
-	depends embox.lib.cxx.lib
+	depends embox.compat.libc.math.math
+	depends embox.compat.cxx.core.lib
 
 	depends third_party.STLport.core
 
@@ -14,7 +14,7 @@ static module core {
 	source "lib/libzmq.a"
 }
 
-module hwserver extends embox.lib.cxx.app {
+module hwserver extends embox.compat.cxx.core.app {
 	depends core
 
 	@IncludePath("$(ROOT_DIR)/extbld/third_party/zeromq/core/include")

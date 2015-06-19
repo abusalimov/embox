@@ -5,5 +5,5 @@ package third_party.external_build
 static module lib2 {
 	source "lib2.c"
 
-	depends embox.compat.posix.stubs
+	depends embox.compat.posix.stubs.stubs
 }

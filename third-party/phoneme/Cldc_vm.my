@@ -16,6 +16,6 @@ module cldc_vm {
 	@IncludePath("$(ROOT_DIR)/build/extbld/third_party/phoneme/cldc/install/include")
 	source "cldc_vm.c"
 
-	depends third_party.phoneme.cldc
+	depends third_party.phoneme.cldc.cldc
 	depends embox.framework.LibFramework
 }

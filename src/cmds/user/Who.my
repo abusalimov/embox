@@ -17,7 +17,7 @@ package embox.cmd.user
 module who {
 	source "who.c"
 
-	depends embox.compat.posix.passwd
+	depends embox.compat.posix.pwd_grp.passwd
 
-	depends embox.compat.posix.utmp_api
+	depends embox.compat.posix.utmp.utmp_api
 }

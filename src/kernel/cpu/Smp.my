@@ -1,7 +1,7 @@
 package embox.kernel.cpu
 
 module smp {
-	depends bkl
-	depends cpudata
+	depends embox.kernel.cpu.bkl
+	depends embox.kernel.cpu.cpudata
 	depends embox.arch.smp
 }

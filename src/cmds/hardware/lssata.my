@@ -20,5 +20,5 @@ package embox.cmd
 module lssata {
 	source "lssata.c"
 
-	depends embox.driver.ahci.core
+	depends embox.drivers.ahci.core
 }

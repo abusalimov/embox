@@ -48,20 +48,20 @@ module ping {
 	source "ping.c"
 
 	depends embox.net.lib.dns
-	depends embox.net.af_inet
-	depends embox.net.raw_sock
-	depends embox.net.ipv4 /* sock_get_secure_level, skb_get_secure_level */
+	depends embox.net.socket.af_inet
+	depends embox.net.socket.raw_sock
+	depends embox.net.l3.ipv4.ipv4 /* sock_get_secure_level, skb_get_secure_level */
 	depends embox.compat.libc.stdio.file_ops
 	depends embox.compat.libc.stdio.perror
 	depends embox.compat.libc.stdio.scanf
-	depends embox.kernel.timer.sys_timer
+	depends embox.kernel.time.timer.sys_timer
 	depends embox.compat.posix.net.socket
 	depends embox.compat.posix.net.inet_addr
-	depends embox.kernel.timer.sleep_api
+	depends embox.kernel.time.timer.sleep_api
 	depends embox.compat.posix.util.getopt
-	depends embox.mem.heap_api
+	depends embox.mem.heap.heap_api
 	depends embox.net.core
-	depends embox.net.route
+	depends embox.net.l3.route
 	depends embox.framework.LibFramework
 	depends embox.compat.posix.net.gethostbyname
 	depends embox.compat.posix.net.herror

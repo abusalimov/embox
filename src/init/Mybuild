@@ -19,11 +19,11 @@ module GraphicMode extends Display {
 
 	source "graphic_init.c"
 
-	depends embox.driver.video.fb
-	depends embox.driver.video.fb_videomodes
-	depends embox.driver.video.vesa_modes
+	depends embox.drivers.video.fb
+	depends embox.drivers.video.fb_videomodes
+	depends embox.drivers.video.vesa_modes
 
-	depends embox.driver.diag
+	depends embox.drivers.diag.diag
 }
 
 module TextMode extends Display {
@@ -64,7 +64,7 @@ module start_script {
 	source "start_script.c"
 
 	depends setup_tty_api
-	depends embox.cmd.sh.shell_registry
-	depends embox.cmd.sh.shell_api
+	depends embox.cmds.shell.shell_registry
+	depends embox.cmds.shell.shell_api
 	@NoRuntime depends embox.compat.libc.stdio.file_ops
 }

@@ -5,5 +5,5 @@ module stack {
 
 	option number stack_size=0x20000
 	option number alignment=0x1000
-	depends embox.mem.page_api
+	depends embox.mem.pagealloc.page_api
 }

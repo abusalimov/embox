@@ -6,9 +6,9 @@ static module print {
 	source "printf_impl.c"
 	source "printf_impl.h"
 
-	depends embox.compat.libc.math                   // depends from support_floating value
+	depends embox.compat.libc.math.math                   // depends from support_floating value
 	@NoRuntime depends embox.compat.libc.stdlib.core // atoi
-	@NoRuntime depends embox.compat.libc.type
+	@NoRuntime depends embox.compat.libc.ctype.type
 }
 
 static module sprintf {
@@ -16,7 +16,7 @@ static module sprintf {
 	source "snprintf.c"
 
 	@NoRuntime depends print
-	@NoRuntime depends embox.lib.LibGcc
+	@NoRuntime depends embox.lib.gcc.LibGcc
 }
 
 static module file_pool {
@@ -30,7 +30,7 @@ static module open {
 	depends file_pool
 	depends embox.compat.posix.fs.open
 	depends embox.compat.posix.fs.close
-	@NoRuntime depends embox.compat.libc.str
+	@NoRuntime depends embox.compat.libc.string.str
 }
 
 static module fseek {

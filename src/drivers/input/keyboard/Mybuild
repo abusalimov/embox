@@ -5,7 +5,7 @@ module keyboard {
 
 	option number register_in_vt = 1
 
-	depends embox.driver.input.core
+	depends embox.drivers.input.core
 }
 
 module keymap {

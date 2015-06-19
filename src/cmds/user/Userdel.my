@@ -18,7 +18,7 @@ AUTHORS
 module userdel {
 	source "userdel.c"
 
-	depends embox.cmd.user.utils
-	depends embox.compat.posix.passwd
-	depends embox.compat.posix.passwd_db_dynamic
+	depends embox.cmds.user.utils
+	depends embox.compat.posix.pwd_grp.passwd
+	depends embox.compat.posix.pwd_grp.passwd_db_dynamic
 }

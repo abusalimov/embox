@@ -16,7 +16,7 @@ module backtrace_symbols {
 	option number row_size=64
 
 	depends embox.lib.debug.symbol
-	depends embox.mem.heap_api
+	depends embox.mem.heap.heap_api
 }
 
 module backtrace_symbols_fd {

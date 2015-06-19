@@ -15,7 +15,7 @@ module smac_adm {
 	source "smac_adm.c",
 		"smac_adm_db.c"
 
-	depends embox.security.smac
-	depends embox.security.smac_user_dynamic_db
+	depends embox.security.smac.smac
+	depends embox.security.smac.smac_user_dynamic_db
 	depends embox.compat.libc.stdlib.system
 }

@@ -4,6 +4,6 @@ module math_test {
 	source "math_test.c"
 
 	depends embox.compat.libc.all
-	depends embox.compat.libc.math
+	depends embox.compat.libc.math.math
 	depends embox.framework.LibFramework
 }

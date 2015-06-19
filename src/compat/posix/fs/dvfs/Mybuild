@@ -1,6 +1,6 @@
 package embox.compat.posix.fs
 
-module all_dvfs extends all {
+module all_dvfs extends embox.compat.posix.fs.all {
 	depends file_dvfs,
 		chdir_dvfs,
 		dirent_dvfs,
@@ -11,78 +11,78 @@ module all_dvfs extends all {
 		libgen_dvfs
 }
 
-static module file_dvfs extends file {
+static module file_dvfs extends embox.compat.posix.fs.file {
 	depends file_ops_dvfs
 	depends lseek_dvfs
 	depends open_dvfs
 }
 
-static module chdir_dvfs extends chdir {
+static module chdir_dvfs extends embox.compat.posix.fs.chdir {
 	source "chdir.c"
 
 	depends embox.compat.posix.util.environ
 	depends embox.compat.libc.all
 }
 
-static module dirent_dvfs extends dirent {
+static module dirent_dvfs extends embox.compat.posix.fs.dirent {
 	option number dir_quantity=4
 	source "dirent.c"
 
-	depends embox.fs.dvfs
-	depends embox.mem.objalloc
-	depends embox.compat.libc.str
+	depends embox.fs.dvfs.dvfs
+	depends embox.mem.objalloc.objalloc
+	depends embox.compat.libc.string.str
 	depends embox.compat.posix.fs.getcwd
 }
 
-static module lseek_dvfs extends lseek {
+static module lseek_dvfs extends embox.compat.posix.fs.lseek {
 	source "lseek.c"
 
-	depends embox.kernel.task.idesc
+	depends embox.kernel.task.idesc.idesc
 	depends embox.kernel.task.resource.errno
 }
 
-static module file_ops_dvfs extends file_ops {
+static module file_ops_dvfs extends embox.compat.posix.fs.file_ops {
 	source "ftruncate.c"
 
-	depends embox.fs.dvfs
+	depends embox.fs.dvfs.dvfs
 	depends embox.kernel.task.api
-	depends embox.kernel.task.idesc
+	depends embox.kernel.task.idesc.idesc
 	depends embox.kernel.task.resource.errno
 }
 
-static module fsop_dvfs extends fsop {
+static module fsop_dvfs extends embox.compat.posix.fs.fsop {
 	source "fsop.c"
 
-	depends embox.fs.dvfs
+	depends embox.fs.dvfs.dvfs
 	depends embox.kernel.task.resource.errno
 	depends umask_dvfs // mkdir
 }
 
-static module getcwd_dvfs extends getcwd {
+static module getcwd_dvfs extends embox.compat.posix.fs.getcwd {
 	source "getcwd.c"
 
 	depends embox.compat.posix.util.environ
-	depends embox.compat.libc.str
+	depends embox.compat.libc.string.str
 }
 
-static module open_dvfs extends open {
+static module open_dvfs extends embox.compat.posix.fs.open {
 	source "open.c"
 
-	depends embox.fs.dvfs
+	depends embox.fs.dvfs.dvfs
 	depends embox.kernel.task.resource.errno
 	depends libgen_dvfs
 	depends dirent_dvfs
 	depends umask_dvfs
 }
 
-static module umask_dvfs extends umask {
+static module umask_dvfs extends embox.compat.posix.fs.umask {
 	source "umask.c"
 
 	option number default_umask = 0022
 	depends embox.kernel.task.task_resource
 }
 
-static module xattr_dvfs extends xattr {
+static module xattr_dvfs extends embox.compat.posix.fs.xattr {
 	source "xattr.c"
 
 	//depends embox.fs.xattr
@@ -90,7 +90,7 @@ static module xattr_dvfs extends xattr {
 	depends embox.security.api
 }
 
-static module libgen_dvfs extends libgen {
+static module libgen_dvfs extends embox.compat.posix.fs.libgen {
 	source "libgen.c"
 }
 
