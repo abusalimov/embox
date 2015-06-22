@@ -11,7 +11,7 @@ module env {
 
 	depends embox.kernel.task.task_resource
 	@NoRuntime depends embox.compat.libc.assert.assert
-	@NoRuntime depends embox.compat.libc.string.str
+	@NoRuntime depends embox.compat.libc.^string.str
 	@NoRuntime depends embox.util.array_spread.Array
 }
 

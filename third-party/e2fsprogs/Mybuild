@@ -14,7 +14,7 @@ static module core {
 	depends embox.compat.posix.stubs.stubs
 
 	@NoRuntime depends embox.compat.libc.all
-	@NoRuntime depends embox.compat.libc.string.str_dup
+	@NoRuntime depends embox.compat.libc.^string.str_dup
 	@NoRuntime depends embox.compat.posix.util.time
 	@NoRuntime depends embox.compat.posix.util.sleep
 	@NoRuntime depends embox.compat.posix.util.gettimeofday

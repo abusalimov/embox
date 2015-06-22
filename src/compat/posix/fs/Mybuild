@@ -46,7 +46,7 @@ static module dirent_old extends dirent {
 
 	depends embox.fs.core
 	depends embox.mem.objalloc.objalloc
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 	depends embox.fs.syslib.dcache
 	depends getcwd
 	depends embox.fs.syslib.perm
@@ -137,7 +137,7 @@ static module getcwd_old extends getcwd {
 	source "getcwd.c"
 
 	depends embox.compat.posix.util.environ
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 }
 
 @DefaultImpl(open_old)

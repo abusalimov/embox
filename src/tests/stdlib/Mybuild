@@ -53,7 +53,7 @@ module strdup_test {
 	depends embox.compat.libc.all
 	depends embox.mem.heap.heap_api
 	depends embox.framework.LibFramework
-	depends embox.compat.libc.string.str_dup
+	depends embox.compat.libc.^string.str_dup
 }
 
 module strlen_test {

@@ -4,7 +4,7 @@ module arp {
 	source "arp.c"
 
 	@NoRuntime depends embox.compat.libc.assert.assert
-	@NoRuntime depends embox.compat.libc.string.str
+	@NoRuntime depends embox.compat.libc.^string.str
 }
 
 module bootp {
@@ -35,7 +35,7 @@ module icmpv4 {
 	source "icmpv4.c"
 
 	@NoRuntime depends embox.compat.libc.assert.assert
-	@NoRuntime depends embox.compat.libc.string.str
+	@NoRuntime depends embox.compat.libc.^string.str
 	@NoRuntime depends ipv4
 }
 
@@ -43,7 +43,7 @@ module icmpv6 {
 	source "icmpv6.c"
 
 	@NoRuntime depends embox.compat.libc.assert.assert
-	@NoRuntime depends embox.compat.libc.string.str
+	@NoRuntime depends embox.compat.libc.^string.str
 	@NoRuntime depends ipv6
 }
 
@@ -57,7 +57,7 @@ module ipv6 {
 	source "ipv6.c"
 
 	@NoRuntime depends embox.compat.libc.assert.assert
-	@NoRuntime depends embox.compat.libc.string.str
+	@NoRuntime depends embox.compat.libc.^string.str
 }
 
 module ntp {

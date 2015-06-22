@@ -4,6 +4,6 @@ module ethernet {
 	source "ethernet.c"
 
 	@NoRuntime depends embox.compat.libc.assert.assert
-	@NoRuntime depends embox.compat.libc.string.str
+	@NoRuntime depends embox.compat.libc.^string.str
 	depends embox.net.dev
 }

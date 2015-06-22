@@ -58,5 +58,5 @@ static module indexator {
 
 	depends embox.compat.libc.assert.assert
 	depends embox.compat.libc.stdlib.core
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 }

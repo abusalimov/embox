@@ -1,4 +1,4 @@
-package embox.cmds.module
+package embox.cmds.^module
 
 @AutoCmd
 @Cmd(name = "modprobe",

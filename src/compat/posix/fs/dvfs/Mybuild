@@ -30,7 +30,7 @@ static module dirent_dvfs extends embox.compat.posix.fs.dirent {
 
 	depends embox.fs.dvfs.dvfs
 	depends embox.mem.objalloc.objalloc
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 	depends embox.compat.posix.fs.getcwd
 }
 
@@ -62,7 +62,7 @@ static module getcwd_dvfs extends embox.compat.posix.fs.getcwd {
 	source "getcwd.c"
 
 	depends embox.compat.posix.util.environ
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 }
 
 static module open_dvfs extends embox.compat.posix.fs.open {

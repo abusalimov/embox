@@ -1,5 +1,5 @@
 
-package embox.driver.usb.class
+package embox.drivers.usb.class
 
 module hid {
 	source "usb_class_hid.c"

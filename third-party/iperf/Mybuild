@@ -33,6 +33,6 @@ module iperf_stubs {
 
 	@NoRuntime depends embox.compat.cxx.core.lib
 	@NoRuntime depends embox.kernel.task.resource.errno
-	@NoRuntime depends embox.compat.libc.string.str
+	@NoRuntime depends embox.compat.libc.^string.str
 	@NoRuntime depends embox.lib.Printk
 }
