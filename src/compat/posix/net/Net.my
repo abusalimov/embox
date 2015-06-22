@@ -45,7 +45,7 @@ static module gethostbyaddr {
 	source "gethostbyaddr.c"
 
 	depends inet_addr
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 	depends embox.compat.libc.stdio.sprintf
 	depends embox.net.lib.dns
 	depends embox.net.util.hostent
@@ -56,7 +56,7 @@ static module gethostbyname {
 
 	depends gethostent
 	depends inet_addr
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 	depends embox.net.lib.dns
 	depends embox.net.util.hostent
 }
@@ -82,7 +82,7 @@ static module getnetbyname {
 	source "getnetbyname.c"
 
 	depends getnetent
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 }
 
 static module getnetent {
@@ -98,7 +98,7 @@ static module getprotobyname {
 	source "getprotobyname.c"
 
 	depends getprotoent
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 }
 
 static module getprotobynumber {
@@ -119,14 +119,14 @@ static module getservbyname {
 	source "getservbyname.c"
 
 	depends getservent
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 }
 
 static module getservbyport {
 	source "getservbyport.c"
 
 	depends getservent
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 }
 
 static module getservent {
@@ -134,7 +134,7 @@ static module getservent {
 	source "getservent.c"
 
 	depends embox.compat.libc.stdio.sprintf
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 	depends embox.net.util.servent
 }
 
@@ -150,13 +150,13 @@ static module inet_addr {
 	depends embox.compat.libc.assert.assert
 	depends embox.compat.libc.stdio.sprintf
 	depends embox.compat.libc.stdlib.core
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 }
 
 static module socket {
 	source "socket.c"
 	depends embox.kernel.task.idesc.idesc
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 	depends embox.net.socket.socket
 	depends embox.util.sys_log
 

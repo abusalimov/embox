@@ -8,8 +8,8 @@ static module all {
 	@NoRuntime depends embox.compat.libc.ctype.type
 	@NoRuntime depends embox.compat.libc.stdlib.all
 	@NoRuntime depends embox.compat.libc.stdio.all
-	@NoRuntime depends embox.compat.libc.string.str
-	@NoRuntime depends embox.compat.libc.string.str_dup
+	@NoRuntime depends embox.compat.libc.^string.str
+	@NoRuntime depends embox.compat.libc.^string.str_dup
 	@NoRuntime depends embox.compat.libc.wchar.wchar
 
 	depends embox.mem.heap.heap_api

@@ -12,7 +12,7 @@ module tcp {
 	depends embox.compat.posix.net.inet_addr
 	depends embox.kernel.time.kernel_time
 	depends embox.compat.libc.assert.assert
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 	depends embox.kernel.time.timer.sys_timer
 	depends embox.framework.net.proto.proto
 }

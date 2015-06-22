@@ -34,7 +34,7 @@ module multi extends api {
 	 */
 
 	@NoRuntime depends embox.compat.libc.assert.assert
-	@NoRuntime depends embox.compat.libc.string.str
+	@NoRuntime depends embox.compat.libc.^string.str
 }
 
 module single extends api {
@@ -44,7 +44,7 @@ module single extends api {
 	depends kernel_task
 	depends task_resource
 	@NoRuntime depends embox.compat.libc.assert.assert
-	@NoRuntime depends embox.compat.libc.string.str
+	@NoRuntime depends embox.compat.libc.^string.str
 }
 
 module task_no_table extends task_table_api {

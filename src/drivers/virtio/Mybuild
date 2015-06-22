@@ -7,7 +7,7 @@ module virtio {
 
 	source "virtio_queue.c"
 	depends embox.compat.libc.assert.assert
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 	depends embox.compat.libc.stdlib.core
 	depends embox.mem.heap.sysmalloc_api
 	/* depends virtio_ring.c */

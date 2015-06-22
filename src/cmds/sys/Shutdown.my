@@ -20,6 +20,6 @@ module shutdown {
 	source "shutdown.c"
 
 	depends embox.compat.libc.stdio.all
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 	/* FIXME: arch_shutdown() - which module? */
 }

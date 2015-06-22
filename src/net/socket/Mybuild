@@ -5,7 +5,7 @@ module raw_sock {
 
 	depends embox.framework.net.sock.sock
 	depends embox.compat.libc.assert.assert
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 	depends embox.net.skbuff
 	depends embox.net.sock
 	depends embox.util.dlist.DList
@@ -21,7 +21,7 @@ module tcp_sock {
 	depends embox.net.l4.tcp
 	depends embox.net.skbuff
 	depends embox.compat.posix.net.inet_addr
-	depends embox.compat.libc.string.str     /* memset, memcpy */
+	depends embox.compat.libc.^string.str     /* memset, memcpy */
 	depends embox.mem.misc.pool
 	depends embox.framework.LibFrameworkNet
 }
@@ -31,7 +31,7 @@ module udp_sock {
 
 	depends embox.framework.net.sock.sock
 	depends embox.compat.libc.assert.assert
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 	depends embox.net.lib.udp
 	depends embox.util.indexator
 	depends embox.util.dlist.DList
@@ -89,7 +89,7 @@ module socket {
 	source "socket_desc.c"
 	option number connect_timeout=5000
 
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 	depends embox.net.sock
 	depends embox.net.dev //ksocket, netdev_get_by_name
 	depends embox.util.sys_log

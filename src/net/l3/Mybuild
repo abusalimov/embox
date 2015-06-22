@@ -5,7 +5,7 @@ module arp {
 
 	@NoRuntime depends embox.framework.net.pack.pack
 	@NoRuntime depends embox.compat.libc.assert.assert
-	@NoRuntime depends embox.compat.libc.string.str
+	@NoRuntime depends embox.compat.libc.^string.str
 	@NoRuntime depends embox.net.core
 	@NoRuntime depends embox.net.l0.net_tx
 	@NoRuntime depends embox.net.lib.arp
@@ -28,7 +28,7 @@ module icmpv6 {
 
 	depends embox.framework.net.proto.proto
 	depends embox.compat.libc.assert.assert
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 	depends embox.net.core
 	depends embox.net.lib.icmpv6
 	depends embox.net.lib.ipv6
@@ -39,7 +39,7 @@ module ndp {
 	source "ndp.c"
 
 	depends embox.compat.libc.assert.assert
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 	@NoRuntime depends embox.net.lib.icmpv6
 	@NoRuntime depends embox.net.lib.ipv6
 	depends embox.net.l0.net_tx
@@ -51,7 +51,7 @@ module rarp {
 
 	@NoRuntime depends embox.framework.net.pack.pack
 	@NoRuntime depends embox.compat.libc.assert.assert
-	@NoRuntime depends embox.compat.libc.string.str
+	@NoRuntime depends embox.compat.libc.^string.str
 	@NoRuntime depends embox.net.core
 	@NoRuntime depends embox.net.l0.net_tx
 	@NoRuntime depends embox.net.lib.arp

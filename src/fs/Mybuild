@@ -69,7 +69,7 @@ module core extends fs_api {
 	depends path_helper
 	depends node
 
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 	depends embox.compat.posix.util.environ
 	depends embox.util.tree
 	depends embox.compat.posix.proc.uid
@@ -115,7 +115,7 @@ module journal {
 	source "journal.c"
 
 	depends embox.compat.libc.assert.assert
-	depends embox.compat.libc.string.str
+	depends embox.compat.libc.^string.str
 
 	depends buffer_cache
 	depends embox.mem.misc.slab

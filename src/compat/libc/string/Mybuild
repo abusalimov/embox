@@ -1,4 +1,4 @@
-package embox.compat.libc.string
+package embox.compat.libc.^string
 
 static module str {
 	source "memchr.c"
