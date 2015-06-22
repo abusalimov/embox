@@ -10,7 +10,7 @@
 #define PWD_GRP_DB_H_
 
 #include <framework/mod/options.h>
-#include <module/embox/compat/posix/passwd_db.h>
+#include <module/embox/compat/posix/pwd_grp/passwd_db.h>
 
 #define FS_DB_PREFIX __FS_DB_PREFIX
 

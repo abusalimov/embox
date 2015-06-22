@@ -9,7 +9,7 @@
 #ifndef MEM_MMAP_H_
 #define MEM_MMAP_H_
 
-#include <module/embox/mem/mmap_api.h>
+#include <module/embox/mem/mmap/mmap_api.h>
 
 //TODO:
 #define MAREA_ALIGMENT            0x1000

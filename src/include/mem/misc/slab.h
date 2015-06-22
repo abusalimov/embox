@@ -32,7 +32,7 @@
 #ifndef MEM_MISC_SLAB_H_
 #define MEM_MISC_SLAB_H_
 
-#include <module/embox/mem/slab.h>
+#include <module/embox/mem/misc/slab.h>
 #include <stdbool.h>
 
 /** cache descriptor */

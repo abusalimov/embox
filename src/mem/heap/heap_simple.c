@@ -17,7 +17,7 @@ static int has_initialized = 0;
 static char *managed_memory_start;
 static char *last_valid_address;
 
-#define HEAP_SIZE OPTION_MODULE_GET(embox__mem__heap_api,NUMBER,heap_size)
+#define HEAP_SIZE OPTION_MODULE_GET(embox__mem__heap__heap_api,NUMBER,heap_size)
 
 #define MEM_POOL_SIZE  (HEAP_SIZE / PAGE_SIZE())
 static void *mem_pool;

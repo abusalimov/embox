@@ -21,7 +21,7 @@
 #include <kernel/time/clock_source.h>
 #include <kernel/time/ktime.h>
 
-#include <module/embox/driver/interrupt/lapic.h>
+#include <module/embox/drivers/interrupt/lapic.h>
 
 #define IRQ0               0x0
 #define LAPIC_HZ           1000     /* You can change it */

@@ -17,7 +17,7 @@
 
 #include <drivers/irqctrl.h>
 
-#include <module/embox/driver/interrupt/lapic.h>
+#include <module/embox/drivers/interrupt/lapic.h>
 
 #define IOAPIC_DEF_ADDR	          0xFEC00000
 

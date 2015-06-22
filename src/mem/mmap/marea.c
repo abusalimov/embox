@@ -7,7 +7,7 @@
 
 #include <mem/misc/pool.h>
 #include <mem/mapping/marea.h>
-#include <module/embox/mem/mmap_api.h>
+#include <module/embox/mem/mmap/mmap_api.h>
 
 //TODO const number of struct marea
 POOL_DEF(marea_pool, struct marea, 0x400)

@@ -8,7 +8,7 @@
 
 #include <stdint.h>
 
-#include <module/embox/driver/clock/tsc.h>
+#include <module/embox/drivers/clock/tsc.h>
 
 #include <hal/cpu_info.h>
 

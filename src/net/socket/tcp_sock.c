@@ -38,9 +38,9 @@
 #include <framework/mod/options.h>
 #define MODOPS_AMOUNT_TCP_SOCK OPTION_GET(NUMBER, amount_tcp_sock)
 
-#include <config/embox/net/socket.h>
+#include <config/embox/net/socket/socket.h>
 #define MODOPS_CONNECT_TIMEOUT \
-	OPTION_MODULE_GET(embox__net__socket, NUMBER, connect_timeout)
+	OPTION_MODULE_GET(embox__net__socket__socket, NUMBER, connect_timeout)
 
 #define MAX_SIMULTANEOUS_TX_PACK OPTION_GET(NUMBER, max_simultaneous_tx_pack)
 static const struct sock_proto_ops tcp_sock_ops_struct;

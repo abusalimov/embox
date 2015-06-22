@@ -22,7 +22,7 @@
 
 #include <framework/cmd/types.h>
 
-#include <module/embox/framework/embuild.h>
+#include <module/embox/framework/mod/embuild.h>
 
 /**
  * Defines a new package.
@@ -69,7 +69,7 @@
 	__MOD_BUILDINFO_DEF(mod_nm, pkg_name, mod_name); \
 	__MOD_RUNLEVEL_BIND(runlevel_nr, seq_num, mod_nm);
 
-#if OPTION_MODULE_GET(embox__framework__mod, BOOLEAN, security_label)
+#if OPTION_MODULE_GET(embox__framework__mod__mod, BOOLEAN, security_label)
 # define MOD_LABEL_DEF(mod_nm) \
 	__MOD_LABEL_DEF(mod_nm)
 # define MOD_SEC_LABEL_DEF(mod_nm) \

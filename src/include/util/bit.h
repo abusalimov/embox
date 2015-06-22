@@ -11,7 +11,7 @@
 
 #include <limits.h>
 
-#include <module/embox/util/Bit.h>
+#include <module/embox/util/bit/Bit.h>
 
 /**
  * Count trailing (least significant) zero bits.

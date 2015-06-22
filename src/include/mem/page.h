@@ -15,7 +15,7 @@
 
 #include <framework/mod/options.h>
 
-#include <module/embox/mem/page_api.h>
+#include <module/embox/mem/pagealloc/page_api.h>
 
 struct page_allocator {
 	void *pages_start;

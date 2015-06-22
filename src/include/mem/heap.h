@@ -11,6 +11,6 @@
 #define MEM_HEAP_H_
 
 #include <framework/mod/options.h>
-#include <module/embox/mem/heap_api.h>
+#include <module/embox/mem/heap/heap_api.h>
 
 #endif /* MEM_HEAP_H_ */

@@ -52,7 +52,7 @@ static struct page_allocator *slab_pa;
 # define SLAB_ALLOCATOR_DEBUG
 #endif
 
-#define HEAP_SIZE OPTION_MODULE_GET(embox__mem__slab,NUMBER,heap_size)
+#define HEAP_SIZE OPTION_MODULE_GET(embox__mem__misc__slab,NUMBER,heap_size)
 
 static char *heap_start_ptr;
 

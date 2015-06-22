@@ -20,13 +20,13 @@
 #include <pnet/prior_path.h>
 
 #include <framework/mod/options.h>
-#include <module/embox/pnet/rx_thread.h>
+#include <module/embox/pnet/core/rx_thread.h>
 #include <embox/unit.h>
 
 EMBOX_UNIT(init, fini);
 
 #define PNET_PRIORITY_COUNT \
-	OPTION_MODULE_GET(embox__pnet__rx_thread, NUMBER, pnet_priority_count)
+	OPTION_MODULE_GET(embox__pnet__core__rx_thread, NUMBER, pnet_priority_count)
 
 #define ITERATION_CNT 100
 

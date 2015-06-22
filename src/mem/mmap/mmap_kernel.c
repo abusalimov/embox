@@ -13,7 +13,7 @@
 #include <kernel/task/kernel_task.h>
 #include <kernel/task/resource/mmap.h>
 
-#include <module/embox/mem/mmap_mmu.h>
+#include <module/embox/mem/mmap/mmap_mmu.h>
 
 static struct emmap early_emmap = {
 #if 0
