@@ -55,7 +55,7 @@ extern int    mprotect(void *, size_t, int);
 #define PROT_NOCACHE 0x80
 
 /* TODO move to compat/qnx */
-#include <module/embox/mem/vmem_api.h>
+#include <module/embox/mem/vmem/vmem_api.h>
 extern void *mmap_device_memory(void * addr,
                            size_t len,
                            int prot,

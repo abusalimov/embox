@@ -25,7 +25,7 @@
 #include <kernel/spinlock.h>
 
 
-#include <module/embox/driver/interrupt/lapic.h>
+#include <module/embox/drivers/interrupt/lapic.h>
 #include <module/embox/kernel/thread/core.h>
 
 #define THREAD_STACK_SIZE OPTION_MODULE_GET(embox__kernel__thread__core, \

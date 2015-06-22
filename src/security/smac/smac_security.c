@@ -19,7 +19,7 @@
 
 #include <kernel/task/resource/security.h>
 
-#include <module/embox/security/smac.h>
+#include <module/embox/security/smac/smac.h>
 #include <framework/mod/options.h>
 
 const char *smac_def_file_label = OPTION_STRING_GET(default_file_label);

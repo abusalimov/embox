@@ -7,7 +7,7 @@
  */
 
 #include <kernel/cpu/cpu.h>
-#include <module/embox/driver/interrupt/lapic.h>
+#include <module/embox/drivers/interrupt/lapic.h>
 
 unsigned int cpu_get_id(void) {
 	return lapic_id();

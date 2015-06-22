@@ -18,7 +18,7 @@
 #include <util/ring.h>
 
 #include <framework/mod/options.h>
-#include <module/embox/driver/tty/tty.h>
+#include <module/embox/drivers/tty/tty.h>
 
 /* Defaults */
 
@@ -46,10 +46,10 @@
 			ECHO | ECHOE | ECHOK | ECHONL)
 
 #define TTY_IO_BUFF_SZ \
-	OPTION_MODULE_GET(embox__driver__tty__tty, NUMBER, io_buff_sz)
+	OPTION_MODULE_GET(embox__drivers__tty__tty, NUMBER, io_buff_sz)
 
 #define TTY_RX_BUFF_SZ \
-	OPTION_MODULE_GET(embox__driver__tty__tty, NUMBER, rx_buff_sz)
+	OPTION_MODULE_GET(embox__drivers__tty__tty, NUMBER, rx_buff_sz)
 
 struct tty_ops;
 struct idesc;

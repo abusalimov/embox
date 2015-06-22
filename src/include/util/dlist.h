@@ -20,7 +20,7 @@
 #include <assert.h>
 #include <util/member.h>
 #include <util/macro.h>
-#include <module/embox/util/DList.h>
+#include <module/embox/util/dlist/DList.h>
 
 /**
  * A service list data structure. It's used both for elements and for list head.

@@ -2,7 +2,7 @@
 #include <asm-generic/embox.lds.h>
 
 #include <framework/mod/options.h>
-#include <module/embox/mem/page_api.h>
+#include <module/embox/mem/pagealloc/page_api.h>
 
 // for mmu
 #define ARCH_TEXT_ALIGNMENT PAGE_SIZE()

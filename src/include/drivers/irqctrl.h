@@ -9,7 +9,7 @@
 #ifndef DRIVER_IRQCTRL_H_
 #define DRIVER_IRQCTRL_H_
 
-#include <module/embox/driver/interrupt/irqctrl_api.h>
+#include <module/embox/drivers/interrupt/irqctrl_api.h>
 
 /**
  * Total amount of interrupt lines that the controller can handle.

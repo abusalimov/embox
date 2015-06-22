@@ -11,7 +11,7 @@
 #include <mem/page.h>
 #include <mem/heap.h>
 
-#define HEAP_SIZE OPTION_MODULE_GET(embox__mem__heap_api,NUMBER,heap_size)
+#define HEAP_SIZE OPTION_MODULE_GET(embox__mem__heap__heap_api,NUMBER,heap_size)
 
 EMBOX_TEST_SUITE("heap allocation test");
 

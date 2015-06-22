@@ -15,7 +15,7 @@
 struct __trace_point;
 struct __trace_block;
 
-#include <module/embox/profiler/trace.h>
+#include <module/embox/profiler/tracing/trace.h>
 
 #define TRACE_POINT_DEF(name, tp_name) \
 	  __TRACE_POINT_DEF(name, tp_name)

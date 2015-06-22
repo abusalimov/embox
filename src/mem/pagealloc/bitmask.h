@@ -9,7 +9,7 @@
 #define BITMASK_H_
 
 
-#define PAGE_SIZE() OPTION_MODULE_GET(embox__mem__bitmask,NUMBER,page_size)
+#define PAGE_SIZE() OPTION_MODULE_GET(embox__mem__pagealloc__bitmask,NUMBER,page_size)
 
 
 #endif /* BITMASK_H_ */

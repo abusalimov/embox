@@ -22,7 +22,7 @@
 #include <mem/sysmalloc.h>
 
 #include <framework/mod/options.h>
-#include <module/embox/driver/block.h>
+#include <module/embox/drivers/block_dev/block.h>
 
 #include <fs/fs_driver.h>
 #include <fs/vfs.h>

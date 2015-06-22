@@ -24,7 +24,7 @@
 #include <stddef.h>
 #include <util/macro.h>
 
-#include <module/embox/mem/objalloc.h>
+#include <module/embox/mem/objalloc/objalloc.h>
 
 /**
  *  Creates and initializes allocator.
