@@ -1,5 +1,5 @@
 
-package third_party
+package third_party.packetdrill
 
 @App
 @AutoCmd
@@ -16,5 +16,5 @@ module packetdrill {
 	       "huge-backlog.pkt",
 	       "transmission-pause.pkt"
 
-	depends embox.net.af_packet
+	depends embox.net.socket.af_packet
 }

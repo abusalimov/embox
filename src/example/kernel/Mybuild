@@ -4,7 +4,7 @@ module syscall_example {
 	source "syscall_example.c"
 
 	depends embox.compat.libc.all
-	depends embox.kernel.syscall
+	depends embox.kernel.syscall.syscall
 	depends embox.arch.syscall_caller
-	depends embox.framework.example
+	depends embox.framework.example.example
 }

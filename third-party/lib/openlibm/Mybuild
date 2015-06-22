@@ -1,5 +1,5 @@
 
-package third_party.lib
+package third_party.lib.openlibm
 
 @DefaultImpl(OpenLibmImpl)
 abstract module OpenLibm { }

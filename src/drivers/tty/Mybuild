@@ -1,5 +1,5 @@
 /*FIXME mybuild wrong packet name */
-package embox.driver.tty
+package embox.drivers.tty
 
 @DefaultImpl(task_breaking_enable)
 abstract module task_breaking {
@@ -24,7 +24,7 @@ module tty {
 	depends embox.fs.idesc
 	depends embox.fs.idesc_event
 
-	depends embox.kernel.thread.sync /* mutex */
+	depends embox.kernel.thread.sync.sync /* mutex */
 	depends embox.kernel.thread.sched_wait
 	depends task_breaking
 	depends embox.util.ring
@@ -41,7 +41,7 @@ module termios_ops {
 
 module tty_repo {
 	source "tty_repo.c"
-	depends embox.mem.pool
+	depends embox.mem.misc.pool
 }
 
 module pty {
@@ -55,5 +55,5 @@ module ttyfs {
 	source "ttyfs.c"
 
 	depends embox.fs.core
-	depends embox.fs.driver.devfs
+	depends embox.fs.driver.devfs.devfs
 }

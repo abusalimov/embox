@@ -1,5 +1,5 @@
 
-package embox.cmd.user
+package embox.cmds.user
 
 @AutoCmd
 @Cmd(name = "whoami",
@@ -17,5 +17,5 @@ package embox.cmd.user
 module whoami {
 	source "whoami.c"
 
-	depends embox.compat.posix.passwd
+	depends embox.compat.posix.pwd_grp.passwd
 }

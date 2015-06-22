@@ -1,25 +1,25 @@
-package embox.test.kernel.thread.sync
+package embox.tests.kernel.thread.sync
 
-@TestFor(embox.kernel.thread.mutex)
+@TestFor(embox.kernel.thread.sync.mutex)
 module mutex_test {
 	source "mutex_test.c"
 
 	depends embox.kernel.thread.core
 	depends embox.kernel.sched.sched
-	depends embox.kernel.thread.sync
-	depends embox.kernel.timer.sleep_api
+	depends embox.kernel.thread.sync.sync
+	depends embox.kernel.time.timer.sleep_api
 	depends embox.framework.LibFramework
 }
 
 
-@TestFor(embox.kernel.thread.mutex)
+@TestFor(embox.kernel.thread.sync.mutex)
 module concurrent_mutex_test {
 	source "concurrent_mutex_test.c"
 
 	depends embox.kernel.thread.core
 	depends embox.kernel.sched.sched
-	depends embox.kernel.thread.sync
-	depends embox.kernel.timer.sleep_api
+	depends embox.kernel.thread.sync.sync
+	depends embox.kernel.time.timer.sleep_api
 	depends embox.framework.LibFramework
 }
 
@@ -28,8 +28,8 @@ module priority_inheritance_test {
 
 	depends embox.kernel.thread.core
 	depends embox.kernel.sched.sched
-	depends embox.kernel.thread.sync
-	depends embox.kernel.timer.sleep_api
+	depends embox.kernel.thread.sync.sync
+	depends embox.kernel.time.timer.sleep_api
 	depends embox.framework.LibFramework
 }
 
@@ -38,8 +38,8 @@ module sem_test {
 
 	depends embox.kernel.thread.core
 	depends embox.kernel.sched.sched
-	depends embox.kernel.thread.sync
-	depends embox.kernel.timer.sleep_api
+	depends embox.kernel.thread.sync.sync
+	depends embox.kernel.time.timer.sleep_api
 	depends embox.framework.LibFramework
 }
 
@@ -48,8 +48,8 @@ module barrier_test {
 
 	depends embox.kernel.thread.core
 	depends embox.kernel.sched.sched
-	depends embox.kernel.thread.sync
-	depends embox.kernel.timer.sleep_api
+	depends embox.kernel.thread.sync.sync
+	depends embox.kernel.time.timer.sleep_api
 	depends embox.framework.LibFramework
 }
 
@@ -59,8 +59,8 @@ module cond_test {
 	depends embox.kernel.task.api
 	depends embox.kernel.thread.core
 	depends embox.kernel.sched.sched
-	depends embox.kernel.thread.sync
-	depends embox.kernel.timer.sleep_api
+	depends embox.kernel.thread.sync.sync
+	depends embox.kernel.time.timer.sleep_api
 	depends embox.framework.LibFramework
 }
 
@@ -69,7 +69,7 @@ module rwlock_test {
 
 	depends embox.kernel.thread.core
 	depends embox.kernel.sched.sched
-	depends embox.kernel.thread.sync
-	depends embox.kernel.timer.sleep_api
+	depends embox.kernel.thread.sync.sync
+	depends embox.kernel.time.timer.sleep_api
 	depends embox.framework.LibFramework
 }

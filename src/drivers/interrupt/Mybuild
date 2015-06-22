@@ -1,5 +1,5 @@
 /*FIXME mybuild wrong packet name */
-package embox.driver.interrupt
+package embox.drivers.interrupt
 
 abstract module irqctrl_api { }
 
@@ -33,7 +33,7 @@ module lapic {
 module irqmp extends irqctrl_api {
 	source "irqmp.c", "irqmp.h"
 
-	depends embox.driver.ambapp_api
+	depends embox.drivers.ambapp.ambapp_api
 	option number irqmp_base=0x80000200
 }
 

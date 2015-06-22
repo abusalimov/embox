@@ -2,5 +2,5 @@ package embox.mem
 
 module phymem {
 	source "phymem.c"
-	depends embox.mem.vmem_api
+	depends embox.mem.vmem.vmem_api
 }

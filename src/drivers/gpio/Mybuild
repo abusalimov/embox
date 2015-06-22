@@ -1,4 +1,4 @@
-package embox.driver.gpio
+package embox.drivers.gpio
 
 abstract module pins { }
 

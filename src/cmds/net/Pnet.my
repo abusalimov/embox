@@ -1,4 +1,4 @@
-package embox.cmd.net
+package embox.cmds.net
 
 @AutoCmd
 @Cmd(name = "pnet",
@@ -87,10 +87,10 @@ module pnet {
 	source "pnet.c"
 
 	depends embox.compat.libc.all
-	depends embox.pnet.core
+	depends embox.pnet.core.core
 	depends embox.pnet.node.linux_dev
-	depends embox.mem.heap_api
-	depends embox.pnet.node.skbuff.matcher
+	depends embox.mem.heap.heap_api
+	depends embox.pnet.node.skbuff_match.matcher
 	depends embox.net.util.macaddr
 	depends embox.compat.posix.net.inet_addr
 	depends embox.compat.posix.LibPosix

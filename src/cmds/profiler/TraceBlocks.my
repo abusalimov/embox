@@ -1,4 +1,4 @@
-package embox.cmd
+package embox.cmds.profiler
 
 @AutoCmd
 @Cmd(name = "trace_blocks",
@@ -25,6 +25,6 @@ module trace_blocks {
 	source "trace_blocks.c"
 
 	depends embox.compat.libc.stdio.all
-	depends embox.profiler.tracing
+	depends embox.profiler.tracing.tracing
 	depends embox.framework.LibFramework
 }

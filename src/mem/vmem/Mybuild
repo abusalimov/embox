@@ -1,4 +1,4 @@
-package embox.mem
+package embox.mem.vmem
 
 @DefaultImpl(vmem_nommu)
 abstract module vmem_api {
@@ -16,7 +16,7 @@ module vmem extends vmem_api {
 	depends embox.arch.mmu
 	depends vmem_alloc
 
-	depends embox.mem.mmap_mmu
+	depends embox.mem.mmap.mmap_mmu
 }
 
 module vmem_alloc {
@@ -26,7 +26,7 @@ module vmem_alloc {
 	source "vmem_alloc.c"
 
 	/*depends embox.mem.phymem*/ // not depends now!
-	depends embox.mem.page_api
+	depends embox.mem.pagealloc.page_api
 	depends embox.arch.mmu
 }
 

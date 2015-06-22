@@ -1,7 +1,7 @@
 
-package lego_nxt.example
+package platform.lego_nxt.example.sound
 
 module sound {
 	source "sound.c"
-	depends lego_nxt.driver.nxt_sound
+	depends platform.lego_nxt.drivers.sound.nxt_sound
 }

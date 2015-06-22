@@ -1,9 +1,9 @@
-package embox.net
+package embox.net.netfilter
 
 module netfilter {
 	source "netfilter.c"
 	option number amount_rules=10
 
-	depends embox.mem.pool
-	depends embox.util.DList
+	depends embox.mem.misc.pool
+	depends embox.util.dlist.DList
 }

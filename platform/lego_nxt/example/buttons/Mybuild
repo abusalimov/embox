@@ -1,8 +1,8 @@
 
-package lego_nxt.example
+package platform.lego_nxt.example.buttons
 
 module buttons {
 	source "buttons.c"
 
-	depends lego_nxt.driver.nxt_avr_init
+	depends platform.lego_nxt.drivers.avr_init.nxt_avr_init
 }

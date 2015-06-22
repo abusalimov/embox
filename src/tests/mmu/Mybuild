@@ -1,10 +1,10 @@
-package embox.test
+package embox.tests.mmu
 
 module mmu_core {
 	source "mmu_core.c"
 
 	depends embox.framework.LibFramework
-	depends embox.mem.vmem
+	depends embox.mem.vmem.vmem
 	//depends embox.arch.x86.mmu
 	//depends embox.arch.x86.test.testtrap
 	depends embox.arch.mmu

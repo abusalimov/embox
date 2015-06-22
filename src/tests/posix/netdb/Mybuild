@@ -1,9 +1,9 @@
-package embox.test.posix.netdb
+package embox.tests.posix.netdb
 
 module getaddrinfo_test {
 	source "getaddrinfo_test.c"
 
 	depends embox.compat.posix.net.getaddrinfo
-	depends embox.framework.test
-	depends embox.compat.libc.str
+	depends embox.framework.test.test
+	depends embox.compat.libc.string.str
 }

@@ -1,5 +1,5 @@
 
-package embox.arch.msp430
+package embox.arch.msp430.lib
 
 static module libarch extends embox.arch.libarch {
 	source "setjmp.S"
@@ -8,5 +8,5 @@ static module libarch extends embox.arch.libarch {
 static module libgcc {
 	source "mulhi3.c"
 
-	depends embox.lib.LibGcc
+	depends embox.lib.gcc.LibGcc
 }

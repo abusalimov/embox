@@ -1,4 +1,4 @@
-package embox.cmd.proc
+package embox.cmds.proc
 
 @AutoCmd
 @Cmd(name = "top",
@@ -16,6 +16,6 @@ package embox.cmd.proc
 module top {
 	source "top.c"
 
-	depends embox.kernel.task.resource.u_area
+	depends embox.kernel.task.resource.u_area.u_area
 	depends embox.compat.libc.all
 }

@@ -1,4 +1,4 @@
-package embox.test.net.socket
+package embox.tests.net.socket
 
 module inet_socket_test {
 	source "inet_socket_test.c"
@@ -6,8 +6,8 @@ module inet_socket_test {
 	depends embox.compat.posix.net.socket
 	depends embox.compat.posix.LibPosix
 	depends embox.framework.LibFramework
-	depends embox.driver.net.loopback
-	depends embox.net.af_inet
+	depends embox.drivers.net.loopback
+	depends embox.net.socket.af_inet
 }
 
 module packet_socket_test {

@@ -9,7 +9,7 @@ module fs_full extends file {
 	source "kfile.c"
 	source "kfile_node.c"
 
-	depends embox.compat.libc.assert
+	depends embox.compat.libc.assert.assert
 	depends embox.fs.core
 	depends embox.fs.file_desc
 	depends embox.security.api
@@ -42,9 +42,9 @@ module file_system_full extends file_system {
 	depends embox.fs.core
 	depends embox.fs.driver.repo
 	depends embox.fs.file_desc
-	depends embox.fs.syslib.fs_full
-	depends embox.kernel.thread.mutex
-	depends embox.compat.libc.str_dup
+	depends fs_full
+	depends embox.kernel.thread.sync.mutex
+	depends embox.compat.libc.string.str_dup
 	depends embox.compat.posix.fs.open
 	depends embox.compat.posix.util.environ
 	depends embox.util.tree
@@ -72,7 +72,7 @@ module dcache_last extends dcache{
 
 
 	source "dcache.c"
-	depends embox.util.hashtable
+	depends embox.util.hashtable.hashtable
 }
 
 module noncache extends dcache{

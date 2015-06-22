@@ -1,5 +1,5 @@
 
-package embox.arch.usermode86
+package embox.arch.usermode86.kernel
 
 /*
 module host {
@@ -20,7 +20,7 @@ module ipl extends embox.arch.interrupt {
 		"ipl.h"
 
 	depends embox.kernel.critical
-	depends embox.driver.interrupt.irqctrl_api
+	depends embox.drivers.interrupt.irqctrl_api
 	depends embox.kernel.irq
 
 }

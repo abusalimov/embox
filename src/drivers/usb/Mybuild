@@ -1,5 +1,5 @@
 
-package embox.driver.usb
+package embox.drivers.usb
 
 module core {
 	source "usb_core.c"
@@ -13,7 +13,7 @@ module core {
 	source "usb_class.c"
 
 	source "usb_driver.c"
-	depends embox.driver.char_dev
+	depends embox.drivers.char.char_dev
 
 	source "usb_dev_desc.c"
 }
@@ -29,7 +29,7 @@ module whitelist_dev extends whitelist_api {
 	source "usb_whitelist_dev.h"
 	source "usb_whitelist_dev.c"
 
-	depends embox.driver.char_dev
+	depends embox.drivers.char.char_dev
 	depends core
 }
 

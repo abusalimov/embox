@@ -1,5 +1,5 @@
 
-package embox.test.kernel.sched
+package embox.tests.kernel.sched
 
 module waitq {
 	source "waitq.c"

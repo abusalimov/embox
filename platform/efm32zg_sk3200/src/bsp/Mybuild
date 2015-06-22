@@ -1,5 +1,5 @@
 
-package efm32zg_sk3200
+package platform.efm32zg_sk3200.src.bsp
 
 @Build(stage=1,script="$(EXTERNAL_MAKE) download extract")
 @BuildArtifactPath(cppflags="-I$(EXTERNAL_BUILD_DIR)/efm32zg_sk3200/bsp_get/CMSIS/Include")

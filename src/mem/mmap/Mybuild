@@ -1,6 +1,6 @@
-package embox.mem
+package embox.mem.mmap
 
-@DefaultImpl(embox.mem.mmap_nommu)
+@DefaultImpl(mmap_nommu)
 abstract module mmap_api {
 	depends embox.kernel.task.resource.mmap
 }
@@ -8,7 +8,7 @@ abstract module mmap_api {
 module mmap_nommu extends mmap_api {
 	source "mmap_nommu.h", "mmap_nommu.c"
 
-	depends embox.mem.page_api
+	depends embox.mem.pagealloc.page_api
 	depends embox.mem.phymem
 }
 
@@ -22,5 +22,5 @@ module mmap_mmu extends mmap_api {
 	depends embox.kernel.task.resource.mmap
 	depends embox.kernel.task.resource.mmap_notify
 	depends embox.arch.mmu
-	depends embox.mem.vmem
+	depends embox.mem.vmem.vmem
 }

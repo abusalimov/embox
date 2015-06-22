@@ -1,4 +1,4 @@
-package embox.cmd
+package embox.cmds
 
 @AutoCmd
 @Cmd(name = "md5sum",
@@ -16,7 +16,7 @@ package embox.cmd
 module md5sum {
 	source "md5sum.c"
 
-	depends embox.lib.LibCrypt
+	depends embox.lib.crypt.LibCrypt
 	depends embox.compat.libc.all
 	depends embox.compat.posix.LibPosix
 	depends embox.fs.core

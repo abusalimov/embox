@@ -1,4 +1,4 @@
-package embox.cmd.net
+package embox.cmds.net
 
 @AutoCmd
 @Cmd(name = "rlogin",
@@ -18,7 +18,7 @@ module rlogin {
 	source "rlogin.c"
 
 	depends embox.compat.libc.all
-	depends embox.mem.heap_api
+	depends embox.mem.heap.heap_api
 	depends embox.compat.posix.net.socket
 	depends embox.compat.posix.LibPosix
 	depends embox.framework.LibFramework

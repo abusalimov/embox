@@ -1,4 +1,4 @@
-package embox.cmd.net
+package embox.cmds.net
 
 @AutoCmd
 @Cmd(name = "ifconfig",
@@ -58,7 +58,7 @@ module ifconfig {
 	depends embox.compat.posix.net.inet_addr
 	depends embox.net.core
 	depends embox.net.util.macaddr
-	depends embox.net.af_inet
+	depends embox.net.socket.af_inet
 	depends embox.framework.LibFramework
 	depends embox.compat.libc.stdio.perror
 	depends embox.compat.libc.stdio.scanf

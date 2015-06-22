@@ -1,13 +1,13 @@
-package third_party.tcl
+package third_party.tcl.tcludp
 
 @Build(stage=2,script="$(EXTERNAL_MAKE)")
-@BuildDepends(third_party.tcl.core)
+@BuildDepends(third_party.tcl.tclsh.core)
 static module tcludp {
 	@AddPrefix("^BUILD/extbld/^MOD_PATH/install")
 	source "libudp1.0.10.a"
 
 	depends embox.compat.posix.LibPosix
-	@NoRuntime depends third_party.tcl.core
+	@NoRuntime depends third_party.tcl.tclsh.core
 
 	@InitFS
 	@AddPrefix("../example")

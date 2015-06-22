@@ -1,4 +1,4 @@
-package embox.cmd
+package embox.cmds.hardware
 
 @AutoCmd
 @Cmd(name = "lssata",
@@ -20,5 +20,5 @@ package embox.cmd
 module lssata {
 	source "lssata.c"
 
-	depends embox.driver.ahci.core
+	depends embox.drivers.ahci.core
 }

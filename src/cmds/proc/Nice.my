@@ -1,4 +1,4 @@
-package embox.cmd.proc
+package embox.cmds.proc
 
 @AutoCmd
 @Cmd(name = "nice",
@@ -22,6 +22,6 @@ module nice {
 
 	depends embox.compat.posix.proc.priority
 	depends embox.compat.libc.all
-	depends embox.framework.cmd
+	depends embox.framework.cmd.cmd
 	depends embox.framework.LibFramework
 }

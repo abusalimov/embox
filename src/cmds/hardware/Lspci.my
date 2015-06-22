@@ -1,4 +1,4 @@
-package embox.cmd
+package embox.cmds.hardware
 
 @AutoCmd
 @Cmd(name = "lspci",
@@ -21,6 +21,6 @@ module lspci {
 
 	depends embox.compat.libc.all
 	//depends embox.compat.posix.LibPosix
-	depends embox.driver.pci
+	depends embox.drivers.pci.pci
 	depends embox.framework.LibFramework
 }

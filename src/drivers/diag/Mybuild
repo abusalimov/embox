@@ -1,4 +1,4 @@
-package embox.driver.diag
+package embox.drivers.diag
 
 @DefaultImpl(no_diag)
 abstract module diag_api {

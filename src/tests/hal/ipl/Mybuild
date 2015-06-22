@@ -1,10 +1,10 @@
-package embox.test.hal
+package embox.tests.hal.ipl
 
 module ipl_test {
 	source "ipl_test.c"
 
 	depends embox.kernel.irq
 	depends embox.arch.interrupt
-	depends embox.framework.test
+	depends embox.framework.test.test
 }
 

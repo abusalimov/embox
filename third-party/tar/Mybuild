@@ -1,4 +1,4 @@
-package third_party.gnu
+package third_party.tar
 
 @Build(stage=2,script="$(EXTERNAL_MAKE)")
 @App
@@ -14,9 +14,9 @@ module tar {
 	source "strip.tar.o"
 
 	@NoRuntime depends embox.compat.posix.fs.dirent
-	@NoRuntime depends embox.compat.libc.assert
-	@NoRuntime depends embox.compat.libc.type
+	@NoRuntime depends embox.compat.libc.assert.assert
+	@NoRuntime depends embox.compat.libc.ctype.type
 	@NoRuntime depends embox.kernel.task.resource.errno
 
-	depends embox.compat.posix.stubs
+	depends embox.compat.posix.stubs.stubs
 }

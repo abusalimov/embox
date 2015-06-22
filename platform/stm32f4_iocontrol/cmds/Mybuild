@@ -1,14 +1,14 @@
-package stm32f4_iocontrol
+package platform.stm32f4_iocontrol.cmds
 
 @AutoCmd
 @Build(script="true")
-@BuildDepends(third_party.lib.libmodbus)
+@BuildDepends(third_party.lib.libmodbus.libmodbus)
 @Cmd(name="modbus_server")
 module modbus_server {
 	@IncludePath("$(ROOT_DIR)/build/extbld/third_party/lib/libmodbus/install/include/modbus")
 	source "modbus_server.c"
 
-	@NoRuntime depends third_party.lib.libmodbus
+	@NoRuntime depends third_party.lib.libmodbus.libmodbus
 }
 
 @AutoCmd

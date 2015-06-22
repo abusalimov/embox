@@ -1,19 +1,19 @@
-package embox.compat.posix.proc
+package embox.compat.posix.proc.vfork_exchanged
 
-static module exec_exchanged extends exec_lib {
+static module exec_exchanged extends embox.compat.posix.proc.exec_lib {
 	source "exec_exchanged.c"
 
-	depends embox.kernel.task.resource.argv
-	depends exec_lib
+	depends embox.kernel.task.resource.argv.argv
+	depends embox.compat.posix.proc.exec_lib
 }
 
-static module vfork_exchanged extends vfork {
+static module vfork_exchanged extends embox.compat.posix.proc.vfork {
 	source "vfork_exchanged.c"
 	source "vfork_res_exchanged.h"
 
 	depends embox.compat.posix.proc.exit
-	depends embox.kernel.task.resource.vfork
-	depends vfork_entry
+	depends embox.kernel.task.resource.vfork.vfork
+	depends embox.compat.posix.proc.vfork_entry
 	depends embox.arch.vfork_entry
 	depends embox.util.LibUtil
 }

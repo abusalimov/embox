@@ -1,4 +1,4 @@
-package embox.kernel.task.resource
+package embox.kernel.task.resource.waitpid
 
 module waitpid {
 	@IncludeExport(path="kernel/task/resource")
@@ -8,7 +8,7 @@ module waitpid {
 
 	depends embox.kernel.sched.wait_queue
 	depends embox.kernel.task.task_resource
-	@NoRuntime depends embox.compat.libc.assert
+	@NoRuntime depends embox.compat.libc.assert.assert
 }
 
 

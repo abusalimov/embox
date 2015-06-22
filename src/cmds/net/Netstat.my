@@ -1,4 +1,4 @@
-package embox.cmd.net
+package embox.cmds.net
 
 @AutoCmd
 @Cmd(name = "netstat",
@@ -17,7 +17,7 @@ module netstat {
 	source "netstat.c"
 
 	depends embox.compat.libc.all
-	depends embox.net.tcp
-	depends embox.net.udp
+	depends embox.net.l4.tcp
+	depends embox.net.l4.udp
 	depends embox.framework.LibFramework
 }

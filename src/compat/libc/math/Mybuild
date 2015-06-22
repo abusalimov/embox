@@ -1,5 +1,5 @@
-package embox.compat.libc
+package embox.compat.libc.math
 
 static module math {
-	depends third_party.lib.OpenLibm
+	depends third_party.lib.openlibm.OpenLibm
 }

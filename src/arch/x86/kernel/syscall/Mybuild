@@ -1,4 +1,4 @@
-package embox.arch.x86.kernel
+package embox.arch.x86.kernel.syscall
 
 module syscall extends embox.arch.syscall {
 	source "syscall_entry.S"
@@ -6,12 +6,12 @@ module syscall extends embox.arch.syscall {
 	// TODO: Replace
 	source "fork.c", "fork_leave.S"
 
-	depends locore
+	depends embox.arch.x86.kernel.locore
 	depends embox.kernel.syscall.syscall_table
 }
 
 module syscall_caller extends embox.arch.syscall_caller {
 	source "syscall_caller.h"
 
-	depends embox.kernel.syscall
+	depends embox.kernel.syscall.syscall
 }

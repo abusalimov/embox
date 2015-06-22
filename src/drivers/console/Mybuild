@@ -1,4 +1,4 @@
-package embox.driver.console
+package embox.drivers.console
 
 abstract module mpx {
 }
@@ -6,8 +6,8 @@ abstract module mpx {
 module mpx_simple extends mpx {
 	source "mpx_simple.c"
 
-	depends embox.driver.video.fb
-	depends embox.driver.input.core
+	depends embox.drivers.video.fb
+	depends embox.drivers.input.core
 }
 
 module fbcon {
@@ -18,12 +18,12 @@ module fbcon {
 	@IncludeExport(path="drivers/console")
 	source "mpx.h"
 
-	depends embox.driver.video.fonts
-	depends embox.driver.tty.vterm
-	depends embox.driver.input.keyboard.keyboard
+	depends embox.drivers.video.fonts
+	depends embox.drivers.tty.vt.vterm
+	depends embox.drivers.input.keyboard.keyboard
 	depends mpx_simple
-	depends embox.cmd.user.login //TODO why it required?
+	depends embox.cmds.user.login //TODO why it required?
 
-	depends embox.cmd.sh.tish
+	depends embox.cmds.shell.tish
 }
 

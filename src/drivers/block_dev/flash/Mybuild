@@ -1,4 +1,4 @@
-package embox.driver
+package embox.drivers.block_dev.flash
 
 module flash_lib {
 	@IncludeExport(path="drivers/block_dev/flash")
@@ -15,9 +15,9 @@ module flash {
 	depends flash_lib
 
 	depends embox.fs.node
-	depends embox.mem.page_api
-	depends embox.mem.pool
-	depends embox.driver.block
+	depends embox.mem.pagealloc.page_api
+	depends embox.mem.misc.pool
+	depends embox.drivers.block_dev.block
 	depends embox.mem.phymem
 	depends embox.util.indexator
 }

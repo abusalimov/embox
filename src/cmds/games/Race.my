@@ -1,4 +1,4 @@
-package embox.cmd.games
+package embox.cmds.games
 
 @DefaultImpl(race_diag_stdio)
 abstract module race_io_api { }

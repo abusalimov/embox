@@ -1,5 +1,5 @@
 
-package embox.test.lib.shell
+package embox.tests.lib.shell
 
 module tokenizer {
 	source "tokenizer.c"

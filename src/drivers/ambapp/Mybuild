@@ -1,4 +1,4 @@
-package embox.driver
+package embox.drivers.ambapp
 
 abstract module ambapp_api { }
 

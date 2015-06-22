@@ -1,8 +1,8 @@
-package embox.util
+package embox.util.hashtable
 
 
 static module hashtable {
 	source "hashtable.c"
 
-	depends embox.util.DList
+	depends embox.util.dlist.DList
 }

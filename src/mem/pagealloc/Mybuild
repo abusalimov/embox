@@ -1,4 +1,4 @@
-package embox.mem
+package embox.mem.pagealloc
 
 @DefaultImpl(NoPage)
 abstract module page_api {
@@ -13,6 +13,6 @@ module bitmask extends page_api {
 	source "bitmask.c"
 	source "bitmask.h"
 
-	depends embox.util.Bitmap
+	depends embox.util.bitmap.Bitmap
 	option number page_size=4096
 }

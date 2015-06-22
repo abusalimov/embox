@@ -1,4 +1,4 @@
-package embox.kernel.task.resource
+package embox.kernel.task.resource.vfork
 
 module vfork {
 	@IncludeExport(path="kernel/task/resource")

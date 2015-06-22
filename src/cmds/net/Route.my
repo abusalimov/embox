@@ -1,4 +1,4 @@
-package embox.cmd.net
+package embox.cmds.net
 
 @AutoCmd
 @Cmd(name = "route",
@@ -56,6 +56,6 @@ module route {
 	depends embox.compat.libc.stdio.file_ops
 	depends embox.compat.posix.net.inet_addr
 	depends embox.net.core
-	depends embox.net.route
+	depends embox.net.l3.route
 	depends embox.framework.LibFramework
 }

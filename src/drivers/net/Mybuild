@@ -1,9 +1,9 @@
-package embox.driver.net
+package embox.drivers.net
 
 module loopback {
 	source "loopback.c"
 
-	depends embox.net.entry_api
+	depends embox.net.l0.entry_api
 	depends embox.net.l2.ethernet
 	depends embox.net.dev
 }
@@ -11,7 +11,7 @@ module loopback {
 module tun {
 	source "tun.c"
 
-	depends embox.net.entry_api
+	depends embox.net.l0.entry_api
 	depends embox.net.l2.ethernet
 	depends embox.net.dev
 }
@@ -24,12 +24,12 @@ module virtio {
 
 	depends embox.net.skbuff
 	depends embox.compat.libc.all
-	depends embox.driver.pci
+	depends embox.drivers.pci.pci
 	depends embox.net.l2.ethernet
 	depends embox.kernel.irq
 	depends embox.net.dev
-	depends embox.net.entry_api
-	depends embox.driver.virtio
+	depends embox.net.l0.entry_api
+	depends embox.drivers.virtio.virtio
 }
 
 module ti816x {
@@ -43,8 +43,8 @@ module ti816x {
 	depends embox.net.l2.ethernet
 	depends embox.kernel.irq
 	depends embox.net.dev
-	depends embox.net.entry_api
-	depends embox.util.DList
+	depends embox.net.l0.entry_api
+	depends embox.util.dlist.DList
 }
 
 module e1000 {
@@ -54,11 +54,11 @@ module e1000 {
 
 	depends embox.net.skbuff
 	depends embox.compat.libc.all
-	depends embox.driver.pci
+	depends embox.drivers.pci.pci
 	depends embox.net.l2.ethernet
 	depends embox.kernel.irq
 	depends embox.net.dev
-	depends embox.net.entry_api
+	depends embox.net.l0.entry_api
 }
 
 module ne2k_pci {
@@ -68,11 +68,11 @@ module ne2k_pci {
 
 	depends embox.net.skbuff
 	depends embox.compat.libc.all
-	depends embox.driver.pci
+	depends embox.drivers.pci.pci
 	depends embox.net.l2.ethernet
 	depends embox.kernel.irq
 	depends embox.net.dev
-	depends embox.net.entry_api
+	depends embox.net.l0.entry_api
 }
 
 module rtl8139 {
@@ -82,11 +82,11 @@ module rtl8139 {
 
 	depends embox.net.skbuff
 	depends embox.compat.libc.all
-	depends embox.driver.pci
+	depends embox.drivers.pci.pci
 	depends embox.net.l2.ethernet
 	depends embox.kernel.irq
 	depends embox.net.dev
-	depends embox.net.entry_api
+	depends embox.net.l0.entry_api
 }
 
 module r6040 {
@@ -95,7 +95,7 @@ module r6040 {
 	source "r6040.c"
 
 	depends embox.compat.libc.all
-	depends embox.kernel.timer.sleep_api
+	depends embox.kernel.time.timer.sleep_api
 	depends embox.kernel.irq
 }
 
@@ -110,7 +110,7 @@ module xemaclite {
 	depends embox.net.l2.ethernet
 	depends embox.kernel.irq
 	depends embox.net.dev
-	depends embox.net.entry_api
+	depends embox.net.l0.entry_api
 }
 
 
@@ -124,7 +124,7 @@ module greth {
 	depends embox.net.l2.ethernet
 	depends embox.kernel.irq
 	depends embox.net.dev
-	depends embox.net.entry_api
+	depends embox.net.l0.entry_api
 	depends embox.net.core
 	depends embox.compat.posix.util.sleep
 }
@@ -135,7 +135,7 @@ module usermode {
 	depends embox.net.l2.ethernet
 	depends embox.kernel.irq
 	depends embox.net.dev
-	depends embox.net.entry_api
+	depends embox.net.l0.entry_api
 }
 
 module lan9118 {
@@ -144,25 +144,25 @@ module lan9118 {
 	option number irq_pin=16
 	option number port=6
 
-	depends embox.driver.gpmc.gpmc_api
-	depends embox.driver.gpio.api
+	depends embox.drivers.gpmc.gpmc_api
+	depends embox.drivers.gpio.api
 
 	depends embox.net.skbuff
 	depends embox.compat.libc.all
 	depends embox.net.l2.ethernet
 	depends embox.kernel.irq
 	depends embox.net.dev
-	depends embox.net.entry_api
+	depends embox.net.l0.entry_api
 }
 
 module usbnet {
 	source "usbnet.c"
 
-	depends embox.driver.usb.class.cdc
+	depends embox.drivers.usb.class.cdc
 	depends embox.net.skbuff
 	depends embox.net.l2.ethernet
 	depends embox.net.dev
-	depends embox.net.entry_api
+	depends embox.net.l0.entry_api
 	depends embox.net.core
 }
 
@@ -175,5 +175,5 @@ module stm32f4_eth {
 	depends embox.kernel.irq_api
 	depends embox.net.dev
 	depends embox.net.core
-	depends embox.net.entry_api
+	depends embox.net.l0.entry_api
 }

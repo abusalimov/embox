@@ -1,14 +1,14 @@
-package embox.net
+package embox.net.socket
 
 module raw_sock {
 	source "raw_sock.c"
 
-	depends embox.framework.net.sock
-	depends embox.compat.libc.assert
-	depends embox.compat.libc.str
+	depends embox.framework.net.sock.sock
+	depends embox.compat.libc.assert.assert
+	depends embox.compat.libc.string.str
 	depends embox.net.skbuff
 	depends embox.net.sock
-	depends embox.util.DList
+	depends embox.util.dlist.DList
 }
 
 module tcp_sock {
@@ -16,33 +16,33 @@ module tcp_sock {
 	option number amount_tcp_sock=20
 	option number max_simultaneous_tx_pack = 0
 
-	depends route
-	depends sock
-	depends tcp
-	depends skbuff
+	depends embox.net.l3.route
+	depends embox.net.sock
+	depends embox.net.l4.tcp
+	depends embox.net.skbuff
 	depends embox.compat.posix.net.inet_addr
-	depends embox.compat.libc.str     /* memset, memcpy */
-	depends embox.mem.pool
+	depends embox.compat.libc.string.str     /* memset, memcpy */
+	depends embox.mem.misc.pool
 	depends embox.framework.LibFrameworkNet
 }
 
 module udp_sock {
 	source "udp_sock.c"
 
-	depends embox.framework.net.sock
-	depends embox.compat.libc.assert
-	depends embox.compat.libc.str
+	depends embox.framework.net.sock.sock
+	depends embox.compat.libc.assert.assert
+	depends embox.compat.libc.string.str
 	depends embox.net.lib.udp
 	depends embox.util.indexator
-	depends embox.util.DList
+	depends embox.util.dlist.DList
 }
 
 module af_inet {
 	source "af_inet.c"
 	option number amount_inet_sock=20
 
-	depends sock
-	depends route
+	depends embox.net.sock
+	depends embox.net.l3.route
 	depends embox.util.indexator
 	depends embox.framework.LibFrameworkNet
 }
@@ -51,7 +51,7 @@ module af_inet6 {
 	source "af_inet6.c"
 	option number amount_inet6_sock=20
 
-	depends sock
+	depends embox.net.sock
 	depends embox.util.indexator
 	depends embox.framework.LibFrameworkNet
 }
@@ -63,8 +63,8 @@ module af_packet extends af_packet_api {
 	source "af_packet.c"
 	option number amount_sockets=20
 
-	depends sock
-	depends packet
+	depends embox.net.sock
+	depends embox.net.packet
 	depends embox.framework.LibFrameworkNet
 }
 
@@ -72,15 +72,15 @@ module no_af_packet extends af_packet_api {
 	source "no_af_packet.c"
 	option number amount_sockets=20
 
-	depends sock
-	depends packet
+	depends embox.net.sock
+	depends embox.net.packet
 	depends embox.framework.LibFrameworkNet
 }
 
 module af_unix {
 	source "af_unix.c"
 
-	depends sock
+	depends embox.net.sock
 	depends embox.framework.LibFrameworkNet
 }
 
@@ -89,7 +89,7 @@ module socket {
 	source "socket_desc.c"
 	option number connect_timeout=5000
 
-	depends embox.compat.libc.str
+	depends embox.compat.libc.string.str
 	depends embox.net.sock
 	depends embox.net.dev //ksocket, netdev_get_by_name
 	depends embox.util.sys_log

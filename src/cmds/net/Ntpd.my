@@ -1,4 +1,4 @@
-package embox.cmd.net
+package embox.cmds.net
 
 @AutoCmd
 @Cmd(name = "ntpd",
@@ -23,7 +23,7 @@ module ntpd {
 	depends embox.compat.posix.util.getopt
 	depends embox.framework.LibFramework
 	depends embox.kernel.time.timekeeper
-	depends embox.kernel.timer.sys_timer
+	depends embox.kernel.time.timer.sys_timer
 	depends embox.compat.libc.all
 	depends embox.net.lib.ntp
 }

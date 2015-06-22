@@ -1,10 +1,10 @@
-package embox.example.vmem
+package embox.example.virt_mem
 
 module mmuprobe {
 	source "mmu_probe.c"
 
-	depends embox.mem.vmem
+	depends embox.mem.vmem.vmem
 	depends embox.compat.libc.all
 	depends embox.compat.posix.util.getopt
-	depends embox.framework.example
+	depends embox.framework.example.example
 }

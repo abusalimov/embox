@@ -1,4 +1,4 @@
-package embox.test.hal
+package embox.tests.hal.context
 
 module context_switch_test {
 	source "context_switch_test.c"

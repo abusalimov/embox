@@ -1,5 +1,5 @@
 
-package embox.driver.terminal
+package embox.drivers.char
 
 module vt {
 	source "vtbuild.c", "vtparse.c", "vtparse_state.c"

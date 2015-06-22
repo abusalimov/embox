@@ -1,4 +1,4 @@
-package embox.driver.serial
+package embox.drivers.serial
 
 /* FIXME:
  * Unused files: skyeye_uart.c
@@ -24,9 +24,9 @@ module fsnode extends fsnode_api {
 	@IncludeExport(path="drivers/serial")
 	source "fsnode.h"
 
-	@NoRuntime depends embox.driver.char_dev
-	@NoRuntime depends embox.driver.tty.serial
-	depends embox.fs.driver.devfs
+	@NoRuntime depends embox.drivers.char.char_dev
+	@NoRuntime depends embox.drivers.tty.serial.serial
+	depends embox.fs.driver.devfs.devfs
 }
 
 module fsnode_none extends fsnode_api {
@@ -43,20 +43,20 @@ module diag {
 	source "diag.h"
 }
 
-module apbuart extends embox.driver.diag.diag_api {
+module apbuart extends embox.drivers.diag.diag_api {
 	option number baud_rate
 	option number apbuart_base=0x80000100
 	option number irq_num=2
 
 	source "apbuart.c"
 
-	@NoRuntime depends embox.driver.ambapp_api
+	@NoRuntime depends embox.drivers.ambapp.ambapp_api
 
 	depends core
 	depends diag
 }
 
-module at91_uart extends embox.driver.diag.diag_api {
+module at91_uart extends embox.drivers.diag.diag_api {
 	option number baud_rate
 
 	source "at91_uart.c"
@@ -74,26 +74,26 @@ module i8250 extends serial {
 	depends embox.util.LibUtil
 }
 
-module xuartlite extends embox.driver.diag.diag_api {
+module xuartlite extends embox.drivers.diag.diag_api {
 	source "xuartlite.c"
 
 	option number xuartlite_base
 	option number irq_num
 }
 
-module stm32_usart extends embox.driver.diag.diag_api {
+module stm32_usart extends embox.drivers.diag.diag_api {
 	option number baud_rate
 	/*option boolean hw_flow = false*/
 
 	source "stm32_usart.c"
 
-	depends embox.driver.gpio.stm32
+	depends embox.drivers.gpio.stm32
 	depends core
 	depends diag
 }
 
 @BuildDepends(third_party.bsp.st_f4.core)
-module stm_usart extends embox.driver.diag.diag_api {
+module stm_usart extends embox.drivers.diag.diag_api {
 	option number baud_rate
 	option number usartx=6
 	/*option boolean hw_flow = false*/
@@ -107,33 +107,33 @@ module stm_usart extends embox.driver.diag.diag_api {
 }
 
 
-@BuildDepends(efm32zg_sk3200.bsp)
-module efm32_leuart extends embox.driver.diag.diag_api {
+@BuildDepends(platform.efm32zg_sk3200.src.bsp.bsp)
+module efm32_leuart extends embox.drivers.diag.diag_api {
 	option number baud_rate
 
 	source "efm32_leuart.c"
 
-	depends efm32zg_sk3200.bsp
+	depends platform.efm32zg_sk3200.src.bsp.bsp
 	depends core
 	depends diag
 }
 
 
-module msp430usci extends embox.driver.diag.diag_api {
+module msp430usci extends embox.drivers.diag.diag_api {
 	source "msp430usci.c"
 }
 
-module pic32mx_uart extends embox.driver.diag.diag_api {
+module pic32mx_uart extends embox.drivers.diag.diag_api {
 	source "pic32mx_uart.c"
 }
 
-module ns16550 extends embox.driver.diag.diag_api {
+module ns16550 extends embox.drivers.diag.diag_api {
 	option number base_addr = 0x49020000
 
 	source "ns16550.c"
 }
 
-module bpi extends embox.driver.diag.diag_api {
+module bpi extends embox.drivers.diag.diag_api {
 	option number base_addr = 0x01C28000
 
 	source "bpi_uart.c"

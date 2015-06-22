@@ -1,4 +1,4 @@
-package embox.cmd
+package embox.cmds.profiler
 
 @AutoCmd
 @Cmd(name = "tbprof",
@@ -25,8 +25,8 @@ package embox.cmd
 module tbprof {
 	source "tbprof.c"
 
-	depends embox.profiler.tracing
-	depends embox.kernel.timer.itimer
-	depends embox.util.hashtable
+	depends embox.profiler.tracing.tracing
+	depends embox.kernel.time.timer.itimer
+	depends embox.util.hashtable.hashtable
 	depends embox.lib.debug.symbol
 }

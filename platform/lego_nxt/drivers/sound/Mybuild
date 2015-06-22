@@ -1,9 +1,9 @@
-package lego_nxt.driver
+package platform.lego_nxt.drivers.sound
 
 module nxt_sound {
 	@IncludePath("$(PLATFORM_DIR)/lego_nxt/include")
 	source "sound.c"
 
 	depends embox.kernel.irq
-	depends embox.kernel.timer.sleep_api
+	depends embox.kernel.time.timer.sleep_api
 }

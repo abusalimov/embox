@@ -1,5 +1,5 @@
 
-package ti816x
+package platform.ti816x
 
 module platform_shutdown extends embox.arch.arm.platform_shutdown {
 	source "platform_shutdown.c"

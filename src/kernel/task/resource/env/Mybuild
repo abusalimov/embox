@@ -1,4 +1,4 @@
-package embox.kernel.task.resource
+package embox.kernel.task.resource.env
 
 module env {
 	@IncludeExport(path="kernel/task/resource")
@@ -10,8 +10,8 @@ module env {
 	source "env_impl.h"
 
 	depends embox.kernel.task.task_resource
-	@NoRuntime depends embox.compat.libc.assert
-	@NoRuntime depends embox.compat.libc.str
-	@NoRuntime depends embox.util.Array
+	@NoRuntime depends embox.compat.libc.assert.assert
+	@NoRuntime depends embox.compat.libc.string.str
+	@NoRuntime depends embox.util.array_spread.Array
 }
 

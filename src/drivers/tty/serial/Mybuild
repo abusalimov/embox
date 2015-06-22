@@ -1,4 +1,4 @@
-package embox.driver.tty
+package embox.drivers.tty.serial
 
 module serial {
 	source "serial_repo.c"
@@ -6,6 +6,6 @@ module serial {
 
 	option number serial_quantity = 1
 
-	depends tty_repo
-	depends tty
+	depends embox.drivers.tty.tty_repo
+	depends embox.drivers.tty.tty
 }

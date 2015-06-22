@@ -1,4 +1,4 @@
-package embox.kernel.thread
+package embox.kernel.thread.sync
 
 module sync {
 	depends mutex
@@ -15,7 +15,7 @@ module mutex {
 	depends embox.kernel.sched.priority.priority
 	depends embox.kernel.sched.wait_queue
 
-	depends embox.kernel.sched.mutex
+	depends embox.kernel.sched.sync.mutex
 	depends embox.kernel.sched.sched
 }
 

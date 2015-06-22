@@ -11,10 +11,10 @@ static module core {
 	@AddPrefix("^BUILD/extbld/^MOD_PATH/src/e2fsprogs-build/intl")
 	source "libintl.a"
 
-	depends embox.compat.posix.stubs
+	depends embox.compat.posix.stubs.stubs
 
 	@NoRuntime depends embox.compat.libc.all
-	@NoRuntime depends embox.compat.libc.str_dup
+	@NoRuntime depends embox.compat.libc.string.str_dup
 	@NoRuntime depends embox.compat.posix.util.time
 	@NoRuntime depends embox.compat.posix.util.sleep
 	@NoRuntime depends embox.compat.posix.util.gettimeofday

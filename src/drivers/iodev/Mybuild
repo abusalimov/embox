@@ -1,9 +1,9 @@
-package embox.driver.iodev
+package embox.drivers.iodev
 
 module iodev_video {
 	source "iodev_video.c"
 
-	depends embox.driver.video.fonts
+	depends embox.drivers.video.fonts
 
 	/**
 	 * TODO cycle

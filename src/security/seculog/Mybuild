@@ -1,11 +1,11 @@
 
-package embox.security
+package embox.security.seculog
 
 module seculog {
 	source "seculog.c"
 
-	depends embox.util.DList
-	depends embox.mem.pool
+	depends embox.util.dlist.DList
+	depends embox.mem.misc.pool
 }
 
 module seculog_file {

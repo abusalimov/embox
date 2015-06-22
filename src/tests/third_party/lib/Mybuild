@@ -1,11 +1,11 @@
-package embox.test.third_party.lib
+package embox.tests.third_party.lib
 
 @Build(script="true")
-@BuildDepends(third_party.lib.libmodbus)
+@BuildDepends(third_party.lib.libmodbus.libmodbus)
 module libmodbus_test {
 	@IncludePath("$(EXTERNAL_BUILD_DIR)/third_party/lib/libmodbus/libmodbus-3.0.6/src/")
 	source "libmodbus_test.c"
 
-	depends third_party.lib.libmodbus
+	depends third_party.lib.libmodbus.libmodbus
 	depends embox.framework.LibFramework
 }

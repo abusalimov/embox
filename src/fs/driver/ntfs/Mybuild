@@ -1,4 +1,4 @@
-package embox.fs.driver
+package embox.fs.driver.ntfs
 
 @Build(stage=2,script="true")
 @BuildDepends(third_party.ntfs_3g.core)

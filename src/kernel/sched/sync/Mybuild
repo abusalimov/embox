@@ -1,4 +1,4 @@
-package embox.kernel.sched
+package embox.kernel.sched.sync
 
 module mutex {
 	source "mutex.c"

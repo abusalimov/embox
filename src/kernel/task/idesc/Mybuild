@@ -1,4 +1,4 @@
-package embox.kernel.task
+package embox.kernel.task.idesc
 
 module idesc {
 	source "idesc_table.c", "index_descriptor.c"
@@ -6,6 +6,6 @@ module idesc {
 	depends embox.kernel.task.api
 	@NoRuntime depends embox.kernel.task.resource.idesc_table
 	@NoRuntime depends embox.util.indexator
-	@NoRuntime depends embox.compat.libc.assert
-	@NoRuntime depends embox.compat.libc.str
+	@NoRuntime depends embox.compat.libc.assert.assert
+	@NoRuntime depends embox.compat.libc.string.str
 }

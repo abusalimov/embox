@@ -1,4 +1,4 @@
-package embox.test.framework.mod.member
+package embox.tests.framework.mod.member
 
 module ops_test {
 	source "ops_test.c"

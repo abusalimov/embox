@@ -1,9 +1,9 @@
-package third_party.phoneme
+package third_party.phoneme.cldc
 
 @Build(stage=1,script="$(EXTERNAL_MAKE) configure build install")
 @BuildArtifactPath(cppflags="-I$(abspath $(EXTERNAL_BUILD_DIR))/third_party/phoneme/cldc/install/include")
-@BuildDepends(third_party.phoneme.javacall)
-@BuildDepends(third_party.phoneme.pcsl)
+@BuildDepends(third_party.phoneme.javacall.javacall)
+@BuildDepends(third_party.phoneme.pcsl.pcsl)
 @BuildDepends(third_party.phoneme.src)
 static module cldc {
 	/*
@@ -18,8 +18,8 @@ static module cldc {
 	@AddPrefix("^BUILD/extbld/^MOD_PATH/install")
 	source "libcldc_vm_g.a", "jvmspi.o"
 
-	@NoRuntime depends embox.lib.cxx.lib
-	@NoRuntime depends third_party.phoneme.javacall
-	@NoRuntime depends third_party.phoneme.pcsl
+	@NoRuntime depends embox.compat.cxx.core.lib
+	@NoRuntime depends third_party.phoneme.javacall.javacall
+	@NoRuntime depends third_party.phoneme.pcsl.pcsl
 	@NoRuntime depends third_party.phoneme.src
 }

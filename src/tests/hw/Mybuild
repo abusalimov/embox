@@ -1,4 +1,4 @@
-package embox.test.hw
+package embox.tests.hw
 
 module memtest {
 	option number base

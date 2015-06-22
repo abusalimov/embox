@@ -1,4 +1,4 @@
-package embox.cmd.net
+package embox.cmds.net
 
 @AutoCmd
 @Cmd(name = "bootpc",
@@ -24,6 +24,6 @@ module bootpc {
 	depends embox.net.lib.bootp
 	depends embox.net.dev
 	depends embox.net.core
-	depends embox.net.route
+	depends embox.net.l3.route
 	depends embox.framework.LibFramework
 }

@@ -1,4 +1,4 @@
-package embox.cmd.games
+package embox.cmds.games
 
 @AutoCmd
 @Cmd(name = "snake",

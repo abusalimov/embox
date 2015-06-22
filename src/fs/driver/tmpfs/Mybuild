@@ -1,4 +1,4 @@
-package embox.fs.driver
+package embox.fs.driver.tmpfs
 
 module tmpfs {
 	@IncludeExport(path="fs")
@@ -15,9 +15,9 @@ module tmpfs {
 	depends embox.fs.core
 	depends embox.fs.driver.repo
 	depends embox.fs.node
-	depends embox.driver.block
-	depends embox.mem.page_api
-	depends embox.mem.pool
-	depends embox.driver.ramdisk
+	depends embox.drivers.block_dev.block
+	depends embox.mem.pagealloc.page_api
+	depends embox.mem.misc.pool
+	depends embox.drivers.block_dev.ramdisk.ramdisk
 	depends embox.fs.rootfs
 }

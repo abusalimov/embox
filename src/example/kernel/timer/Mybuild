@@ -5,6 +5,6 @@ module timer {
 	source "timer.c"
 
 	depends embox.compat.libc.all
-	depends embox.kernel.timer.sys_timer
-	depends embox.framework.example
+	depends embox.kernel.time.timer.sys_timer
+	depends embox.framework.example.example
 }

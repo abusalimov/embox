@@ -1,4 +1,4 @@
-package embox.cmd.fs
+package embox.cmds.fs
 
 @AutoCmd
 @Cmd(name = "more",
@@ -19,7 +19,7 @@ module more {
 	source "more.c"
 
 	depends embox.compat.libc.all
-	depends embox.compat.posix.LibCurses
+	depends embox.compat.posix.curses.LibCurses
 	depends embox.compat.posix.util.getopt
 	depends embox.compat.posix.fs.file
 	depends embox.fs.core

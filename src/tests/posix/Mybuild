@@ -1,5 +1,5 @@
 
-package embox.test.posix
+package embox.tests.posix
 
 module all {
 	depends environ_test
@@ -40,19 +40,19 @@ module getopt_long_test {
 module passwd {
 	source "passwd.c"
 
-	depends embox.compat.posix.passwd
+	depends embox.compat.posix.pwd_grp.passwd
 }
 
 module inttypes_test {
 	source "inttypes_test.c"
 
-	depends embox.compat.libc.int_types
+	depends embox.compat.libc.inttypes.int_types
 }
 
 module libgen_test {
 	source "libgen_test.c"
 
-	depends embox.compat.libc.int_types
+	depends embox.compat.libc.inttypes.int_types
 }
 
 module poll_test {
@@ -69,9 +69,9 @@ module select_test {
 	depends embox.compat.posix.fs.file_ops
 	depends embox.compat.posix.idx.select
 	depends embox.compat.posix.idx.pipe
-	depends embox.compat.posix.pthreads
+	depends embox.compat.posix.pthread.pthreads
 	depends embox.compat.posix.util.sleep
-	depends embox.framework.test
+	depends embox.framework.test.test
 }
 
 module pipe_test {
@@ -90,7 +90,7 @@ module ppty_test {
 module fork_test {
 	source "fork_test.c"
 
-	depends embox.test.posix.fork.test_fork_static
+	depends embox.tests.posix.test_fork_static
 
 	depends embox.compat.posix.proc.fork
 }
@@ -114,8 +114,8 @@ module sleep_test {
 
 	depends embox.compat.posix.util.time
 	depends embox.compat.posix.util.sleep
-	depends embox.compat.posix.pthreads
-	depends embox.framework.test
+	depends embox.compat.posix.pthread.pthreads
+	depends embox.framework.test.test
 	depends embox.kernel.task.kernel_task
 }
 

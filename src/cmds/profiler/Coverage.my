@@ -1,5 +1,5 @@
 
-package embox.cmd
+package embox.cmds.profiler
 
 @AutoCmd
 @Cmd(name = "coverage",
@@ -17,5 +17,5 @@ package embox.cmd
 module coverage {
 	source "coverage.c"
 
-	depends embox.profiler.coverage
+	depends embox.profiler.tracing.coverage
 }

@@ -1,4 +1,4 @@
-package embox.test.stdio
+package embox.tests.stdio
 
 module printf_test {
 	source "printf_test.c"

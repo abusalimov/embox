@@ -1,10 +1,10 @@
-package embox.compat.posix.proc
+package embox.compat.posix.proc.vfork_none
 
-static module vfork_stub extends vfork {
+static module vfork_stub extends embox.compat.posix.proc.vfork {
 	source "vfork_stub.c"
 	source "vfork_res_stub.h"
 }
 
-static module exec_stub extends exec_lib {
+static module exec_stub extends embox.compat.posix.proc.exec_lib {
 	source "exec_stub.c"
 }

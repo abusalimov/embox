@@ -1,4 +1,4 @@
-package embox.cmd.proc
+package embox.cmds.proc
 
 @AutoCmd
 @Cmd(name = "taskset",
@@ -18,5 +18,5 @@ module taskset {
 
 	depends embox.compat.libc.all
 	depends embox.kernel.task.api
-	depends embox.kernel.task.resource.affinity
+	depends embox.kernel.task.resource.affinity.affinity
 }

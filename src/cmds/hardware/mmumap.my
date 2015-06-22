@@ -1,4 +1,4 @@
-package embox.cmd.hw
+package embox.cmds.hardware
 
 @AutoCmd
 @Cmd(name = "mmumap",

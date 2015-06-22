@@ -1,7 +1,7 @@
-package lego_nxt.cmd
+package platform.lego_nxt.cmds.power_mng
 
 module power_mng {
 	source "power.c"
 
-	depends lego_nxt.driver.nxt_avr_init
+	depends platform.lego_nxt.drivers.avr_init.nxt_avr_init
 }

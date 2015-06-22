@@ -1,10 +1,10 @@
-package lego_nxt.example
+package platform.lego_nxt.example.wake_up
 
 module wake_up {
 	source "wake_up.c"
 
-	depends lego_nxt.driver.nxt_motor
-	depends lego_nxt.driver.nxt_avr_init
-	depends lego_nxt.driver.soft_i2c
-	depends embox.driver.gpio.at91_pins
+	depends platform.lego_nxt.drivers.motor.nxt_motor
+	depends platform.lego_nxt.drivers.avr_init.nxt_avr_init
+	depends platform.lego_nxt.drivers.soft_i2c.soft_i2c
+	depends embox.drivers.gpio.at91_pins
 }

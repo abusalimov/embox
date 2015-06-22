@@ -1,5 +1,5 @@
 
-package embox.cmd.user
+package embox.cmds.user
 
 @AutoCmd
 @Cmd(name = "login",
@@ -18,16 +18,16 @@ package embox.cmd.user
 module login {
 	source "login.c"
 
-	depends embox.compat.posix.passwd
-	depends embox.compat.posix.utmp_api
+	depends embox.compat.posix.pwd_grp.passwd
+	depends embox.compat.posix.utmp.utmp_api
 	depends embox.kernel.task.syslib.waitpid
-	depends embox.security.smac
-	depends embox.security.seculog
-	depends embox.compat.posix.crypt
+	depends embox.security.smac.smac
+	depends embox.security.seculog.seculog
+	depends embox.compat.posix.pwd_grp.crypt
 
 	depends embox.lib.readline_api
 
-	depends embox.cmd.sh.shell_api
+	depends embox.cmds.shell.shell_api
 
-	depends embox.security.smac_user_db
+	depends embox.security.smac.smac_user_db
 }

@@ -1,5 +1,5 @@
 
-package embox.driver.lcd
+package embox.drivers.lcd
 
 module hd44780 {
 	option string control_port
@@ -19,7 +19,7 @@ module hd44780 {
 
 	source "hd44780.c"
 
-	depends embox.driver.gpio.api
+	depends embox.drivers.gpio.api
 }
 /* include example (suitable for stm32vl)
 
