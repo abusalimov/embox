@@ -1,8 +1,6 @@
 package embox.drivers.diag
 
-@DefaultImpl(no_diag)
-abstract module diag_api {
-}
+module diag_api {}
 
 module mem_diag extends diag_api {
 	option number buffer_len = 128
