@@ -8,7 +8,7 @@ module system {
 @Mandatory
 @DefaultImpl(embox.arch.generic.onecpu)
 abstract module cpu {
-	option number cpu_count
+	option number cpu_count = 1
 }
 
 @Mandatory
