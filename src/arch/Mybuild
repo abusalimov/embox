@@ -2,7 +2,7 @@ package embox.arch
 
 @Mandatory
 module system {
-	option number core_freq
+	option number core_freq = 0
 }
 
 @Mandatory
