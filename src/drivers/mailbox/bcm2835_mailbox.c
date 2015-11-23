@@ -10,16 +10,11 @@
 #include <stdint.h>
 
 #include <drivers/mailbox/bcm2835_mailbox.h>
+#include <hal/reg.h>
+#include <hal/mem_barriers.h>
 
 static struct bcm2835_mailbox_regs volatile *const mailbox_regs =
 		(struct bcm2835_mailbox_regs volatile *) BCM2835_MAILBOX_BASE;
-
-static inline void data_mem_barrier(void) {
-	__asm__ __volatile__(
-		"mov r12, #0; \n\t"
-		"mcr p15, 0, r12, c7, c10, 5; \n\t"
-	);
-}
 
 /**
  * Read from memory mapped IO registers with a memory barrier around.
